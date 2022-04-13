@@ -1,15 +1,9 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import Media from "./components/media/Media"
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <h1>Hello</h1>
-      <h2>Bye</h2>
-      <h3>See ya</h3>
+    <div>
+      <Media />
     </div>
   )
 }
