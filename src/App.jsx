@@ -1,9 +1,9 @@
-import Media from "./components/media/Media"
+import Inicio from "./components/Inicio/Inicio"
 
 function App() {
   return (
     <div>
-      <Media />
+      <Inicio />
     </div>
   )
 }
