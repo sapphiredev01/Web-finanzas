@@ -1,5 +1,13 @@
 import styled from "styled-components";
-import Wrapper from "../UI/Wrapper";
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+`;
 
 const Title = styled.h1`
   text-align: left;
@@ -37,15 +45,15 @@ position: absolute;
 
 const Nosotros = () => {
   return (
-    <Wrapper>
+    <Container>
       <Title>Los expertos que necesitas.</Title>
       <Content>
         Somos un equipo de operadores experimentados, comprometidos con buscar y
         detectar las mejores Oportunidades de inversión de mercado, condiciones
         financieras de las acciones y los mercados estadounidenses de divisas.
       </Content>
-      <imgHor/>
-    </Wrapper>
+      <imgHor />
+    </Container>
   );
 };
 
