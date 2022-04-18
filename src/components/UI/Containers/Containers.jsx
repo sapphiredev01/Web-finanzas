@@ -9,7 +9,8 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: auto;
+  width: 90%;
+  margin: 0 auto;
 `;
 
 export default Container;

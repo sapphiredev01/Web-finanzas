@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Media, MediaItem } from "../UI/Media/Media";
-import { Nav, List, ListElement } from "../UI/Nav/Nav";
+import { Nav, Link, Effect } from "../UI/Nav/Nav";
 import Container from "../UI/Containers/Containers";
 import {
   FaFacebookF,
@@ -9,15 +9,31 @@ import {
   HiOutlineMail,
 } from "react-icons/all";
 
-const Text = styled.div`
+const Content = styled.div`
   grid-area: 2 / 1 / 7 / 6;
   display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+`;
+
+const Left = styled.div`
+  grid-area: 1 / 1 / 6 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Right = styled.div`
+  grid-area: 1 / 3 / 6 / 5;
+  display: flex;
   justify-content: center;
   align-items: center;
 `;
 
 const Title = styled.h1`
-  text-align: left;
   font: Helvetica Neue;
   letter-spacing: 0px;
   color: #000000;
@@ -25,8 +41,7 @@ const Title = styled.h1`
   opacity: 1;
 `;
 
-const Content = styled.div`
-  text-align: left;
+const Text = styled.div`
   font: Helvetica Neue;
   letter-spacing: 0px;
   color: #000000;
@@ -50,26 +65,27 @@ const Inicio = () => {
           <HiOutlineMail />
         </MediaItem>
       </Media>
-      <Text>
-        <Title>El crecimiento esta asegurado.</Title>
-        <Content>
-          Especialistas en financiamiento a la medida para su negocio, contamos
-          con experiencia apoyando a las empresas a obtener créditos a través de
-          instituciones internacionales.
-        </Content>
-        <div>
-          Hexagono
-        </div>
-      </Text>
+      <Content>
+        <Left>
+          <Title>El crecimiento esta asegurado.</Title>
+          <Text>
+            Especialistas en financiamiento a la medida para su negocio,
+            contamos con experiencia apoyando a las empresas a obtener créditos
+            a través de instituciones internacionales.
+          </Text>
+        </Left>
+        <Right>
+          <div>Hexágono</div>
+        </Right>
+      </Content>
       <Nav>
-        <List>
-          <ListElement>INICIO</ListElement>
-          <ListElement>NOSOTROS</ListElement>
-          <ListElement>SERVICIOS</ListElement>
-          <ListElement>PAQUETES</ListElement>
-          <ListElement>CALCULADORA</ListElement>
-          <ListElement>CONTACTO</ListElement>
-        </List>
+        <Link>Inicio</Link>
+        <Link>Nosotros</Link>
+        <Link>Servicios</Link>
+        <Link>Paquetes</Link>
+        <Link>Calculadora</Link>
+        <Link>Contacto</Link>
+        <Effect />
       </Nav>
     </Container>
   );
