@@ -26,7 +26,6 @@ const Content = styled.div`
   font: bold 16px Helvetica;
   letter-spacing: 0px;
   color: #000000;
-  text-transform: lowercase;
   opacity: 1;
   position relative;
   top: 50px;
