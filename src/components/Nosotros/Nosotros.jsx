@@ -1,12 +1,35 @@
 import styled from "styled-components";
-import Wrapper from "../UI/Wrapper";
-import { Container, MediaItem } from "../UI/Media";
+import { Media, MediaItem } from "../UI/Media/Media";
 import {
   FaFacebookF,
   AiOutlineInstagram,
   BsWhatsapp,
   HiOutlineMail,
 } from "react-icons/all";
+
+const Wrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: auto;
+`;
+
+const Container = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: auto;
+`;
 
 const Title = styled.h1`
   text-align: left;

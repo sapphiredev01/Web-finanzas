@@ -1,9 +1,18 @@
 import styled from "styled-components";
-import Wrapper from "../UI/Wrapper";
 import Pararelogram from "./Pararelogram";
 import ServiceBar from "./ServiceBar";
 
-
+const Wrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: auto;
+`;
 
 const Title = styled.h1`
   transform: skew(20deg);
@@ -16,10 +25,10 @@ const Title = styled.h1`
 `;
 
 const Content = styled.div`
-transform: skew(20deg);
+  transform: skew(20deg);
   text-align: center;
   font: bold 16px Helvetica;
-  color: #ffffff;   
+  color: #ffffff;
   text-transform: uppercase;
   position: absolute;
   top: 275px;
@@ -38,7 +47,7 @@ const Servicios = () => {
           detectar las mejores oportunidades de inversiones en los mercados
           financieros de acciones americanas y mercado de divisas.
         </Content>
-        <ServiceBar/>
+        <ServiceBar />
       </Pararelogram>
     </Wrapper>
   );
