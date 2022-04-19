@@ -1,35 +1,13 @@
 import styled from "styled-components";
 import { Media, MediaItem } from "../UI/Media/Media";
+import Container from "../UI/Containers/Containers";
+import { Nav, Link, Effect } from "../UI/Nav/Nav";
 import {
   FaFacebookF,
   AiOutlineInstagram,
   BsWhatsapp,
   HiOutlineMail,
 } from "react-icons/all";
-
-const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(7, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: auto;
-`;
-
-const Container = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: auto;
-`;
 
 const Title = styled.h1`
   text-align: left;
@@ -45,6 +23,7 @@ const Title = styled.h1`
 `;
 
 const Content = styled.div`
+grid-area: 2 / 1 / 7 / 6; 
   text-align: left;
   font: bold 16px Helvetica;
   letter-spacing: 0px;
@@ -81,8 +60,8 @@ const ImgBox = styled.div`
 
 const Nosotros = () => {
   return (
-    <Wrapper>
-      <Container>
+    <Container grid>
+      <Media>
         <MediaItem>
           <FaFacebookF />
         </MediaItem>
@@ -95,7 +74,7 @@ const Nosotros = () => {
         <MediaItem>
           <HiOutlineMail />
         </MediaItem>
-      </Container>
+      </Media>
       <Title>Los expertos que necesitas.</Title>
       <Content>
         Somos un equipo de operadores experimentados, comprometidos con buscar y
@@ -106,8 +85,17 @@ const Nosotros = () => {
         <ImageHor src="src/images/business.jpg" />
         <ImageVer src="src/images/business4.jpg" />
       </ImgBox>
-    </Wrapper>
+      <Nav>
+        <Link>Inicio</Link>
+        <Link>Nosotros</Link>
+        <Link>Servicios</Link>
+        <Link>Paquetes</Link>
+        <Link>Calculadora</Link>
+        <Link>Contacto</Link>
+        <Effect />
+      </Nav>
+    </Container>
   );
 };
 
-export default Nosotros;
+export default Nosotros;  
