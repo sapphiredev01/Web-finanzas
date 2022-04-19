@@ -6,7 +6,7 @@ import Servicios from "./components/Servicios/Servicios"
 function App() {
   return (
     <div>
-      <Servicios />
+      <Nosotros />
     </div>
   )
 }
