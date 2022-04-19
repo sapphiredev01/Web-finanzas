@@ -9,29 +9,56 @@ import {
   HiOutlineMail,
 } from "react-icons/all";
 
+const Content = styled.div`
+  grid-area: 2 / 1 / 7 / 6;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 0fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+`;
+
+const Left = styled.div`
+  grid-area: 1 / 1 / 6 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Middle = styled.div`
+  grid-area: 2 / 3 / 4 / 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+`;
+
+const Right = styled.div`
+  grid-area: 1 / 5 / 6 / 7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+`;
+
 const Title = styled.h1`
   text-align: left;
   font: bold 50px Helvetica;
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
-  position: relative;
-  top: 45px;
-  left: 100px;
   width: 400px;
   height: 150px;
+  margin-left: 60px;
 `;
 
-const Content = styled.div`
-grid-area: 2 / 1 / 7 / 6; 
+const Text = styled.div`
   text-align: left;
   font: bold 16px Helvetica;
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
-  position relative;
-  top: 50px;
-  left: 80px;
   width: 525px;
   height: 150px;
 `;
@@ -39,23 +66,14 @@ grid-area: 2 / 1 / 7 / 6;
 const ImageHor = styled.img`
   background-image: url(${(props) => props.src});
   height: 200px;
+  margin-right: 50px;
 `;
 
 const ImageVer = styled.img`
   background-image: url(${(props) => props.src});
-  height: 300px;
-  position: absolute;
-  right: 75px;
-  bottom: 200px;
-`;
-
-const ImgBox = styled.div`
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: flex-end;
-  align-content: center;
-  margin-right: 200px;
+  height: 250px;
+  position: relative;
+  margin-bottom: -20px; 
 `;
 
 const Nosotros = () => {
@@ -75,16 +93,21 @@ const Nosotros = () => {
           <HiOutlineMail />
         </MediaItem>
       </Media>
-      <Title>Los expertos que necesitas.</Title>
       <Content>
-        Somos un equipo de operadores experimentados, comprometidos con buscar y
-        detectar las mejores Oportunidades de inversión de mercado, condiciones
-        financieras de las acciones y los mercados estadounidenses de divisas.
+        <Middle>
+          <Title>Los expertos que necesitas.</Title>
+          <Text>
+            Somos un equipo de operadores experimentados, comprometidos con
+            buscar y detectar las mejores Oportunidades de inversión de mercado,
+            condiciones financieras de las acciones y los mercados
+            estadounidenses de divisas.
+          </Text>
+        </Middle>
+        <Right>
+          <ImageVer src="src/images/business4.jpg" />
+          <ImageHor src="src/images/business.jpg" />
+        </Right>
       </Content>
-      <ImgBox>
-        <ImageHor src="src/images/business.jpg" />
-        <ImageVer src="src/images/business4.jpg" />
-      </ImgBox>
       <Nav>
         <Link>Inicio</Link>
         <Link>Nosotros</Link>
@@ -98,4 +121,4 @@ const Nosotros = () => {
   );
 };
 
-export default Nosotros;  
+export default Nosotros;
