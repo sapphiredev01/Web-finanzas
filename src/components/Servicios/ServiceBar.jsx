@@ -7,15 +7,14 @@ import {
 } from "react-icons/all";
 
 const Container = styled.div`
+  grid-area: 4 / 2 / 6 / 6;
   transform: skew(20deg);
   display: flex;
   text-align: center;
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  color: #ffffff;  
-  position: absolute;
-  top: 380px; 
+  color: #ffffff;
 `;
 
 const Item = styled.div`
@@ -24,11 +23,10 @@ const Item = styled.div`
 `;
 
 const Description = styled.h3`
-text-transform: uppercase;
-font-size: 15px;
-margin-top:-18px;
+  text-transform: uppercase;
+  font-size: 15px;
+  margin-top: -18px;
 `;
-
 
 const ServiceBar = () => {
   return (
@@ -49,7 +47,6 @@ const ServiceBar = () => {
         <ImMap />
         <Description>CLIENTES EN TODO EL PAIS</Description>
       </Item>
-    
     </Container>
   );
 };

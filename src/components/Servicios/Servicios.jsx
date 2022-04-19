@@ -1,45 +1,46 @@
 import styled from "styled-components";
-import Pararelogram from "./Pararelogram";
 import ServiceBar from "./ServiceBar";
+import Container from "../UI/Containers/Containers";
+import { Media, MediaItem } from "../UI/Media/Media";
 
-const Wrapper = styled.div`
+const Pararelogram = styled.div`
+  width: 70%;
+  height: 617px;
+  transform: skew(-20deg);
+  background: #034e80;
+  margin-top: 5px;
+  margin-left: 200px;
+  grid-area: 1 / 1 / 6 / 6;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(7, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: auto;
 `;
 
 const Title = styled.h1`
+  grid-area: 2 / 3 / 3 / 5;
   transform: skew(20deg);
   text-align: left;
   font: bold 50px Helvetica;
   color: #ffffff;
-  position: absolute;
-  top: 140px;
-  left: 260px;
 `;
 
 const Content = styled.div`
+  grid-area: 3 / 2 / 4 / 6;
   transform: skew(20deg);
   text-align: center;
   font: bold 16px Helvetica;
   color: #ffffff;
   text-transform: uppercase;
-  position: absolute;
-  top: 275px;
-  left: 120px;
   width: 650px;
   height: 150px;
 `;
 
+
 const Servicios = () => {
   return (
-    <Wrapper>
+    <Container grid>
       <Pararelogram>
         <Title>SERVICIOS</Title>
         <Content>
@@ -49,7 +50,7 @@ const Servicios = () => {
         </Content>
         <ServiceBar />
       </Pararelogram>
-    </Wrapper>
+    </Container>
   );
 };
 
