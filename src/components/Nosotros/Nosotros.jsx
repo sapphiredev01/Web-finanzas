@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Media, MediaItem } from "../UI/Media/Media";
 import Container from "../UI/Containers/Containers";
-import { Nav, Link, Effect } from "../UI/Nav/Nav";
+import Nav from "../UI/Nav/Nav";
 import {
   FaFacebookF,
   AiOutlineInstagram,
@@ -116,15 +116,7 @@ const Nosotros = () => {
           <ImageHor src="src/images/business.jpg" />
         </Right>
       </Content>
-      <Nav>
-        <Link>Inicio</Link>
-        <Link>Nosotros</Link>
-        <Link>Servicios</Link>
-        <Link>Paquetes</Link>
-        <Link>Calculadora</Link>
-        <Link>Contacto</Link>
-        <Effect />
-      </Nav>
+      <Nav />
     </Container>
   );
 };
