@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Media, MediaItem } from "../UI/Media/Media";
 import Nav from "../UI/Nav/Nav";
 import Container from "../UI/Containers/Containers";
+import Hexagono from "./Hexagono";
 import {
   FaFacebookF,
   AiOutlineInstagram,
@@ -83,7 +84,6 @@ const Inicio = () => {
           </Text>
         </Left>
         <Right>
-          <div>Hexágono</div>
         </Right>
       </Content>
       <Nav />

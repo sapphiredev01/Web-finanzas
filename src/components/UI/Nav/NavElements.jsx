@@ -26,4 +26,9 @@ export const Step = styled.li`
     margin: auto;
     background: #000;
   }
+  &:not(:last-of-type) {
+    border-right: #000;
+    border-right-width: 1px;
+    border-right-style: solid;
+  }
 `;
