@@ -7,6 +7,8 @@ export const Wrapper = styled.div`
 export const Stepper = styled.ol`
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+  padding: 0;
 `;
 
 export const Title = styled.p`
@@ -36,3 +38,13 @@ export const Step = styled.li`
     background: #000;
   }
 `;
+
+export const Line = styled.div`
+  position: absolute;
+  height: 2px;
+  width: 84%;
+  background: #000;
+  bottom: 2px;
+  left: 8%;
+`; 	  
+
