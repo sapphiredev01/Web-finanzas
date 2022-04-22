@@ -1,26 +1,27 @@
-import { Wrapper, Stepper, Step } from "./NavElements";
+import React from 'react';
+import { Wrapper, Stepper, Step, Title } from "./NavElements";
 
 const Nav = () => {
   return (
     <Wrapper>
       <Stepper>
         <Step>
-          <h4>INICIO</h4>
+          <Title>INICIO</Title>
         </Step>
         <Step>
-          <h4>NOSOTROS</h4>
+          <Title>NOSOTROS</Title>
         </Step>
         <Step>
-          <h4>SERVICIOS</h4>
+          <Title>SERVICIOS</Title>
         </Step>
         <Step>
-          <h4>PAQUETES</h4>
+          <Title>PAQUETES</Title>
         </Step>
         <Step>
-          <h4>CALCULADORA</h4>
+          <Title>CALCULADORA</Title>
         </Step>
         <Step>
-          <h4>CONTACTO</h4>
+          <Title>CONTACTO</Title>
         </Step>
       </Stepper>
     </Wrapper>

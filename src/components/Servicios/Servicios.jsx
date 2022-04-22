@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import ServiceBar from "./ServiceBar";
 import Container from "../UI/Containers/Containers";
-import { Media, MediaItem } from "../UI/Media/Media";
 
 const Pararelogram = styled.div`
   width: 70%;

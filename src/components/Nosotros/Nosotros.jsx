@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from "styled-components";
 import { Media, MediaItem } from "../UI/Media/Media";
 import Container from "../UI/Containers/Containers";
@@ -112,8 +113,8 @@ const Nosotros = () => {
           </Text>
         </Middle>
         <Right>
-          <ImageVer src="src/images/business4.jpg" />
-          <ImageHor src="src/images/business.jpg" />
+          <ImageVer src="../../../public/images/business4.jpg" />
+          <ImageHor src="../../../public/images/business.jpg" />
         </Right>
       </Content>
       <Nav />

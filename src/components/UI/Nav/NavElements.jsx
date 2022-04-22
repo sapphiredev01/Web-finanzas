@@ -9,13 +9,22 @@ export const Stepper = styled.ol`
   flex-wrap: wrap;
 `;
 
+export const Title = styled.p`
+  font: Helvetica Neue;
+  font-weight: 700;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  font-size: .8rem;
+`;
+
 export const Step = styled.li`
   flex: 1;
   display: flex;
   flex-direction: column;
   text-align: center;
   &:after {
-    --size: 1rem;
+    --size: .5rem;
     content: "";
     position: relative;
     z-index: 1;
@@ -25,10 +34,5 @@ export const Step = styled.li`
     border-radius: 50%;
     margin: auto;
     background: #000;
-  }
-  &:not(:last-of-type) {
-    border-right: #000;
-    border-right-width: 1px;
-    border-right-style: solid;
   }
 `;
