@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { useAlert, types} from "react-alert";
 import styled from "styled-components";
 import { Media, MediaItem } from "../UI/Media/Media";
 import Container from "../UI/Containers/Containers";
@@ -112,39 +113,40 @@ const ButtonSend = styled.button`
   width: 30%;
 `;
 
-const Nosotros = () => {
+const Contacto = () => {
+  const alert = useAlert();
   const [nombre, setNombre] = react.useState("");
   const [correo, setCorreo] = react.useState("");
   const [mensaje, setMensaje] = react.useState("");
-  const [error, setError] = react.useState(null);
 
   const mandarCorreo = (e) => {
     e.preventDefault();
 
     if (!nombre.trim()) {
       console.log("Sin nombre");
-      setError("Escriba su nombre por favor");
+      alert.show("Por favor, escriba su nombre",{type: "error"})
       return;
     }
     if (!correo.trim()) {
       console.log("Sin correo");
-      setError("Escriba su correo por favor");
+      alert.show("Por favor, escriba su correo",{type: "error"})
       return;
     }
     if (!mensaje.trim()) {
       console.log("Sin mensaje");
-      setError("Escriba su mensaje por favor");
+      alert.show("Por favor, escriba un mensaje",{type: "error"})
       return;
     }
     console.log(nombre);
     console.log(correo);
     console.log(mensaje);
 
+    alert.show("Su mensaje fue enviado, pronto nos pondremos en contacto con usted",{type: "success"})
     setNombre("");
     setCorreo("");
     setMensaje("");
   };
-  
+
   return (
     <Container grid>
       <Media>
@@ -227,4 +229,4 @@ const Nosotros = () => {
   );
 };
 
-export default Nosotros;
+export default Contacto;
