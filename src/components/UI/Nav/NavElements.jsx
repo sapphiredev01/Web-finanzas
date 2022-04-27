@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  grid-area: 7 / 1 / 8 / 6;
+  grid-area: 12 / 1 / 13 / 13;
+  margin-bottom: 1.5rem;
 `;
 
 export const Stepper = styled.ol`
@@ -9,6 +10,7 @@ export const Stepper = styled.ol`
   flex-wrap: wrap;
   position: relative;
   padding: 0;
+  margin: 0;
 `;
 
 export const Title = styled.p`

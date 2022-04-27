@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const Media = styled.div`
-  grid-area: 1 / 1 / 2 / 6;
+  grid-area: 1 / 1 / 2 / 13;
   display: flex;
   justify-content: flex-end;
-  margin-top: -1em;
+  margin-top: 1rem;
 `;
 
 export const MediaItem = styled.button`
