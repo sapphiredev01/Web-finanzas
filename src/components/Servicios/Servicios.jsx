@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from "styled-components";
 import ServiceBar from "./ServiceBar";
 import Container from "../UI/Containers/Containers";
@@ -26,7 +27,7 @@ const Title = styled.h1`
 `;
 
 const Content = styled.div`
-  grid-area: 3 / 2 / 4 / 6;
+  grid-area: 2 / 1 / 12 / 13;
   transform: skew(20deg);
   text-align: center;
   font: bold 16px Helvetica;

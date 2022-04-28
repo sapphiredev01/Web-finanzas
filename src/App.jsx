@@ -8,7 +8,7 @@ import Paquetes from './components/Paquetes/Paquetes';
 function App() {
   return (
     <div>
-      <Paquetes />
+      <Contacto />
     </div>
   )
 }

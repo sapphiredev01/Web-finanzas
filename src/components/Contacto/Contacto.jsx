@@ -1,20 +1,12 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { useAlert, types} from "react-alert";
 import styled from "styled-components";
-import { Media, MediaItem } from "../UI/Media/Media";
+import Media from "../UI/Media/index";
 import Container from "../UI/Containers/Containers";
 import Nav from "../UI/Nav/Nav";
-import {
-  FaFacebookF,
-  AiOutlineInstagram,
-  BsWhatsapp,
-  HiOutlineMail,
-} from "react-icons/all";
-import react from "react";
 
 const Content = styled.div`
-  grid-area: 2 / 1 / 7 / 6;
+  grid-area: 2 / 1 / 12 / 13;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(8, 1fr);
@@ -115,9 +107,9 @@ const ButtonSend = styled.button`
 
 const Contacto = () => {
   const alert = useAlert();
-  const [nombre, setNombre] = react.useState("");
-  const [correo, setCorreo] = react.useState("");
-  const [mensaje, setMensaje] = react.useState("");
+  const [nombre, setNombre] = useState("");
+  const [correo, setCorreo] = useState("");
+  const [mensaje, setMensaje] = useState("");
 
   const mandarCorreo = (e) => {
     e.preventDefault();
@@ -149,28 +141,7 @@ const Contacto = () => {
 
   return (
     <Container grid>
-      <Media>
-        <a href="https://www.Facebook.com" target="_blank">
-          <MediaItem>
-            <FaFacebookF />
-          </MediaItem>
-        </a>
-        <a href="https://www.Instagram.com" target="_blank">
-          <MediaItem>
-            <AiOutlineInstagram />
-          </MediaItem>
-        </a>
-        <a href="https://www.Whatsapp.com" target="_blank">
-          <MediaItem>
-            <BsWhatsapp />
-          </MediaItem>
-        </a>
-        <a href="https://www.Outlook.com" target="_blank">
-          <MediaItem>
-            <HiOutlineMail />
-          </MediaItem>
-        </a>
-      </Media>
+      <Media />
       <Content>
         <ImageSquare src="../../../public/images/contact.jpg" />
         <Form>

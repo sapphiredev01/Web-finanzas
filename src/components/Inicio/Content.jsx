@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-  grid-area: 2 / 1 / 7 / 6;
+  grid-area: 2 / 1 / 12 / 13;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);

@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   grid-area: 12 / 1 / 13 / 13;
   margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
 `;
 
 export const Stepper = styled.ol`

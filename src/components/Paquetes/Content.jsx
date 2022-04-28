@@ -10,11 +10,11 @@ export const Content = styled.div`
   grid-row-gap: 2rem;
   margin: 0;
   padding: 0;
-  height: 90%;
+  height:100%;
   width: auto;
 `;
 
-export const TitleContainer = styled.p`
+export const TitleContainer = styled.div`
   grid-area: 1 / 1 / 3 / 13;
   display: flex;
   justify-content: start;

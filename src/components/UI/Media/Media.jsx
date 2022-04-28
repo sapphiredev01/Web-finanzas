@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Media = styled.div`
+export const Container = styled.div`
   grid-area: 1 / 1 / 2 / 13;
   display: flex;
   justify-content: flex-end;

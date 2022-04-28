@@ -1,40 +1,13 @@
 import React from "react";
 import Container from "../UI/Containers/Containers";
-import { Media, MediaItem } from "../UI/Media/Media";
-import Nav from "../UI/Nav/Nav";
+import Media from "../UI/Media/index";
 import { Content, TitleContainer, Title, Div1, Div2, Div3 } from "./Content";
-import {
-  FaFacebookF,
-  AiOutlineInstagram,
-  BsWhatsapp,
-  HiOutlineMail,
-} from "react-icons/all";
+import Nav from "../UI/Nav/Nav";
 
 const Paquetes = () => {
   return (
     <Container grid>
-      <Media>
-        <a href="https://www.Facebook.com" target="_blank">
-          <MediaItem>
-            <FaFacebookF />
-          </MediaItem>
-        </a>
-        <a href="https://www.Instagram.com" target="_blank">
-          <MediaItem>
-            <AiOutlineInstagram />
-          </MediaItem>
-        </a>
-        <a href="https://www.Whatsapp.com" target="_blank">
-          <MediaItem>
-            <BsWhatsapp />
-          </MediaItem>
-        </a>
-        <a href="https://www.Outlook.com" target="_blank">
-          <MediaItem>
-            <HiOutlineMail />
-          </MediaItem>
-        </a>
-      </Media>
+      <Media />
       <Content>
         <TitleContainer>
           <Title>
