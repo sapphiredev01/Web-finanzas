@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from "styled-components";
 import {
   BsFillPeopleFill,
@@ -7,8 +8,6 @@ import {
 } from "react-icons/all";
 
 const Container = styled.div`
-  grid-area: 4 / 2 / 6 / 6;
-  transform: skew(20deg);
   display: flex;
   text-align: center;
   flex-direction: row;
@@ -25,6 +24,7 @@ const Item = styled.div`
 const Description = styled.h3`
   text-transform: uppercase;
   font-size: 15px;
+  font-weight: bold;
   margin-top: -18px;
 `;
 

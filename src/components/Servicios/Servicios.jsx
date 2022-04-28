@@ -1,56 +1,58 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 import ServiceBar from "./ServiceBar";
-import Container from "../UI/Containers/Containers";
 
 const Pararelogram = styled.div`
-  width: 70%;
-  height: 617px;
-  transform: skew(-20deg);
+  grid-area: 2 / 1 / 12 / 13;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
   background: #034e80;
-  margin-top: 5px;
-  margin-left: 200px;
-  grid-area: 1 / 1 / 6 / 6;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+`;
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 100%;
 `;
 
 const Title = styled.h1`
-  grid-area: 2 / 3 / 3 / 5;
-  transform: skew(20deg);
-  text-align: left;
-  font: bold 50px Helvetica;
+  text-align: center;
   color: #ffffff;
+  font-size: 3rem;
 `;
 
-const Content = styled.div`
-  grid-area: 2 / 1 / 12 / 13;
-  transform: skew(20deg);
+const Text = styled.div`
   text-align: center;
-  font: bold 16px Helvetica;
   color: #ffffff;
   text-transform: uppercase;
-  width: 650px;
-  height: 150px;
+  font-weight: bold;
+  margin: 2rem 1rem;
+  margin-bottom: 3rem;
 `;
-
 
 const Servicios = () => {
   return (
-    <Container grid>
-      <Pararelogram>
+    <Pararelogram>
+      <Wrapper>
         <Title>SERVICIOS</Title>
-        <Content>
+        <Text>
           Somos un equipo experimentado de operadores dedicado a buscar y
           detectar las mejores oportunidades de inversiones en los mercados
           financieros de acciones americanas y mercado de divisas.
-        </Content>
+        </Text>
         <ServiceBar />
-      </Pararelogram>
-    </Container>
+      </Wrapper>
+    </Pararelogram>
   );
 };
 
