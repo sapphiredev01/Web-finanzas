@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { useAlert, types} from "react-alert";
+import { useAlert, types } from "react-alert";
+import emailjs from "emailjs-com";
 import styled from "styled-components";
 import Media from "../UI/Media/index";
 import Container from "../UI/Containers/Containers";
@@ -116,27 +117,35 @@ const Contacto = () => {
 
     if (!nombre.trim()) {
       console.log("Sin nombre");
-      alert.show("Por favor, escriba su nombre",{type: "error"})
+      alert.show("Por favor, escriba su nombre", { type: "error" });
       return;
     }
     if (!correo.trim()) {
       console.log("Sin correo");
-      alert.show("Por favor, escriba su correo",{type: "error"})
+      alert.show("Por favor, escriba su correo", { type: "error" });
       return;
     }
     if (!mensaje.trim()) {
       console.log("Sin mensaje");
-      alert.show("Por favor, escriba un mensaje",{type: "error"})
+      alert.show("Por favor, escriba un mensaje", { type: "error" });
       return;
     }
-    console.log(nombre);
-    console.log(correo);
-    console.log(mensaje);
 
-    alert.show("Su mensaje fue enviado, pronto nos pondremos en contacto con usted",{type: "success"})
-    setNombre("");
-    setCorreo("");
-    setMensaje("");
+    emailjs
+      .sendForm("service_2xv3n5g", "template_8tzti5d", e.target, "8xSfqOfcIitvYSLaO")
+      .then(
+        (result) => {
+          alert.show("Su mensaje fue enviado, pronto nos pondremos en contacto con usted", { type: "success" });
+          setNombre("");
+          setCorreo("");
+          setMensaje("");
+          console.log(result.text);
+        },
+        (error) => {
+          alert.show("Se produjo un error al enviar el correo, por favor intente de nuevo",{ type: "error" });
+          console.log(error.text);
+        }
+      );
   };
 
   return (
