@@ -29,6 +29,7 @@ export const Step = styled.li`
   gap: 1rem;
   padding-bottom: 4rem;
   position: relative;
+  cursor: pointer;
   &:before {
     --size: 1rem;
     content: "";
