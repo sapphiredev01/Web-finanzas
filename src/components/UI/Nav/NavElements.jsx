@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   grid-area: 1 / 1 / 13 / 2;
   position: fixed;
+  height: 100%;
+  display: flex;
+  align-items: center;
 `;
 
 export const Stepper = styled.ol`
@@ -13,11 +16,11 @@ export const Stepper = styled.ol`
 `;
 
 export const Title = styled.p`
-  font: Helvetica Neue;
   font-weight: 700;
-  letter-spacing: 0px;
   color: #000000;
   opacity: 1;
+  display: flex;
+  margin-block-start: 0;
   font-size: 0.8rem;
 `;
 
