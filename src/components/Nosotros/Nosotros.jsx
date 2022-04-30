@@ -80,7 +80,7 @@ const Nosotros = () => {
           <Title>Los expertos que necesitas.</Title>
           <Text>
             Somos un equipo de operadores experimentados, comprometidos con
-            buscar y detectar las mejores Oportunidades de inversión de mercado,
+            buscar y detectar las mejores oportunidades de inversión de mercado,
             condiciones financieras de las acciones y los mercados
             estadounidenses de divisas.
           </Text>

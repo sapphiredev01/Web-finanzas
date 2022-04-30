@@ -21,10 +21,12 @@ const ImageSquare = styled.img`
   grid-area: 1 / 1 / 9 / 4;
   background-image: url(${(props) => props.src});
   width: 100%;
+  height: 100%; 
 `;
 
 const Form = styled.div`
   grid-area: 1 / 4 / 9 / 7;
+  padding: 2rem;
 `;
 
 const Titulo = styled.h1`
@@ -130,6 +132,7 @@ const Contacto = () => {
       alert.show("Por favor, escriba un mensaje", { type: "error" });
       return;
     }
+<<<<<<< HEAD
 
     emailjs
       .sendForm("service_2xv3n5g", "template_8tzti5d", e.target, "8xSfqOfcIitvYSLaO")
@@ -146,6 +149,19 @@ const Contacto = () => {
           console.log(error.text);
         }
       );
+=======
+    console.log(nombre);
+    console.log(correo);
+    console.log(mensaje);
+
+    alert.show(
+      "Su mensaje fue enviado, pronto nos pondremos en contacto con usted",
+      { type: "success" }
+    );
+    setNombre("");
+    setCorreo("");
+    setMensaje("");
+>>>>>>> scroll
   };
 
   return (
