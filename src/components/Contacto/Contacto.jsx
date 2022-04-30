@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useAlert, types} from "react-alert";
+import { useAlert, types } from "react-alert";
 import styled from "styled-components";
 import Media from "../UI/Media/index";
 import Container from "../UI/Containers/Containers";
@@ -20,10 +20,12 @@ const ImageSquare = styled.img`
   grid-area: 1 / 1 / 9 / 4;
   background-image: url(${(props) => props.src});
   width: 100%;
+  height: 100%; 
 `;
 
 const Form = styled.div`
   grid-area: 1 / 4 / 9 / 7;
+  padding: 2rem;
 `;
 
 const Titulo = styled.h1`
@@ -116,24 +118,27 @@ const Contacto = () => {
 
     if (!nombre.trim()) {
       console.log("Sin nombre");
-      alert.show("Por favor, escriba su nombre",{type: "error"})
+      alert.show("Por favor, escriba su nombre", { type: "error" });
       return;
     }
     if (!correo.trim()) {
       console.log("Sin correo");
-      alert.show("Por favor, escriba su correo",{type: "error"})
+      alert.show("Por favor, escriba su correo", { type: "error" });
       return;
     }
     if (!mensaje.trim()) {
       console.log("Sin mensaje");
-      alert.show("Por favor, escriba un mensaje",{type: "error"})
+      alert.show("Por favor, escriba un mensaje", { type: "error" });
       return;
     }
     console.log(nombre);
     console.log(correo);
     console.log(mensaje);
 
-    alert.show("Su mensaje fue enviado, pronto nos pondremos en contacto con usted",{type: "success"})
+    alert.show(
+      "Su mensaje fue enviado, pronto nos pondremos en contacto con usted",
+      { type: "success" }
+    );
     setNombre("");
     setCorreo("");
     setMensaje("");
