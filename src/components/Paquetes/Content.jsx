@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Img from "../../../public/images/business.jpg";
 
 export const Content = styled.div`
-  grid-area: 2 / 1 / 12 / 13;
+  grid-area: 2 / 2 / 13 / 13;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(10, 1fr);
@@ -10,7 +10,7 @@ export const Content = styled.div`
   grid-row-gap: 2rem;
   margin: 0;
   padding: 0;
-  height:100%;
+  height: 100%;
   width: auto;
 `;
 

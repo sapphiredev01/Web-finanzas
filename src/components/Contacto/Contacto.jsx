@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-import { useAlert, types } from "react-alert";
+import { useAlert } from "react-alert";
 import emailjs from "emailjs-com";
 import styled from "styled-components";
-import Media from "../UI/Media/index";
 import Container from "../UI/Containers/Containers";
-import Nav from "../UI/Nav/Nav";
 
 const Content = styled.div`
-  grid-area: 2 / 1 / 12 / 13;
+  grid-area: 2 / 2 / 13 / 13;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(8, 1fr);
@@ -21,33 +19,33 @@ const ImageSquare = styled.img`
   grid-area: 1 / 1 / 9 / 4;
   background-image: url(${(props) => props.src});
   width: 100%;
-  height: 100%; 
+  height: 100%;
 `;
 
 const Form = styled.div`
   grid-area: 1 / 4 / 9 / 7;
-  padding: 2rem;
+  padding: 1rem;
 `;
 
 const Titulo = styled.h1`
   grid-area: 1 / 4 / 2 / 7;
   text-align: left;
   font: bold 40px Helvetica;
-  margin-left: 30px;
+  margin-left: 15px;
   margin-top: 10px;
   color: #034e80;
 `;
 
 const Info = styled.div`
   grid-area: 2 / 4 / 3 / 7;
-  margin: 0px 30px;
+  margin: 0px 15px;
   display: flex;
   justify-content: space-between;
 `;
 
 const InfoItem = styled.div`
   text-align: left;
-  font: 15px Helvetica;
+  font: 13px Helvetica;
   font-weight: ${(props) => (props.alt ? "bold" : "normal")};
   color: #000000;
 `;
@@ -56,13 +54,13 @@ const Subtitle = styled.h2`
   grid-area: 3 / 4 / 4 / 7;
   text-align: left;
   font: bold 25px Helvetica;
-  margin-left: 30px;
+  margin-left: 15px;
   color: #034e80;
 `;
 
 const InputsLabelDiv = styled.div`
   grid-area: ${(props) => (props.down ? "6 / 4 / 7 / 7" : "4 / 4 / 5 / 7")};
-  margin: 0px 30px;
+  margin: 0px 15px;
   display: flex;
   justify-content: space-between;
 `;
@@ -75,7 +73,7 @@ const Label = styled.p`
 
 const InputsFormDiv = styled.div`
   grid-area: ${(props) => (props.down ? "7 / 4 / 8 / 7" : "5 / 4 / 6 / 7")};
-  margin: 0px 30px;
+  margin: 0px 15px;
   display: flex;
   justify-content: space-between;
   text-align: left;
@@ -132,41 +130,36 @@ const Contacto = () => {
       alert.show("Por favor, escriba un mensaje", { type: "error" });
       return;
     }
-<<<<<<< HEAD
-
     emailjs
-      .sendForm("service_2xv3n5g", "template_8tzti5d", e.target, "8xSfqOfcIitvYSLaO")
+      .sendForm(
+        "service_2xv3n5g",
+        "template_8tzti5d",
+        e.target,
+        "8xSfqOfcIitvYSLaO"
+      )
       .then(
         (result) => {
-          alert.show("Su mensaje fue enviado, pronto nos pondremos en contacto con usted", { type: "success" });
+          alert.show(
+            "Su mensaje fue enviado, pronto nos pondremos en contacto con usted",
+            { type: "success" }
+          );
           setNombre("");
           setCorreo("");
           setMensaje("");
           console.log(result.text);
         },
         (error) => {
-          alert.show("Se produjo un error al enviar el correo, por favor intente de nuevo",{ type: "error" });
+          alert.show(
+            "Se produjo un error al enviar el correo, por favor intente de nuevo",
+            { type: "error" }
+          );
           console.log(error.text);
         }
       );
-=======
-    console.log(nombre);
-    console.log(correo);
-    console.log(mensaje);
-
-    alert.show(
-      "Su mensaje fue enviado, pronto nos pondremos en contacto con usted",
-      { type: "success" }
-    );
-    setNombre("");
-    setCorreo("");
-    setMensaje("");
->>>>>>> scroll
   };
 
   return (
     <Container grid>
-      <Media />
       <Content>
         <ImageSquare src="../../../public/images/contact.jpg" />
         <Form>
@@ -220,7 +213,6 @@ const Contacto = () => {
           </form>
         </Form>
       </Content>
-      <Nav />
     </Container>
   );
 };

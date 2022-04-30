@@ -7,7 +7,6 @@ import Nav from "../UI/Nav/Nav";
 const Inicio = () => {
   return (
     <Container grid>
-      <Media />
       <Content>
         <Left>
           <Title>El crecimiento esta asegurado.</Title>
@@ -21,7 +20,6 @@ const Inicio = () => {
           <Hexagon src='../../../public/images/hexagono.svg' />
         </Right>
       </Content>
-      <Nav />
     </Container>
   );
 };

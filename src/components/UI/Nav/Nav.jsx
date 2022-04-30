@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wrapper, Stepper, Step, Title, Line } from "./NavElements";
+import { Wrapper, Stepper, Step, Title } from "./NavElements";
 
 const Nav = () => {
   return (
@@ -23,7 +23,6 @@ const Nav = () => {
         <Step>
           <Title>CONTACTO</Title>
         </Step>
-        <Line />
       </Stepper>
     </Wrapper>
   );

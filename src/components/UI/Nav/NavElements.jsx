@@ -1,17 +1,15 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  grid-area: 12 / 1 / 13 / 13;
-  margin-bottom: 1.5rem;
-  margin-top: 1.5rem;
+  grid-area: 1 / 1 / 13 / 2;
+  position: fixed;
 `;
 
 export const Stepper = styled.ol`
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-  padding: 0;
-  margin: 0;
+  padding-left: 1.5rem;
+  --size: 1rem;
+  --spacing: 0.5rem;
+  padding-top: 1rem;
 `;
 
 export const Title = styled.p`
@@ -20,34 +18,35 @@ export const Title = styled.p`
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
-  font-size: .8rem;
+  font-size: 0.8rem;
 `;
 
 export const Step = styled.li`
-  flex: 1;
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  &:after {
-    --size: .5rem;
+  gap: 1rem;
+  padding-bottom: 4rem;
+  position: relative;
+  &:before {
+    --size: 1rem;
     content: "";
     position: relative;
     z-index: 1;
-    display: block;
-    width: var(--size);
+    flex: 0 0 var(--size);
     height: var(--size);
     border-radius: 50%;
-    margin: auto;
-    background: #000;
+    background-color: black;
+  }
+  &:not(:last-child):after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transform: translateX(1.5rem);
+    width: 2px;
+    background-color: black;
+    top: calc(var(--size) + var(--spacing));
+    transform: translateX(calc(var(--size) / 2));
+    bottom: var(--spacing);
   }
 `;
-
-export const Line = styled.div`
-  position: absolute;
-  height: 2px;
-  width: 84%;
-  background: #000;
-  bottom: 2px;
-  left: 8%;
-`; 	  
-

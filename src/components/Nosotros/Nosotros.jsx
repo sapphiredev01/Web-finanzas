@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 import Media from "../UI/Media/index";
 import Container from "../UI/Containers/Containers";
 import Nav from "../UI/Nav/Nav";
 
 const Content = styled.div`
-  grid-area: 2 / 1 / 12 / 13;
+  grid-area: 2 / 2 / 13 / 13;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(5, 0fr);
@@ -27,6 +27,8 @@ const Middle = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
+  position: relative;
+  right: 40%;
 `;
 
 const Right = styled.div`
@@ -45,36 +47,35 @@ const Title = styled.h1`
   opacity: 1;
   width: 400px;
   height: 150px;
-  margin-left: 60px;
 `;
 
 const Text = styled.div`
-  text-align: left;
+  text-align: justify;
+  text-justify: inter-word;
   font: bold 16px Helvetica;
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
-  width: 525px;
-  height: 150px;
+  margin-left: 40%;
+  width: 100%;
 `;
 
 const ImageHor = styled.img`
   background-image: url(${(props) => props.src});
-  height: 200px;
-  margin-right: 50px;
+  height: 13rem;
+  margin-right: 20%;
 `;
 
 const ImageVer = styled.img`
   background-image: url(${(props) => props.src});
-  height: 250px;
+  height: 16rem;
   position: relative;
-  margin-bottom: -20px;
+  margin-bottom: -5%;
 `;
 
 const Nosotros = () => {
   return (
     <Container grid>
-      <Media />
       <Content>
         <Middle>
           <Title>Los expertos que necesitas.</Title>
@@ -90,7 +91,6 @@ const Nosotros = () => {
           <ImageHor src="../../../public/images/business.jpg" />
         </Right>
       </Content>
-      <Nav />
     </Container>
   );
 };

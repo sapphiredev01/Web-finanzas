@@ -1,13 +1,10 @@
 import React from "react";
 import Container from "../UI/Containers/Containers";
-import Media from "../UI/Media/index";
 import { Content, TitleContainer, Title, Div1, Div2, Div3 } from "./Content";
-import Nav from "../UI/Nav/Nav";
 
 const Paquetes = () => {
   return (
     <Container grid>
-      <Media />
       <Content>
         <TitleContainer>
           <Title>
@@ -24,7 +21,6 @@ const Paquetes = () => {
         </Div2>
         <Div3 />
       </Content>
-      <Nav />
     </Container>
   );
 };
