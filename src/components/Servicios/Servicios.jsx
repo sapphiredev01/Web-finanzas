@@ -42,7 +42,7 @@ const Text = styled.div`
 
 const Servicios = () => {
   return (
-    <Pararelogram>
+    <Pararelogram id="servicios">
       <Wrapper>
         <Title>SERVICIOS</Title>
         <Text>

@@ -11,6 +11,8 @@ export const Content = styled.div`
   margin: 0;
   padding: 0;
   height: 100%;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
   width: auto;
 `;
 

@@ -1,12 +1,10 @@
-import React from 'react';
+import React from "react";
 import Container from "../UI/Containers/Containers";
-import Media from "../UI/Media/index";
-import { Content, Left, Right, Title, Text, Hexagon } from './Content';
-import Nav from "../UI/Nav/Nav";
+import { Content, Left, Right, Title, Text, Hexagon } from "./Content";
 
 const Inicio = () => {
   return (
-    <Container grid>
+    <Container id="inicio" grid>
       <Content>
         <Left>
           <Title>El crecimiento esta asegurado.</Title>
@@ -17,7 +15,7 @@ const Inicio = () => {
           </Text>
         </Left>
         <Right>
-          <Hexagon src='../../../public/images/hexagono.svg' />
+          <Hexagon src="../../../public/images/hexagono.svg" />
         </Right>
       </Content>
     </Container>

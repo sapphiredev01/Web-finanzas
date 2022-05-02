@@ -4,7 +4,7 @@ import { Content, TitleContainer, Title, Div1, Div2, Div3 } from "./Content";
 
 const Paquetes = () => {
   return (
-    <Container grid>
+    <Container id="paquetes" grid>
       <Content>
         <TitleContainer>
           <Title>

@@ -16,6 +16,7 @@ export const Left = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 3rem;
+  padding-bottom: 3rem;
 `;
 
 export const Title = styled.h1`
@@ -43,4 +44,5 @@ export const Right = styled.div`
 export const Hexagon = styled.img`
   width: 100%;
   height: 100%;
+  padding-bottom: 5rem;
 `;

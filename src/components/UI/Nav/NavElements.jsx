@@ -1,7 +1,7 @@
 import styled from "styled-components";
+import { Link } from "react-scroll";
 
 export const Wrapper = styled.div`
-  grid-area: 1 / 1 / 13 / 2;
   position: fixed;
   height: 100%;
   display: flex;
@@ -24,6 +24,22 @@ export const Title = styled.p`
   font-size: 0.8rem;
 `;
 
+export const StyledLink = styled(Link).attrs(() => ({
+  activeClass: "active",
+  spy: true,
+  smooth: true,
+  duration: 500,
+  offset: -70,
+}))`
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.3);
+  }
+  &.active {
+    border-bottom: 3px solid #034e80;
+  }
+`;
+
 export const Step = styled.li`
   display: flex;
   gap: 1rem;
@@ -38,7 +54,7 @@ export const Step = styled.li`
     flex: 0 0 var(--size);
     height: var(--size);
     border-radius: 50%;
-    background-color: black;
+    background-color: #034e80;
   }
   &:not(:last-child):after {
     content: "";
@@ -48,7 +64,7 @@ export const Step = styled.li`
     bottom: 0;
     transform: translateX(1.5rem);
     width: 2px;
-    background-color: black;
+    background-color: #034e80;
     top: calc(var(--size) + var(--spacing));
     transform: translateX(calc(var(--size) / 2));
     bottom: var(--spacing);

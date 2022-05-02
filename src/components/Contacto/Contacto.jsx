@@ -159,7 +159,7 @@ const Contacto = () => {
   };
 
   return (
-    <Container grid>
+    <Container id="contacto" grid>
       <Content>
         <ImageSquare src="../../../public/images/contact.jpg" />
         <Form>

@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Media from "../UI/Media/index";
 import Container from "../UI/Containers/Containers";
-import Nav from "../UI/Nav/Nav";
 
 const Content = styled.div`
   grid-area: 2 / 2 / 13 / 13;
@@ -75,7 +73,7 @@ const ImageVer = styled.img`
 
 const Nosotros = () => {
   return (
-    <Container grid>
+    <Container id="nosotros" grid>
       <Content>
         <Middle>
           <Title>Los expertos que necesitas.</Title>
