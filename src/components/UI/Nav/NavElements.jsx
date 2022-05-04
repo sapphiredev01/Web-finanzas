@@ -31,9 +31,11 @@ export const StyledLink = styled(Link).attrs(() => ({
   duration: 500,
   offset: -70,
 }))`
+  height: 15px;
   &:hover {
     cursor: pointer;
     transform: scale(1.3);
+    border-bottom: 3px solid #034e80;
   }
   &.active {
     border-bottom: 3px solid #034e80;
