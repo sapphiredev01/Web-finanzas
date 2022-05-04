@@ -35,10 +35,12 @@ export const StyledLink = styled(Link).attrs(() => ({
   &:hover {
     cursor: pointer;
     transform: scale(1.3);
+    transition: 0.2s ease-in-out;
     border-bottom: 3px solid #034e80;
   }
   &.active {
     border-bottom: 3px solid #034e80;
+    transition: 0.2s ease-in-out;
   }
 `;
 
@@ -47,7 +49,6 @@ export const Step = styled.li`
   gap: 1rem;
   padding-bottom: 4rem;
   position: relative;
-  cursor: pointer;
   &:before {
     --size: 1rem;
     content: "";
