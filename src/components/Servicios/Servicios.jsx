@@ -2,6 +2,27 @@ import React from "react";
 import styled from "styled-components";
 import ServiceBar from "./ServiceBar";
 
+const size = {
+  mobileS: "320px",
+  mobileM: "375px",
+  mobileL: "425px",
+  tablet: "768px",
+  laptop: "1024px",
+  laptopL: "1440px",
+  desktop: "2560px",
+};
+
+const device = {
+  mobileS: `(max-width: ${size.mobileS})`,
+  mobileM: `(max-width: ${size.mobileM})`,
+  mobileL: `(max-width: ${size.mobileL})`,
+  tablet: `(max-width: ${size.tablet})`,
+  laptop: `(max-width: ${size.laptop})`,
+  laptopL: `(max-width: ${size.laptopL})`,
+  desktop: `(max-width: ${size.desktop})`,
+  desktopL: `(max-width: ${size.desktop})`,
+};
+
 const Pararelogram = styled.div`
   grid-area: 2 / 2 / 13 / 13;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
@@ -14,6 +35,11 @@ const Pararelogram = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media ${device.tablet} {
+    clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+
+  }
 `;
 
 const Wrapper = styled.div`

@@ -4,6 +4,27 @@ import emailjs from "emailjs-com";
 import styled from "styled-components";
 import Container from "../UI/Containers/Containers";
 
+const size = {
+  mobileS: "320px",
+  mobileM: "375px",
+  mobileL: "425px",
+  tablet: "768px",
+  laptop: "1024px",
+  laptopL: "1440px",
+  desktop: "2560px",
+};
+
+const device = {
+  mobileS: `(max-width: ${size.mobileS})`,
+  mobileM: `(max-width: ${size.mobileM})`,
+  mobileL: `(max-width: ${size.mobileL})`,
+  tablet: `(max-width: ${size.tablet})`,
+  laptop: `(max-width: ${size.laptop})`,
+  laptopL: `(max-width: ${size.laptopL})`,
+  desktop: `(max-width: ${size.desktop})`,
+  desktopL: `(max-width: ${size.desktop})`,
+};
+
 const Content = styled.div`
   grid-area: 2 / 2 / 13 / 13;
   display: grid;
@@ -13,6 +34,16 @@ const Content = styled.div`
   grid-row-gap: 0px;
   margin: 100px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  @media ${device.tablet} {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin: 0px;
+
+  }
 `;
 
 const ImageSquare = styled.img`
@@ -20,11 +51,19 @@ const ImageSquare = styled.img`
   background-image: url(${(props) => props.src});
   width: 100%;
   height: 100%;
+
+  @media ${device.tablet} {
+    grid-area: 1 / 1 / 5 / 4;
+  }
 `;
 
 const Form = styled.div`
   grid-area: 1 / 4 / 9 / 7;
   padding: 1rem;
+
+  @media ${device.tablet} {
+    grid-area: 5 / 1 / 13 / 4;
+  }
 `;
 
 const Titulo = styled.h1`
