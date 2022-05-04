@@ -3,6 +3,7 @@ import Inicio from "./components/Inicio/Inicio";
 import Nosotros from "./components/Nosotros/Nosotros";
 import Servicios from "./components/Servicios/Servicios";
 import Contacto from "./components/Contacto/Contacto";
+import Calculadora from "./components/Calculadora/Calculadora";
 import Paquetes from "./components/Paquetes/Paquetes";
 import Nav from "./components/UI/Nav/Nav";
 import Media from "./components/UI/Media/index";
@@ -20,6 +21,7 @@ function App() {
       <Nosotros />
       <Servicios />
       <Paquetes />
+      <Calculadora />
       <Contacto />
     </div>
   );

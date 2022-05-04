@@ -3,7 +3,7 @@ import styled from "styled-components";
 import ServiceBar from "./ServiceBar";
 
 const Pararelogram = styled.div`
-  grid-area: 2 / 2 / 13 / 13;
+  grid-area: 1 / 2 / 11 / 13;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
   background: #034e80;
   width: 85%;
@@ -14,6 +14,7 @@ const Pararelogram = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2rem;
 `;
 
 const Wrapper = styled.div`

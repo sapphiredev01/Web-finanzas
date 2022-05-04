@@ -26,7 +26,9 @@ const Nav = () => {
           </StyledLink>
         </Step>
         <Step>
-          <Title>CALCULADORA</Title>
+          <StyledLink to="calculadora">
+            <Title>CALCULADORA</Title>
+          </StyledLink>
         </Step>
         <Step>
           <StyledLink to="contacto">

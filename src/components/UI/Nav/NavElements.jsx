@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-scroll";
 
 export const Wrapper = styled.div`
+  grid-area: 1 / 1 / 11 / 2;
   position: fixed;
   height: 100%;
   display: flex;
