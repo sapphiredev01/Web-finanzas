@@ -1,6 +1,27 @@
 import styled from "styled-components";
 import Img from "../../../public/images/business.jpg";
 
+const size = {
+  mobileS: "320px",
+  mobileM: "375px",
+  mobileL: "425px",
+  tablet: "768px",
+  laptop: "1024px",
+  laptopL: "1440px",
+  desktop: "2560px",
+};
+
+const device = {
+  mobileS: `(max-width: ${size.mobileS})`,
+  mobileM: `(max-width: ${size.mobileM})`,
+  mobileL: `(max-width: ${size.mobileL})`,
+  tablet: `(max-width: ${size.tablet})`,
+  laptop: `(max-width: ${size.laptop})`,
+  laptopL: `(max-width: ${size.laptopL})`,
+  desktop: `(max-width: ${size.desktop})`,
+  desktopL: `(max-width: ${size.desktop})`,
+};
+
 export const Content = styled.div`
   grid-area: 2 / 2 / 13 / 13;
   display: grid;
@@ -42,6 +63,10 @@ export const Div1 = styled.div`
   box-shadow: 0px 3px 6px #00000029;
   padding-left: 1rem;
   overflow: hidden;
+
+  @media ${device.tablet} {
+    grid-area: 3 / 1 / 7 / 13;
+  }
 `;
 
 export const Div2 = styled.div`
@@ -50,6 +75,10 @@ export const Div2 = styled.div`
   box-shadow: 0px 3px 6px #00000029;
   padding-left: 1rem;
   overflow: hidden;
+
+  @media ${device.tablet} {
+    grid-area: 7 / 1 / 11 / 13;
+  }
 `;
 
 export const Div3 = styled.div`
@@ -57,4 +86,8 @@ export const Div3 = styled.div`
   box-shadow: 0px 3px 6px #00000029;
   background-image: url(${Img});
   background-size: cover;
+
+  @media ${device.tablet} {
+    display: none;
+  }
 `;

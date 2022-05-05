@@ -42,7 +42,7 @@ const Content = styled.div`
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     margin: 0px;
-
+    margin-top: 200px;
   }
 `;
 
