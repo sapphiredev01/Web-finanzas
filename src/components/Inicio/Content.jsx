@@ -1,5 +1,26 @@
 import styled from "styled-components";
 
+const size = {
+  mobileS: "320px",
+  mobileM: "375px",
+  mobileL: "425px",
+  tablet: "768px",
+  laptop: "1024px",
+  laptopL: "1440px",
+  desktop: "2560px",
+};
+
+const device = {
+  mobileS: `(max-width: ${size.mobileS})`,
+  mobileM: `(max-width: ${size.mobileM})`,
+  mobileL: `(max-width: ${size.mobileL})`,
+  tablet: `(max-width: ${size.tablet})`,
+  laptop: `(max-width: ${size.laptop})`,
+  laptopL: `(max-width: ${size.laptopL})`,
+  desktop: `(max-width: ${size.desktop})`,
+  desktopL: `(max-width: ${size.desktop})`,
+};
+
 export const Content = styled.div`
   grid-area: 2 / 2 / 13 / 13;
   display: grid;
@@ -17,6 +38,11 @@ export const Left = styled.div`
   align-items: center;
   padding: 0 3rem;
   padding-bottom: 3rem;
+
+  @media ${device.tablet} {
+    grid-area: 3 / 1 / 6 / 5;
+   
+  }
 `;
 
 export const Title = styled.h1`
@@ -39,10 +65,18 @@ export const Right = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media ${device.tablet} {
+    grid-area: 1 / 2 / 3 / 4;
+  }
 `;
 
 export const Hexagon = styled.img`
   width: 100%;
   height: 100%;
   padding-bottom: 5rem;
+
+  @media ${device.tablet} {
+    padding: 0%;
+  }
 `;
