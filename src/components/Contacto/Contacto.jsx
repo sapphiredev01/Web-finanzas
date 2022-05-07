@@ -41,8 +41,7 @@ const Content = styled.div`
     grid-template-rows: repeat(8, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    margin: 0px;
-    margin-top: 200px;
+    margin: auto;
   }
 `;
 
