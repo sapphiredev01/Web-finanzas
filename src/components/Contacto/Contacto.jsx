@@ -32,7 +32,7 @@ const Content = styled.div`
   grid-template-rows: repeat(8, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  margin: 100px;
+  margin: 4rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
   @media ${device.tablet} {
@@ -42,12 +42,16 @@ const Content = styled.div`
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     margin: auto;
+    margin: 0;
   }
 `;
 
 const ImageSquare = styled.img`
   grid-area: 1 / 1 / 9 / 4;
   background-image: url(${(props) => props.src});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
   height: 100%;
 

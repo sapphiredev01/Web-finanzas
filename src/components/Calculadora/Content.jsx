@@ -50,20 +50,22 @@ export const Title = styled.h1`
   }
 `;
 export const Div1 = styled.div`
-  grid-area: 3 / 1 / 11 / 5;
+  grid-area: 6 / 1 / 11 / 5;
   background-color: var(--blue);
   padding-left: 1rem;
   overflow: hidden;
+  border-radius: 0.5rem;
   @media (max-width: 768px) {
     grid-area: 2 / 1 / 2 / 4;
     padding-left: 0;
   }
 `;
 export const Div2 = styled.div`
-  grid-area: 3 / 5 / 11 / 12;
+  grid-area: 6 / 5 / 11 / 13;
   box-shadow: 0px 3px 6px #00000029;
   padding-left: 1rem;
   overflow: hidden;
+  border-radius: 0.5rem;
   @media (max-width: 768px) {
     grid-area: 3 / 1 / 4 / 4;
     padding-left: 0;
