@@ -10,7 +10,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 90%;
+  width: 90vw;
   margin: 0 auto;
   @media (max-width: 768px) {
     width: 100%;
