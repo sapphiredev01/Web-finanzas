@@ -11,6 +11,10 @@ html, body {
   scrollbar-width: none;  /* Firefox */
 }
 
+:root{
+  --blue: #034e80;
+}
+
 body::-webkit-scrollbar {
   display: none;
 }

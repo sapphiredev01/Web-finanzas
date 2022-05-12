@@ -1,9 +1,10 @@
 import React from "react";
-import { Wrapper, Stepper, Step, Title, StyledLink } from "./NavElements";
+import { Wrapper, Stepper, Step, Title, StyledLink, StyledMenu } from "./NavElements";
 
 const Nav = () => {
   return (
     <Wrapper>
+      <StyledMenu />
       <Stepper>
         <Step>
           <StyledLink to="inicio">
@@ -26,7 +27,9 @@ const Nav = () => {
           </StyledLink>
         </Step>
         <Step>
-          <Title>CALCULADORA</Title>
+          <StyledLink to="calculadora">
+            <Title>CALCULADORA</Title>
+          </StyledLink>
         </Step>
         <Step>
           <StyledLink to="contacto">
