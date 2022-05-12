@@ -11,7 +11,7 @@ export const Content = styled.div`
   padding: 0;
   height: 100%;
   margin-left: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
   width: auto;
   @media (max-width: 768px) {
     grid-area: 1 / 1 / 11 / 13;

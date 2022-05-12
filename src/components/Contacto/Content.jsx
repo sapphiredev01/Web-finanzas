@@ -28,7 +28,7 @@ export const Content = styled.div`
   grid-template-rows: repeat(8, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  margin: 4rem;
+  margin-left: 8rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
   @media ${device.tablet} {

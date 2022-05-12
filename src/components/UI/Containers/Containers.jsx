@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const Container = styled.div`
   display: ${(props) => (props.grid ? "grid" : "flex")};
-  display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
   grid-column-gap: 0px;

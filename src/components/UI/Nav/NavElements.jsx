@@ -31,7 +31,9 @@ export const Wrapper = styled.div`
   align-items: center;
 
   @media ${device.tablet} {
-    display: none;
+    height: 0;
+    position: absolute;
+    top: 2%;
   }
 `;
 

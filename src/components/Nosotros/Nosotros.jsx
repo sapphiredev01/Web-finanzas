@@ -16,8 +16,8 @@ export default function Nosotros() {
           </content.Text>
         </content.Left>
         <content.Right>
-          <content.ImageVer src="../../../public/images/business4.jpg" />
-          <content.ImageHor src="../../../public/images/business.jpg" />
+          <content.ImageVer src="../../../public/business4.jpg" />
+          <content.ImageHor src="../../../public/business.jpg" />
         </content.Right>
       </content.Content>
     </Container>

@@ -57,9 +57,9 @@ const Contacto = () => {
   };
 
   return (
-    <Container id="contacto" grid>
+    <Container id="contacto">
       <Content.Content>
-        <Content.ImageSquare src="../../../public/images/contact.jpg" />
+        <Content.ImageSquare src="../../../public/contact.jpg" />
         <Content.Form>
           <Content.Titulo>CONTACTANOS</Content.Titulo>
           <Content.Info>

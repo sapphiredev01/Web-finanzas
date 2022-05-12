@@ -28,6 +28,16 @@ export const Content = styled.div`
   grid-template-rows: repeat(5, 0fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  @media (max-width: 768px) {
+    grid-area: 1 / 1 / 11 / 13;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    margin: 0;
+    width: 100%;
+    place-items: center;
+  }
 `;
 
 export const Left = styled.div`
@@ -37,9 +47,12 @@ export const Left = styled.div`
   justify-content: flex-end;
   align-items: flex-start;
   position: relative;
-
   @media ${device.tablet} {
     grid-area: 1 / 1 / 4 / 5;
+    align-items: center;
+    margin-top: 4rem;
+    width: 100%;
+    justify-content: center; 
   }
 `;
 
@@ -51,8 +64,10 @@ export const Right = styled.div`
   align-items: flex-end;
 
   @media ${device.tablet} {
-    grid-area: 4 / 1 / 6 / 5;
-    margin-top: 45%;
+    grid-area: 4 / 1 / 6 /5;
+    margin-bottom: 2rem;
+    width: 100%;
+    justify-content: center;
   }
 `;
 
@@ -67,7 +82,18 @@ export const Title = styled.h1`
   margin-left: 20%;
 
   @media ${device.tablet} {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left: 0%;
+    font-size: 2rem;
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    justify-self: center;
+    padding-top: 4rem;
   }
 `;
 
@@ -83,6 +109,7 @@ export const Text = styled.div`
 
   @media ${device.tablet} {
     margin-left: 0%;
+    text-align: center;
   }
 `;
 
@@ -90,9 +117,6 @@ export const ImageHor = styled.img`
   background-image: url(${(props) => props.src});
   height: 13rem;
   margin-right: 20%;
-  @media ${device.tablet} {
-   
-  }
 `;
 
 export const ImageVer = styled.img`
@@ -101,6 +125,6 @@ export const ImageVer = styled.img`
   position: relative;
   margin-bottom: -5%;
   @media ${device.tablet} {
-    margin-bottom: -30%;
+    margin-right: 1rem;
   }
 `;
