@@ -15,7 +15,7 @@ const Inicio = () => {
           </Text>
         </Left>
         <Right>
-          <Hexagon src="../../../public/images/hexagono.svg" />
+          <Hexagon src="../../../public/hexagono.svg" />
         </Right>
       </Content>
     </Container>

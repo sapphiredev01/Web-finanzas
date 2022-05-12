@@ -143,8 +143,8 @@ const Nosotros = () => {
           </Text>
         </Left>
         <Right>
-          <ImageVer src="../../../public/images/business4.jpg" />
-          <ImageHor src="../../../public/images/business.jpg" />
+          <ImageVer src="../../../public/business4.jpg" />
+          <ImageHor src="../../../public/business.jpg" />
         </Right>
       </Content>
     </Container>

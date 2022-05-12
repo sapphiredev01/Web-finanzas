@@ -66,6 +66,7 @@ export const Title = styled.h1`
 
 export const Text = styled.div`
   font: Helvetica Neue;
+  font-weight: bold;
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
