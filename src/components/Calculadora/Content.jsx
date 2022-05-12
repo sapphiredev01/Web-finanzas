@@ -14,12 +14,12 @@ export const Content = styled.div`
   margin-bottom: 2rem;
   width: auto;
   @media (max-width: 768px) {
+    grid-area: 1 / 1 / 11 / 13;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(10, 1fr);
     grid-column-gap: 0;
     grid-row-gap: 0;
-    margin-left: 0;
-    margin-bottom: 0;
+    margin: 0;
     width: 100%;
   }
 `;

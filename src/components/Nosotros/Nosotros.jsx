@@ -30,6 +30,16 @@ const Content = styled.div`
   grid-template-rows: repeat(5, 0fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  media (max-width: 768px) {
+  grid-area: 1 / 1 / 11 / 13;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    margin: 0;
+    width: 100%;
+    place-items: center;
+  }
 `;
 
 const Left = styled.div`
@@ -42,6 +52,9 @@ const Left = styled.div`
 
   @media ${device.tablet} {
     grid-area: 1 / 1 / 4 / 5;
+    align-items: center;
+    margin-top: 2rem;
+    width: 100%;
   }
 `;
 
@@ -55,6 +68,7 @@ const Right = styled.div`
   @media ${device.tablet} {
     grid-area: 4 / 1 / 6 / 5;
     margin-top: 45%;
+    align-items: center;
   }
 `;
 
@@ -70,6 +84,11 @@ const Title = styled.h1`
 
   @media ${device.tablet} {
     margin-left: 0%;
+    font-size: 2rem;
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+    margin-right: 2rem;
   }
 `;
 
@@ -85,6 +104,9 @@ const Text = styled.div`
 
   @media ${device.tablet} {
     margin-left: 0%;
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-right: 2rem;
   }
 `;
 

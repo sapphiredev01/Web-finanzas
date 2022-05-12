@@ -11,10 +11,8 @@ export default function Calculadora() {
             <h1>Calculadora</h1>
           </Content.Title>
         </Content.TitleContainer>
-        <Content.Div1>
-        </Content.Div1>
-        <Content.Div2>
-        </Content.Div2>
+        <Content.Div1 />
+        <Content.Div2 />
       </Content.Content>
     </Container>
   );
