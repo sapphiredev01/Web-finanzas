@@ -68,6 +68,9 @@ export const Title = styled.h1`
 
   @media ${device.tablet} {
     margin-left: 0%;
+    font: bold 40px Helvetica;
+    width: auto;
+    text-align: center;
   }
 `;
 
@@ -83,6 +86,8 @@ export const Text = styled.div`
 
   @media ${device.tablet} {
     margin-left: 0%;
+    width: 80%;
+
   }
 `;
 
@@ -90,9 +95,6 @@ export const ImageHor = styled.img`
   background-image: url(${(props) => props.src});
   height: 13rem;
   margin-right: 20%;
-  @media ${device.tablet} {
-   
-  }
 `;
 
 export const ImageVer = styled.img`
@@ -102,5 +104,6 @@ export const ImageVer = styled.img`
   margin-bottom: -5%;
   @media ${device.tablet} {
     margin-bottom: -30%;
+    margin-right: 5%;
   }
 `;

@@ -58,6 +58,7 @@ export const Div1 = styled.div`
   @media (max-width: 768px) {
     grid-area: 2 / 1 / 2 / 4;
     padding-left: 0;
+    margin-right: 2rem;
   }
 `;
 export const Div2 = styled.div`
@@ -69,5 +70,6 @@ export const Div2 = styled.div`
   @media (max-width: 768px) {
     grid-area: 3 / 1 / 4 / 4;
     padding-left: 0;
+    margin-right: 2rem;
   }
 `;

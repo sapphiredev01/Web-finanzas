@@ -35,7 +35,8 @@ export const Pararelogram = styled.div`
   margin-bottom: 2rem;
 
   @media ${device.tablet} {
-    clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+    clip-path: none;
+    left: 10%;
 
   }
 `;

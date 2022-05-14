@@ -66,6 +66,7 @@ export const Div1 = styled.div`
 
   @media ${device.tablet} {
     grid-area: 3 / 1 / 7 / 13;
+    margin-right: 2rem;
   }
 `;
 
@@ -78,6 +79,7 @@ export const Div2 = styled.div`
 
   @media ${device.tablet} {
     grid-area: 7 / 1 / 11 / 13;
+    margin-right: 2rem;
   }
 `;
 

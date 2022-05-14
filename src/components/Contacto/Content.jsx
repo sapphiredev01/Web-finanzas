@@ -39,6 +39,7 @@ export const Content = styled.div`
     grid-row-gap: 0px;
     margin: auto;
     margin: 0;
+    margin-right: 2rem;
   }
 `;
 
@@ -78,6 +79,7 @@ export const Info = styled.div`
   grid-area: 2 / 4 / 3 / 7;
   margin: 0px 15px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
 `;
 
