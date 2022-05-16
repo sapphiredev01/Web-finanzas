@@ -1,8 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "../UI/Containers/Containers";
 import * as Content from "./Content";
+import BarChart from "./BarChart";
 
-export default function Calculadora() {
+const Calculadora = () => {
+  const [userInput, setUserInput] = useState({
+    enteredAmount: "",
+    enteredTime: "",
+  });
+
+  const amountInputHandler = (event) => {
+    setUserInput((prevState) => {
+      return {
+        ...prevState,
+        enteredAmount: event.target.value,
+      };
+    });
+  };
+
+  const timeInputHandler = (event) => {
+    setUserInput((prevState) => {
+      return {
+        ...prevState,
+        enteredTime: event.target.value,
+      };
+    }
+    );
+  };
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+
+    console.log(userInput);
+  };
+
   return (
     <Container id="calculadora" grid>
       <Content.Content>
@@ -15,16 +46,29 @@ export default function Calculadora() {
           <Content.ImageStyled src="../../../public/bear_bull.png" />
         </Content.DivImage>
         <Content.Div1>
-          <Content.FormStyled>
+          <Content.FormStyled onSubmit={submitHandler} >
             <Content.LabelStyled>Capital</Content.LabelStyled>
-            <Content.InputStyled />
+            <Content.InputStyled type="number" onChange={amountInputHandler} />
             <Content.LabelStyled>Plazo</Content.LabelStyled>
-            <Content.InputStyled />
-            <Content.ButtonStyled>Calcular rendimiento</Content.ButtonStyled>
+            <Content.Select onChange={timeInputHandler} >
+              <option value="" hidden>
+                Seleccione una opción
+              </option>
+              <option value="1">Un año</option>
+              <option value="2">Tres años</option>
+              <option value="3">10 años</option>
+            </Content.Select>
+            <Content.ButtonStyled type="submit" >
+              Calcular rendimiento
+            </Content.ButtonStyled>
           </Content.FormStyled>
         </Content.Div1>
-        <Content.Div2></Content.Div2>
+        <Content.Div2>
+          <BarChart />
+        </Content.Div2>
       </Content.Content>
     </Container>
   );
-}
+};
+
+export default Calculadora;

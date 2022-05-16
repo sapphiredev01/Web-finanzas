@@ -57,7 +57,7 @@ const Contacto = () => {
   };
 
   return (
-    <Container id="contacto">
+    <Container style={{marginTop : '8rem', padding : '2rem, 0'}} id="contacto">
       <Content.Content>
         <Content.ImageSquare src="../../../public/contact.jpg" />
         <Content.Form>

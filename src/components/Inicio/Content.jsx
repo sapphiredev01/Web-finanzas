@@ -44,11 +44,21 @@ export const Left = styled.div`
   padding-left: 6rem;
 
   @media ${device.tablet} {
-    grid-area: 3 / 1 / 6 / 5;
+    grid-area: 5 / 1 / 10 / 13;
     padding: 0;
     width: 90%;
     margin: 0 auto;
     padding-left: 0%;
+  }
+
+  @media (max-width: 620px) {
+    grid-area: 4 / 1 / 6 / 13;
+    padding-top: 7rem;
+  }
+
+  @media (max-width: 500px) {
+    grid-area: 3 / 1 / 5 / 13;
+    padding-top: 12rem;
   }
 `;
 
@@ -82,10 +92,7 @@ export const Right = styled.div`
   justify-content: center;
   align-items: center;
   @media ${device.tablet} {
-    grid-area: 1 / 2 / 3 / 4;
-  }
-  @media ${device.mobileL} {
-    
+    grid-area: 1 / 1 / 5 / 5;
   }
 `;
 
@@ -96,5 +103,7 @@ export const Hexagon = styled.img`
 
   @media ${device.tablet} {
     padding: 0%;
+    width: 90%;
+    height: 90%;
   }
 `;
