@@ -27,6 +27,7 @@ export const Menu = styled.nav`
   background: #034e80;
   margin-left: ${(props) => (props.inactive ? "0" : "-200%")};
   transition: all 0.5s;
+  border-radius:  0px 30px 30px 0px;
 `;
 
 export const Lista = styled.ul`
