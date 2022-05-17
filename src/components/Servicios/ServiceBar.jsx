@@ -45,19 +45,19 @@ const Item = styled.div`
   font-size: 6rem;
 
   @media ${device.tablet} {
-    font-size: 3rem;
+    font-size: 4rem;
     margin: 0 1rem;
   }
 `;
 
 const Description = styled.h3`
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: bold;
   margin-top: -18px;
 
   @media ${device.tablet} {
-    font-size: 10px;
+    font-size: 0.8rem;
     margin-top: -5px;
   }
 `;

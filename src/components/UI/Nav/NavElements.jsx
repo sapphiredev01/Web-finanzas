@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Link } from "react-scroll";
-import { FiMenu } from "react-icons/fi";
 
 const size = {
   mobileS: "320px",
@@ -33,20 +32,9 @@ export const Wrapper = styled.div`
   @media ${device.tablet} {
     height: 0;
     position: absolute;
-    top: 2%;
+    top: 0%;
   }
 `;
-
-export const StyledMenu = styled(FiMenu)`
-  font-size: 2rem;
-  cursor: pointer;
-  align-self: flex-start;
-  color: #000000;
-  margin-left: 2rem;
-  @media (min-width: 768px) {
-    display: none;
-  }
-`;  
 
 export const Stepper = styled.ol`
   padding-left: 1.5rem;
