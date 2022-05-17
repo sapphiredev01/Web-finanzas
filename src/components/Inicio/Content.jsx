@@ -81,7 +81,7 @@ export const Text = styled.div`
   color: #000000;
   opacity: 1;
   @media ${device.tablet} {
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
   }
 `;

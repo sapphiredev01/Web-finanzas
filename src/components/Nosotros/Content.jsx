@@ -28,6 +28,7 @@ export const Content = styled.div`
   grid-template-rows: repeat(5, 0fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  justify-items: center;
   @media (max-width: 768px) {
     grid-area: 1 / 1 / 11 / 13;
     grid-template-columns: repeat(1, 1fr);
@@ -35,8 +36,7 @@ export const Content = styled.div`
     grid-column-gap: 0;
     grid-row-gap: 0;
     margin: 0;
-    width: 100%;
-    place-items: center;
+    width: 90%;
   }
 `;
 
@@ -52,7 +52,8 @@ export const Left = styled.div`
     align-items: center;
     margin-top: 4rem;
     width: 100%;
-    justify-content: center; 
+    justify-content: center;
+    margin-left: 2rem;
   }
 `;
 
@@ -62,9 +63,10 @@ export const Right = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
+  margin-left: 4rem;
 
   @media ${device.tablet} {
-    grid-area: 4 / 1 / 6 /5;
+    grid-area: 4 / 1 / 6 / 5;
     margin-bottom: 2rem;
     width: 100%;
     justify-content: center;
@@ -109,6 +111,7 @@ export const Text = styled.div`
 
   @media ${device.tablet} {
     margin-left: 0%;
+    font-size: 1rem;
     text-align: center;
   }
 `;
