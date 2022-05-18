@@ -7,7 +7,6 @@ export const MenuBtn = styled.input`
   color: #000000;
   margin-left: 2rem;
   display: none;
-  position:fixed;
 `;
 
 export const MenuBtnImg = styled.label`
@@ -15,7 +14,7 @@ export const MenuBtnImg = styled.label`
   cursor: pointer;
   color: #000000;
   margin-left: 1rem;
-  position:fixed;
+  position: absolute;
   @media (min-width: 768px) {
     display: none;
   }
@@ -27,13 +26,13 @@ export const Menu = styled.nav`
   background: #034e80;
   margin-left: ${(props) => (props.inactive ? "0" : "-200%")};
   transition: all 0.5s;
-  border-radius:  0px 30px 30px 0px;
+  border-radius: 0px 30px 30px 0px;
 `;
 
 export const Lista = styled.ul`
-  margin: 0;
   list-style: none;
-  padding: 0;
+  margin: 1rem;
+  margin-left: 0;
   display: flex;
   flex-direction: column;
   @media (min-width: 768px) {
@@ -42,17 +41,17 @@ export const Lista = styled.ul`
 `;
 
 export const ListaItem = styled.li`
-border-top: 1px solid #fff;
+  border-top: 1px solid #fff;
+  padding: 0.4rem;
 `;
 
 export const TitleR = styled.p`
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   color: #fff;
   opacity: 1;
   display: flex;
   margin-block-start: 0;
-  
 `;
 
 export const StyledLinkR = styled(Link).attrs(() => ({
@@ -67,10 +66,6 @@ export const StyledLinkR = styled(Link).attrs(() => ({
   padding: 1rem;
   &:hover {
     cursor: pointer;
-    transform: scale(1.3);
-    transition: 0.2s ease-in-out;
-  }
-  &.active {
     transform: scale(1.3);
     transition: 0.2s ease-in-out;
   }
