@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Container from "../UI/Containers/Containers";
 import * as Content from "./Content";
+import imgBearBull from "../../images/bear_bull.png";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -87,7 +88,7 @@ const Calculadora = () => {
           </Content.Title>
         </Content.TitleContainer>
         <Content.DivImage>
-          <Content.ImageStyled src="../../images/bear_bull.png" />
+          <Content.ImageStyled src={imgBearBull} />
         </Content.DivImage>
         <Content.Div1>
           <Content.FormStyled onSubmit={submitHandler}>
