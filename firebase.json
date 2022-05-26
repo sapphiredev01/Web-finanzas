@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/Web-finanzas",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
