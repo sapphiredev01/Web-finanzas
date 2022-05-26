@@ -11,19 +11,20 @@ export const Content = styled.div`
   padding: 0;
   height: 100%;
   margin-left: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
   width: auto;
+  margin-top: 4rem;
   @media (max-width: 1050px) {
     margin-left: 4rem;
   }
   @media (max-width: 768px) {
-    grid-area: 1 / 1 / 13 / 13;
+    width: 90%;
+    grid-area: 1 / 2 / 13 / 13;
     align-content: center;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(10, 1fr);
     grid-column-gap: 0;
     grid-row-gap: 1rem;
-    width: 100%;
     margin-left: 0;
   }
 `;
@@ -71,8 +72,7 @@ export const ImageStyled = styled.img`
   height: auto;
   position: relative;
   @media (max-width: 768px) {
-    width: 40%;
-    top: 25%;
+    visibility: hidden;
   }
 `;
 
@@ -86,7 +86,7 @@ export const Div1 = styled.div`
   justify-content: center;
   align-items: center;
   @media (max-width: 768px) {
-    grid-area: 8 / 1 / 4 / 13;
+    grid-area: 2 / 1 / 7 / 13;
     padding-left: 0;
   }
 `;
@@ -97,8 +97,10 @@ export const Div2 = styled.div`
   padding-left: 1rem;
   overflow: hidden;
   border-radius: 0.5rem;
+  width: 100%;
+  height: 100%;
   @media (max-width: 768px) {
-    grid-area: 8 / 1 / 18 / 13;
+    grid-area: 7 / 1 / 18 / 13;
     padding-left: 0;
   }
 `;
@@ -179,7 +181,7 @@ export const ButtonStyled = styled.button`
   @media (max-width: 768px) {
     font-size: 0.6rem;
     height: 20%;
-    width: 30%;
+    width: 45%;
     margin-top: 1rem;  
   }
 `;

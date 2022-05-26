@@ -120,6 +120,7 @@ const Calculadora = () => {
             data={chartData}
             options={{
               responsive: true,
+              maintainAspectRatio: false,
               plugins: {
                 legend: {
                   position: "top",
