@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Img from "../../../public/business.jpg";
+import Img from "../../images/business.jpg";
 
 const size = {
   mobileS: "320px",

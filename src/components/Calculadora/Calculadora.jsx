@@ -87,7 +87,7 @@ const Calculadora = () => {
           </Content.Title>
         </Content.TitleContainer>
         <Content.DivImage>
-          <Content.ImageStyled src="../../../public/bear_bull.png" />
+          <Content.ImageStyled src="../../images/bear_bull.png" />
         </Content.DivImage>
         <Content.Div1>
           <Content.FormStyled onSubmit={submitHandler}>

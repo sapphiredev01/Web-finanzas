@@ -1,6 +1,8 @@
 import React from "react";
 import Container from "../UI/Containers/Containers";
 import * as content from "./Content"
+import ImgVer from "../../images/business4.jpg";
+import ImgHor from "../../images/business1.jpg";
 
 export default function Nosotros() {
   return (
@@ -16,10 +18,10 @@ export default function Nosotros() {
           </content.Text>
         </content.Left>
         <content.Right>
-          <content.ImageVer src="../../../public/business4.jpg" />
-          <content.ImageHor src="../../../public/business.jpg" />
+          <content.ImageVer src={ImgVer} />
+          <content.ImageHor src={ImgHor} />
         </content.Right>
       </content.Content>
     </Container>
   );
-};
+}

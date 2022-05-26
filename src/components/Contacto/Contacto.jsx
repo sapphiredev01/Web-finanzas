@@ -3,6 +3,7 @@ import { useAlert } from "react-alert";
 import emailjs from "emailjs-com";
 import Container from "../UI/Containers/Containers";
 import * as Content from "./Content";
+import Img from "../../images/contact.jpg";
 
 const Contacto = () => {
   const alert = useAlert();
@@ -59,7 +60,7 @@ const Contacto = () => {
   return (
     <Container style={{marginTop : '8rem', padding : '2rem, 0'}} id="contacto">
       <Content.Content>
-        <Content.ImageSquare src="../../../public/contact.jpg" />
+        <Content.ImageSquare src={Img} />
         <Content.Form>
           <Content.Titulo>CONTACTANOS</Content.Titulo>
           <Content.Info>

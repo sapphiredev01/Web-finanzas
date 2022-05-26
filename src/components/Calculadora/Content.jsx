@@ -11,7 +11,7 @@ export const Content = styled.div`
   padding: 0;
   height: 100%;
   margin-left: 2rem;
-  margin-bottom: 10rem;
+  margin-bottom: 2rem;
   width: auto;
   margin-top: 4rem;
   @media (max-width: 1050px) {
@@ -26,6 +26,7 @@ export const Content = styled.div`
     grid-column-gap: 0;
     grid-row-gap: 1rem;
     margin-left: 0;
+    margin-bottom: 6rem;
   }
 `;
 export const TitleContainer = styled.div`
@@ -179,7 +180,7 @@ export const ButtonStyled = styled.button`
     height: 10%;
   }
   @media (max-width: 768px) {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     height: 20%;
     width: 45%;
     margin-top: 1rem;  
