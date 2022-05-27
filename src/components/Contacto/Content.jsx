@@ -55,6 +55,7 @@ export const ImageSquare = styled.img`
     grid-area: 2 / 1 / 8 / 8;
     width: 100%;
     height: auto;
+    margin-top: 5rem;
   }
 `;
 
