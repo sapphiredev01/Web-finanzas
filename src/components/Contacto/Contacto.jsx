@@ -79,6 +79,7 @@ const Contacto = () => {
               <Content.Label for="name">Nombre</Content.Label>
               <Content.Label for="email">Correo</Content.Label>
             </Content.InputsLabelDiv>
+            <Content.LabelMovil for="name">Nombre</Content.LabelMovil>
             <Content.InputsFormDiv>
               <Content.Inputs
                 type="text"
@@ -87,6 +88,7 @@ const Contacto = () => {
                 onChange={(e) => setNombre(e.target.value)}
                 value={nombre}
               />
+            <Content.LabelMovil middle for="email">Email</Content.LabelMovil> 
               <Content.Inputs
                 type="email"
                 id="email"
@@ -98,6 +100,7 @@ const Contacto = () => {
             <Content.InputsLabelDiv down>
               <Content.Label for="message">Mensaje</Content.Label>
             </Content.InputsLabelDiv>
+            <Content.LabelMovil for="message">Mensaje</Content.LabelMovil>
             <Content.InputsFormDiv down>
               <Content.Input2
                 id="message"

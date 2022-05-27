@@ -45,7 +45,7 @@ const Item = styled.div`
   font-size: 6rem;
 
   @media ${device.tablet} {
-    font-size: 4rem;
+    font-size: 3rem;
     margin: 0 1rem;
   }
 `;
@@ -57,7 +57,7 @@ const Description = styled.h3`
   margin-top: -18px;
 
   @media ${device.tablet} {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     margin-top: -5px;
   }
 `;

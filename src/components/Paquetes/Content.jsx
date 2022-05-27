@@ -83,6 +83,8 @@ export const Div1 = styled.div`
   @media ${device.tablet} {
     grid-area: 3 / 1 / 7 / 13;
     padding-left: 0;
+    padding: 0.8rem;
+    padding-top: 0;
     margin: 2rem;
   }
 `;
@@ -97,6 +99,8 @@ export const Div2 = styled.div`
   @media ${device.tablet} {
     grid-area: 8 / 1 / 11 / 13;
     padding-left: 0;
+    padding: 0.8rem;
+    padding-top: 0;
     margin: 2rem;
   }
 `;
