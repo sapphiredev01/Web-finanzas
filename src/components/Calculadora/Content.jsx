@@ -16,6 +16,7 @@ export const Content = styled.div`
   margin-top: 4rem;
   @media (max-width: 1050px) {
     margin-left: 4rem;
+    margin-bottom: 4rem;
   }
   @media (max-width: 768px) {
     width: 90%;

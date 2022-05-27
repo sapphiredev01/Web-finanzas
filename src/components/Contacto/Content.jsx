@@ -29,7 +29,6 @@ export const Content = styled.div`
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   margin-left: 8rem;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
   @media ${device.tablet} {
     display: grid;
@@ -39,6 +38,7 @@ export const Content = styled.div`
     grid-row-gap: 0px;
     margin: auto;
     margin: 0;
+    width: 90%;
   }
 `;
 
@@ -52,16 +52,16 @@ export const ImageSquare = styled.img`
   height: 100%;
 
   @media ${device.tablet} {
-    grid-area: 1 / 1 / 5 / 4;
+    grid-area: 2 / 1 / 8 / 8;
     width: 100%;
     height: auto;
-    margin-top: 18rem;
   }
 `;
 
 export const Form = styled.div`
   grid-area: 1 / 4 / 9 / 7;
   padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
   @media ${device.tablet} {
     grid-area: 5 / 1 / 13 / 4;
@@ -175,5 +175,6 @@ export const ButtonSend = styled.button`
 
   @media ${device.tablet} {
     width: 70%;
+    height: 3rem;
   }
 `;
