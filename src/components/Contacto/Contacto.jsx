@@ -3,6 +3,7 @@ import { useAlert } from "react-alert";
 import emailjs from "emailjs-com";
 import Container from "../UI/Containers/Containers";
 import * as Content from "./Content";
+import Img from "../../images/contact.jpg";
 
 const Contacto = () => {
   const alert = useAlert();
@@ -57,9 +58,9 @@ const Contacto = () => {
   };
 
   return (
-    <Container id="contacto" grid>
+    <Container style={{marginTop : '8rem', padding : '2rem, 0'}} id="contacto">
       <Content.Content>
-        <Content.ImageSquare src="../../../public/images/contact.jpg" />
+        <Content.ImageSquare src={Img} />
         <Content.Form>
           <Content.Titulo>CONTACTANOS</Content.Titulo>
           <Content.Info>
@@ -78,6 +79,7 @@ const Contacto = () => {
               <Content.Label for="name">Nombre</Content.Label>
               <Content.Label for="email">Correo</Content.Label>
             </Content.InputsLabelDiv>
+            <Content.LabelMovil for="name">Nombre</Content.LabelMovil>
             <Content.InputsFormDiv>
               <Content.Inputs
                 type="text"
@@ -86,6 +88,7 @@ const Contacto = () => {
                 onChange={(e) => setNombre(e.target.value)}
                 value={nombre}
               />
+            <Content.LabelMovil middle for="email">Email</Content.LabelMovil> 
               <Content.Inputs
                 type="email"
                 id="email"
@@ -97,6 +100,7 @@ const Contacto = () => {
             <Content.InputsLabelDiv down>
               <Content.Label for="message">Mensaje</Content.Label>
             </Content.InputsLabelDiv>
+            <Content.LabelMovil for="message">Mensaje</Content.LabelMovil>
             <Content.InputsFormDiv down>
               <Content.Input2
                 id="message"

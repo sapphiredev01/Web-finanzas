@@ -52,12 +52,12 @@ const Item = styled.div`
 
 const Description = styled.h3`
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: bold;
   margin-top: -18px;
 
   @media ${device.tablet} {
-    font-size: 10px;
+    font-size: 0.6rem;
     margin-top: -5px;
   }
 `;

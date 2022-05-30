@@ -28,7 +28,7 @@ export const Content = styled.div`
   grid-template-rows: repeat(8, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  margin: 4rem;
+  margin-left: 8rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
   @media ${device.tablet} {
@@ -54,6 +54,9 @@ export const ImageSquare = styled.img`
 
   @media ${device.tablet} {
     grid-area: 1 / 1 / 5 / 4;
+    width: 100%;
+    height: auto;
+    margin-top: 18rem;
   }
 `;
 
@@ -81,13 +84,21 @@ export const Info = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  @media ${device.tablet} {
+    flex-direction: column;
+  }
 `;
 
 export const InfoItem = styled.div`
   text-align: left;
-  font: 13px Helvetica;
+  font: 16px Helvetica;
   font-weight: ${(props) => (props.alt ? "bold" : "normal")};
   color: #000000;
+  @media ${device.tablet} {
+    display:${(props) => (props.alt ? "none" : "")};
+    margin-bottom: 1rem;  
+    font-size: 18px;
+  }
 `;
 
 export const Subtitle = styled.h2`
@@ -103,6 +114,9 @@ export const InputsLabelDiv = styled.div`
   margin: 0px 15px;
   display: flex;
   justify-content: space-between;
+  @media ${device.tablet} {
+    display: none;
+  }
 `;
 
 export const Label = styled.p`
@@ -111,12 +125,28 @@ export const Label = styled.p`
   color: #000000;
 `;
 
+export const LabelMovil = styled.p`
+  text-align: left;
+  font: bold 16px Helvetica;
+  color: #000000;
+  display: none;
+  margin-left: ${(props) => (props.middle ? "0" : "15px")};
+  @media ${device.tablet} {
+    display: flex;
+  }
+`;
+
 export const InputsFormDiv = styled.div`
   grid-area: ${(props) => (props.down ? "7 / 4 / 8 / 7" : "5 / 4 / 6 / 7")};
   margin: 0px 15px;
   display: flex;
   justify-content: space-between;
   text-align: left;
+
+  @media ${device.tablet} {
+    flex-direction: column;
+  }
+
 `;
 
 export const Inputs = styled.input`
@@ -142,6 +172,10 @@ export const ButtonDiv = styled.div`
 export const ButtonSend = styled.button`
   background: #ffffff;
   border: 1px inset #707070;
-  font: bold 16px Helvetica;
+  font: bold 20px Helvetica;
   width: 30%;
+
+  @media ${device.tablet} {
+    width: 70%;
+  }
 `;

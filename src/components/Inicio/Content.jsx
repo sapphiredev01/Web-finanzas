@@ -28,6 +28,10 @@ export const Content = styled.div`
   grid-template-rows: repeat(5, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  @media ${device.tablet} {
+    margin-bottom: 6rem;
+    grid-area: 2 / 1 / 13 / 13;
+  }
 `;
 
 export const Left = styled.div`
@@ -36,12 +40,25 @@ export const Left = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 3rem;
   padding-bottom: 3rem;
+  padding-left: 6rem;
 
   @media ${device.tablet} {
-    grid-area: 3 / 1 / 6 / 5;
-   
+    grid-area: 5 / 1 / 10 / 13;
+    padding: 0;
+    width: 90%;
+    margin: 0 auto;
+    padding-left: 0%;
+  }
+
+  @media (max-width: 620px) {
+    grid-area: 4 / 1 / 6 / 13;
+    padding-top: 7rem;
+  }
+
+  @media (max-width: 500px) {
+    grid-area: 3 / 1 / 5 / 13;
+    padding-top: 12rem;
   }
 `;
 
@@ -51,13 +68,22 @@ export const Title = styled.h1`
   color: #000000;
   text-transform: uppercase;
   opacity: 1;
+  @media ${device.tablet} {
+    font-size: 1.6rem;
+    text-align: center;
+  }
 `;
 
 export const Text = styled.div`
   font: Helvetica Neue;
+  font-weight: bold;
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
+  @media ${device.tablet} {
+    font-size: 1rem;
+    text-align: center;
+  }
 `;
 
 export const Right = styled.div`
@@ -65,9 +91,8 @@ export const Right = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
   @media ${device.tablet} {
-    grid-area: 1 / 2 / 3 / 4;
+    grid-area: 1 / 1 / 5 / 5;
   }
 `;
 
@@ -78,5 +103,7 @@ export const Hexagon = styled.img`
 
   @media ${device.tablet} {
     padding: 0%;
+    width: 90%;
+    height: 90%;
   }
 `;

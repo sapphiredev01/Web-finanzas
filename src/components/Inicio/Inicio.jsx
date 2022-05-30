@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "../UI/Containers/Containers";
 import { Content, Left, Right, Title, Text, Hexagon } from "./Content";
+import Hex from "../../images/hexagono.svg";
 
 const Inicio = () => {
   return (
@@ -15,7 +16,7 @@ const Inicio = () => {
           </Text>
         </Left>
         <Right>
-          <Hexagon src="../../../public/images/hexagono.svg" />
+          <Hexagon src={Hex} />
         </Right>
       </Content>
     </Container>

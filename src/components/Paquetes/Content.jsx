@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Img from "../../../public/images/business.jpg";
+import Img from "../../images/business.jpg";
 
 const size = {
   mobileS: "320px",
@@ -29,12 +29,20 @@ export const Content = styled.div`
   grid-template-rows: repeat(10, 1fr);
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
-  margin: 0;
-  padding: 0;
   height: 100%;
   margin-top: 3rem;
   margin-left: 2rem;
   width: auto;
+  @media (max-width: 768px) {
+    grid-area: 1 / 1 / 11 / 13;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    margin: 0;
+    width: 100%;
+    place-items: center;
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -44,6 +52,10 @@ export const TitleContainer = styled.div`
   align-items: center;
   margin: 0;
   padding: 0;
+  @media (max-width: 768px) {
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const Title = styled.h1`
@@ -55,6 +67,10 @@ export const Title = styled.h1`
   text-transform: uppercase;
   padding: 0;
   margin: 0;
+  @media (max-width: 768px) {
+    font-size: 1.6rem;
+    text-align: center;
+  }
 `;
 
 export const Div1 = styled.div`
@@ -66,20 +82,26 @@ export const Div1 = styled.div`
 
   @media ${device.tablet} {
     grid-area: 3 / 1 / 7 / 13;
-    margin-right: 2rem;
+    padding-left: 0;
+    padding: 0.8rem;
+    padding-top: 0;
+    margin: 2rem;
   }
 `;
 
 export const Div2 = styled.div`
-  grid-area: 7 / 1 / 11 / 6;
+  grid-area: 11 / 1 / 7 / 6;
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
   padding-left: 1rem;
   overflow: hidden;
 
   @media ${device.tablet} {
-    grid-area: 7 / 1 / 11 / 13;
-    margin-right: 2rem;
+    grid-area: 8 / 1 / 11 / 13;
+    padding-left: 0;
+    padding: 0.8rem;
+    padding-top: 0;
+    margin: 2rem;
   }
 `;
 

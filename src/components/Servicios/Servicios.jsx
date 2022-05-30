@@ -2,7 +2,6 @@ import React from "react";
 import ServiceBar from "./ServiceBar";
 import * as Content from "./Content";
 
-
 const Servicios = () => {
   return (
     <Content.Pararelogram id="servicios">

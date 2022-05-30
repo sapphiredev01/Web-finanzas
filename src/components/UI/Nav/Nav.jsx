@@ -1,10 +1,11 @@
 import React from "react";
-import { Wrapper, Stepper, Step, Title, StyledLink, StyledMenu } from "./NavElements";
+import { Wrapper, Stepper, Step, Title, StyledLink } from "./NavElements";
+import  NavResponsive  from "./NavResponsive";
 
 const Nav = () => {
   return (
     <Wrapper>
-      <StyledMenu />
+      <NavResponsive/>
       <Stepper>
         <Step>
           <StyledLink to="inicio">
