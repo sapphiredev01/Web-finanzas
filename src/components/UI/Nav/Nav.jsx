@@ -1,12 +1,23 @@
 import React from "react";
-import { Wrapper, Stepper, Step, Title, StyledLink } from "./NavElements";
-import  NavResponsive  from "./NavResponsive";
+import {
+  Wrapper,
+  Stepper,
+  Step,
+  Title,
+  StyledLink,
+  ImageStyled,
+} from "./NavElements";
+import NavResponsive from "./NavResponsive";
+import logo from "../../../images/LOGOTIPOS_FINPEI_28.png";
 
 const Nav = () => {
   return (
     <Wrapper>
-      <NavResponsive/>
+      <NavResponsive />
       <Stepper>
+        <Step>
+          <ImageStyled src={logo}/>
+        </Step>
         <Step>
           <StyledLink to="inicio">
             <Title>INICIO</Title>

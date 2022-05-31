@@ -24,3 +24,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face{
+  font-family: "Altone";
+  src: url("src/fonts/ALTONE-REGULAR.woff");
+}
+@font-face{
+  font-family: "BwMitiga";
+  src: url("src/fonts/BwMitga-Regular.woff");
+}
+
+h1{
+  font-family: "Altone";
+}
+h2{
+  font-family: "Altone";
+}
+h3{
+  font-family: "Altone";
+}
+h4{
+  font-family: "Altone";
+}
+h5{
+  font-family: "Altone";
+}
+
+div{
+  font-family: "BwMitiga";
+}
+p{
+  font-family: "BwMitiga";
+}
+button{
+  font-family: "BwMitiga";
+}

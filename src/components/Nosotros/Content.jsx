@@ -75,7 +75,8 @@ export const Right = styled.div`
 
 export const Title = styled.h1`
   text-align: left;
-  font: bold 50px Helvetica;
+  font-size: 50px;
+  font-weight: bold;
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
@@ -102,7 +103,8 @@ export const Title = styled.h1`
 export const Text = styled.div`
   text-align: justify;
   text-justify: inter-word;
-  font: bold 16px Helvetica;
+  font-size: 16px;
+  font-weight: bold;
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
