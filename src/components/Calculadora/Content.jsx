@@ -43,7 +43,6 @@ export const TitleContainer = styled.div`
   }
 `;
 export const Title = styled.h1`
-  font: Helvetica Neue;
   text-align: start;
   color: #034e80;
   letter-spacing: 0px;
@@ -78,7 +77,7 @@ export const ImageStyled = styled.img`
 `;
 
 export const Div1 = styled.div`
-  font-family: "Montserrat", sans-serif;
+
   grid-area: 4 / 1 / 11 / 5;
   background-color: var(--blue);
   overflow: hidden;
@@ -93,7 +92,6 @@ export const Div1 = styled.div`
   }
 `;
 export const Div2 = styled.div`
-  font-family: "Montserrat", sans-serif;
   grid-area: 4 / 5 / 11 / 13;
   box-shadow: 0px 3px 6px #00000029;
   padding-left: 1rem;

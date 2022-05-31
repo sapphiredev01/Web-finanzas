@@ -104,3 +104,8 @@ export const Step = styled.li`
     bottom: var(--spacing);
   }
 `;
+
+export const ImageStyled = styled.img`
+  width: 10%;
+  height: auto;
+`;

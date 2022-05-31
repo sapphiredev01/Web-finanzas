@@ -59,7 +59,6 @@ export const TitleContainer = styled.div`
 `;
 
 export const Title = styled.h1`
-  font: Helvetica Neue;
   text-align: start;
   color: #034e80;
   letter-spacing: 0px;
