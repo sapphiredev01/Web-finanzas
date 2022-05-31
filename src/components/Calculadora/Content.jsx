@@ -44,7 +44,6 @@ export const TitleContainer = styled.div`
   }
 `;
 export const Title = styled.h1`
-  font: Helvetica Neue;
   text-align: start;
   color: #034e80;
   letter-spacing: 0px;
@@ -79,7 +78,7 @@ export const ImageStyled = styled.img`
 `;
 
 export const Div1 = styled.div`
-  font-family: "Montserrat", sans-serif;
+
   grid-area: 4 / 1 / 11 / 5;
   background-color: var(--blue);
   overflow: hidden;
@@ -90,10 +89,10 @@ export const Div1 = styled.div`
   @media (max-width: 768px) {
     grid-area: 2 / 1 / 7 / 13;
     padding-left: 0;
+    margin-right: 2rem;
   }
 `;
 export const Div2 = styled.div`
-  font-family: "Montserrat", sans-serif;
   grid-area: 4 / 5 / 11 / 13;
   box-shadow: 0px 3px 6px #00000029;
   padding-left: 1rem;
@@ -104,6 +103,7 @@ export const Div2 = styled.div`
   @media (max-width: 768px) {
     grid-area: 7 / 1 / 18 / 13;
     padding-left: 0;
+    margin-right: 2rem;
   }
 `;
 

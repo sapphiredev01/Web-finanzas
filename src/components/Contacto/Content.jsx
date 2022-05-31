@@ -39,6 +39,7 @@ export const Content = styled.div`
     margin: auto;
     margin: 0;
     width: 90%;
+    margin-right: 2rem;
   }
 `;
 
@@ -72,7 +73,8 @@ export const Form = styled.div`
 export const Titulo = styled.h1`
   grid-area: 1 / 4 / 2 / 7;
   text-align: left;
-  font: bold 40px Helvetica;
+  font-size: 40px;
+  font-weight: bold;
   margin-left: 15px;
   margin-top: 10px;
   color: #034e80;
@@ -82,6 +84,7 @@ export const Info = styled.div`
   grid-area: 2 / 4 / 3 / 7;
   margin: 0px 15px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   @media ${device.tablet} {
     flex-direction: column;
@@ -90,7 +93,7 @@ export const Info = styled.div`
 
 export const InfoItem = styled.div`
   text-align: left;
-  font: 16px Helvetica;
+  font-size: 16px;
   font-weight: ${(props) => (props.alt ? "bold" : "normal")};
   color: #000000;
   @media ${device.tablet} {
@@ -103,7 +106,8 @@ export const InfoItem = styled.div`
 export const Subtitle = styled.h2`
   grid-area: 3 / 4 / 4 / 7;
   text-align: left;
-  font: bold 25px Helvetica;
+  font-size: 25px;
+  font-weight: bold;
   margin-left: 15px;
   color: #034e80;
 `;
@@ -120,13 +124,15 @@ export const InputsLabelDiv = styled.div`
 
 export const Label = styled.p`
   text-align: left;
-  font: bold 16px Helvetica;
+  font-size: 16px;
+  font-weight: bold;
   color: #000000;
 `;
 
 export const LabelMovil = styled.p`
   text-align: left;
-  font: bold 16px Helvetica;
+  font-size: 16px;
+  font-weight: bold;
   color: #000000;
   display: none;
   margin-left: ${(props) => (props.middle ? "0" : "15px")};
@@ -151,14 +157,14 @@ export const InputsFormDiv = styled.div`
 export const Inputs = styled.input`
   border: none;
   border-bottom: 1px solid black;
-  font: 15px Helvetica;
+  font-size: 15px;
 `;
 
 export const Input2 = styled.textarea`
   border: none;
   border-bottom: 1px solid black;
   width: 100%;
-  font: 15px Helvetica;
+  font-size: 15px ;
 `;
 
 export const ButtonDiv = styled.div`
@@ -171,7 +177,8 @@ export const ButtonDiv = styled.div`
 export const ButtonSend = styled.button`
   background: #ffffff;
   border: 1px inset #707070;
-  font: bold 20px Helvetica;
+  font-size: 20px;
+  font-weight: bold;
   width: 30%;
 
   @media ${device.tablet} {

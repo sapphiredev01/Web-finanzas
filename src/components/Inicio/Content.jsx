@@ -63,7 +63,6 @@ export const Left = styled.div`
 `;
 
 export const Title = styled.h1`
-  font: Helvetica Neue;
   letter-spacing: 0px;
   color: #000000;
   text-transform: uppercase;
@@ -75,7 +74,6 @@ export const Title = styled.h1`
 `;
 
 export const Text = styled.div`
-  font: Helvetica Neue;
   font-weight: bold;
   letter-spacing: 0px;
   color: #000000;
