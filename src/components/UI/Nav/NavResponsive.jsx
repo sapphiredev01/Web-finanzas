@@ -29,8 +29,13 @@ const NavResponsive = () => {
         <FiMenu />
       </MenuBtnImg>
 
-      <Menu inactive={isChecked} >
+      <Menu inactive={isChecked}>
         <Lista>
+          <ListaItem>
+            <StyledLinkR to="crypto" onClick={handleOnChange}>
+              <TitleR>Crypto</TitleR>
+            </StyledLinkR>
+          </ListaItem>
           <ListaItem>
             <StyledLinkR to="inicio" onClick={handleOnChange}>
               <TitleR>Inicio</TitleR>

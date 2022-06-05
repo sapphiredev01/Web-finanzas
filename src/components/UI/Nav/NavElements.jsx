@@ -23,11 +23,12 @@ const device = {
 };
 
 export const Wrapper = styled.div`
-  grid-area: 1 / 1 / 11 / 2;
+  grid-area: 1 / 1 / 1 / 13;
   position: fixed;
   height: 100%;
   display: flex;
   align-items: center;
+  width: 10%;
 
   @media ${device.tablet} {
     height: 0;
@@ -106,6 +107,6 @@ export const Step = styled.li`
 `;
 
 export const ImageStyled = styled.img`
-  width: 10%;
+  width: 100%;
   height: auto;
 `;

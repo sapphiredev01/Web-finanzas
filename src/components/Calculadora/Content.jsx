@@ -11,7 +11,6 @@ export const Content = styled.div`
   padding: 0;
   height: 100%;
   margin-left: 2rem;
-  margin-bottom: 2rem;
   width: auto;
   margin-top: 4rem;
   @media (max-width: 1050px) {

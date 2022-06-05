@@ -15,8 +15,11 @@ const Nav = () => {
     <Wrapper>
       <NavResponsive />
       <Stepper>
+        <ImageStyled src={logo} style={{marginBottom:"2rem"}} />
         <Step>
-          <ImageStyled src={logo}/>
+          <StyledLink to="crypto">
+            <Title>CRYPTO</Title>
+          </StyledLink>
         </Step>
         <Step>
           <StyledLink to="inicio">
