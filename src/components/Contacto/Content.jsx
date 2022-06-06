@@ -39,7 +39,6 @@ export const Content = styled.div`
     margin: auto;
     margin: 0;
     width: 90%;
-    margin-right: 2rem;
   }
 `;
 

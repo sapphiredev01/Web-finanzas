@@ -36,6 +36,7 @@ export const Content = styled.div`
     grid-column-gap: 0;
     grid-row-gap: 0;
     margin: 0;
+    margin-top: 4rem;
     width: 90%;
   }
 `;
@@ -67,6 +68,7 @@ export const Right = styled.div`
 
   @media ${device.tablet} {
     grid-area: 4 / 1 / 6 / 5;
+    margin-top: -3rem;
     margin-bottom: 2rem;
     width: 100%;
     justify-content: center;

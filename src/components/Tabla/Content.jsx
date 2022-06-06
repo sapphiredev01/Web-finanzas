@@ -17,6 +17,7 @@ export const Content = styled.div`
   @media (max-width: 768px) {
     grid-area: 1 / 1 / 11 / 13;
     margin-left: 0;
+    font-size: 0.8rem;
   }
 `;
 
@@ -68,7 +69,7 @@ export const Table = styled.table`
 export const Img = styled.img`
   width: 18px;
   height: 18px;
-  padding-right: 1rem;
+  padding-right: .5rem;
 `;
 
 export const TdChange = styled.td`
@@ -91,11 +92,15 @@ export const TableRender = ({ coins }) => {
       <thead>
         <tr>
           <th>#</th>
-          <th style={{ width: "25%" }}>Moneda</th>
+          <th style={{ width: "30%" }}>Moneda</th>
           <th>Precio</th>
           <th>Capital de mercado</th>
-          {isDesktop && <th>Volumen en 24h</th>}
-          <th>Cambio</th>
+          {isDesktop && (
+            <>
+              <th>Volumen en 24h</th>
+              <th>Cambio</th>
+            </>
+          )}
         </tr>
       </thead>
       <tbody>
@@ -106,21 +111,26 @@ export const TableRender = ({ coins }) => {
               <td>
                 <Img src={coin.image} alt={coin.name} />
                 <span>{coin.name}</span>
-                <span
-                  style={{
-                    textTransform: "uppercase",
-                    opacity: "50%",
-                    paddingLeft: "1rem",
-                  }}
-                >
-                  {coin.symbol}
-                </span>
+                {isDesktop && (
+                  <>
+                    <span
+                      style={{
+                        textTransform: "uppercase",
+                        opacity: "50%",
+                        paddingLeft: "1rem",
+                        fontSize: "0.8rem",
+                      }}
+                    >
+                      {coin.symbol}
+                    </span>
+                  </>
+                )}
               </td>
               <td>{coin.current_price} US$</td>
-              <td>{coin.market_cap} US$</td>
               {isDesktop ? (
                 <>
                   <td>{coin.total_volume} US$</td>
+                  <td>{coin.market_cap} US$</td>
                 </>
               ) : (
                 <></>
