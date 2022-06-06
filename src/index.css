@@ -26,36 +26,36 @@ code {
 }
 
 @font-face{
-  font-family: "Altone";
-  src: url("src/fonts/ALTONE-REGULAR.woff");
+  font-family: "ALTONE-REGULAR";
+  src:local('ALTONE-REGULAR'), url("fonts/ALTONE-REGULAR.TTF");
 }
 @font-face{
-  font-family: "BwMitiga";
-  src: url("src/fonts/BwMitga-Regular.woff");
+  font-family: "BwMitga-Regular";
+  src:local('BwMitga-RegularALTONE-REGULAR'), url("fonts/BwMitga-Regular.otf");
 }
 
 h1{
-  font-family: "Altone";
+  font-family: "ALTONE-REGULAR";
 }
 h2{
-  font-family: "Altone";
+  font-family: "ALTONE-REGULAR";
 }
 h3{
-  font-family: "Altone";
+  font-family: "ALTONE-REGULAR";
 }
 h4{
-  font-family: "Altone";
+  font-family: "ALTONE-REGULAR";
 }
 h5{
-  font-family: "Altone";
+  font-family: "ALTONE-REGULAR";
 }
 
 div{
-  font-family: "BwMitiga";
+  font-family: "BwMitga-Regular";
 }
 p{
-  font-family: "BwMitiga";
+  font-family: "BwMitga-Regular";
 }
 button{
-  font-family: "BwMitiga";
+  font-family: "BwMitga-Regular";
 }
