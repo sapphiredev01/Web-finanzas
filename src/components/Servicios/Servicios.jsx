@@ -11,26 +11,22 @@ const Servicios = () => {
     <Content.Wrapper id="servicios">
         <Content.Title>SERVICIOS</Content.Title>
         <Content.Container>
-        <Content.Item>
-        <Content.IconStyled src={agricultura}/>
-        <Content.Description agric>Agricultura</Content.Description>
-        </Content.Item>
-        <Content.Item>
-        <Content.IconStyled src={crypto}/>
-        <Content.Description>Crypto</Content.Description>
-        </Content.Item>
-        <Content.Item>
-        <Content.IconStyled src={stocks}/>
-        <Content.Description>Stocks</Content.Description>
-        </Content.Item>
-        <Content.Item>
-        <Content.IconStyled src={startups}/>
-        <Content.Description>Startups</Content.Description>
-        </Content.Item>
-        <Content.Item>
-        <Content.IconStyled src={comerc}/>
-        <Content.Description>Comercio exterior</Content.Description>
-        </Content.Item>
+        
+        <Content.IconAgricultura src={agricultura}/>
+        <Content.DescAgricultura agric>Agricultura</Content.DescAgricultura>
+        
+        <Content.IconCrypto src={crypto}/>
+        <Content.DescCrypto>Crypto</Content.DescCrypto>
+       
+        <Content.IconStocks src={stocks}/>
+        <Content.DescStocks>Stocks</Content.DescStocks>
+        
+        <Content.IconStartup src={startups}/>
+        <Content.DescStartup>Startups</Content.DescStartup>
+        
+        <Content.IconComercio src={comerc}/>
+        <Content.DescComercio>Comercio exterior</Content.DescComercio>
+        
         </Content.Container>
     </Content.Wrapper>
   );
