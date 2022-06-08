@@ -22,7 +22,7 @@ export const MenuBtnImg = styled.label`
 
 export const Menu = styled.nav`
   position: fixed;
-  margin-top: 2.5rem;
+  margin-top: -35rem;
   background: #034e80;
   margin-left: ${(props) => (props.inactive ? "0" : "-200%")};
   transition: all 0.5s;

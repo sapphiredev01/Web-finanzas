@@ -13,7 +13,6 @@ import logo from "../../../images/LOGOTIPOS_FINPEI_28.png";
 const Nav = () => {
   return (
     <Wrapper>
-      <NavResponsive />
       <Stepper>
         <ImageStyled src={logo} style={{marginBottom:"2rem"}} />
         <Step>
