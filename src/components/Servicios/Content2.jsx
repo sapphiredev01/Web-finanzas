@@ -21,8 +21,8 @@ export const Wrapper = styled.div`
 
   @media ${device.tablet} {
     left: 0%;
-    margin-top: 11rem;
-    margin-bottom: -4rem;
+    margin-top: 5rem;
+    margin-bottom: -5rem;
   }
 `;
 
@@ -48,7 +48,8 @@ export const IconAgricultura = styled.img`
 
   @media ${device.tablet} {
     grid-area: 1 / 2 / 4 / 4;
-    margin-top: -3rem;
+    margin-top: -2rem;
+    width: 200%;
   }
 `;
 export const IconCrypto = styled.img`
@@ -57,7 +58,8 @@ export const IconCrypto = styled.img`
 
   @media ${device.tablet} {
     grid-area: 4 / 2 / 7 / 4;
-    margin-top: -3rem;
+    margin-top: -2rem;
+    width: 200%;
   }
 `;
 export const IconStocks = styled.img`
@@ -66,7 +68,8 @@ export const IconStocks = styled.img`
 
   @media ${device.tablet} {
     grid-area: 7 / 2 / 10 / 4;
-    margin-top: -3rem;
+    margin-top: -2rem;
+    width: 200%;
   }
 `;
 export const IconStartup = styled.img`
@@ -75,7 +78,8 @@ export const IconStartup = styled.img`
 
   @media ${device.tablet} {
     grid-area: 10 / 2 / 13 / 4;
-    margin-top: -3rem;
+    margin-top: -2rem;
+    width: 200%;
   }
 `;
 export const IconComercio = styled.img`
@@ -84,7 +88,8 @@ export const IconComercio = styled.img`
 
   @media ${device.tablet} {
     grid-area: 13 / 2 / 16 / 4;
-    margin-top: -3rem;
+    margin-top: -2rem;
+    width: 200%;
   }
 `;
 
