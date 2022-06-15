@@ -39,7 +39,7 @@ export const Logo = styled.img`
   grid-area: 2 / 2 / 4 / 4;
 
   animation: ${idle} 3s ease-in-out infinite;
-  width: 100%;
+  width: 100vh;
   height: auto;
   position: relative;
 

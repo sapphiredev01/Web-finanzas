@@ -17,12 +17,12 @@ export const Wrapper = styled.div`
   margin-bottom: 2rem;
   width: 60%;
   height: 100%;
-  left: 20%;
+  left: 22.5%;
 
   @media ${device.tablet} {
     left: 0%;
-    margin-top: 5rem;
-    margin-bottom: -5rem;
+    padding-top: 60%;
+   
   }
 `;
 
@@ -173,6 +173,7 @@ export const Title = styled.h1`
   text-align: center;
   color: #034e80;
   font-size: 3rem;
+  margin-left: 10%;
   @media ${device.tablet} {
     font-size: 2rem;
   }
