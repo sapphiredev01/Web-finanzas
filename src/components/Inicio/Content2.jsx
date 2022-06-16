@@ -84,7 +84,7 @@ export const Right = styled.div`
 export const Card = styled.div`
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
-  padding-left: 1rem;
+  padding: 1rem;
   overflow: hidden;
   @media ${device.tablet} {
     padding: 0.8rem;

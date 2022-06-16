@@ -12,9 +12,10 @@ export const Table = styled.table`
   }
   & td {
     border-bottom: 0.5px solid #034e80;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    font-size: large;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-right: 1rem;
+    font-size: medium;
   }
   @media (max-width: 768px) {
     & td {
@@ -49,7 +50,7 @@ export const TableRender = ({ coins }) => {
         <thead>
           <tr>
             <th>#</th>
-            <th style={{ width: "30%" }}>Moneda</th>
+            <th style={{ }}>Moneda</th>
             <th>Precio</th>
             <th>Capital de mercado</th>
             {isDesktop && (
@@ -87,7 +88,7 @@ export const TableRender = ({ coins }) => {
                 <td>{precio} US</td>
                 {isDesktop ? (
                   <>
-                    <td>{capital} US</td>
+                    <td >{capital} US</td>
                   </>
                 ) : (
                   <></>

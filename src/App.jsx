@@ -19,7 +19,6 @@ function App() {
       <Banner/>
       <NavResponsive/>
       <Media />
-      <TableCrypto />
       <Inicio />
       <Nosotros />
       <Servicios />

@@ -16,11 +16,6 @@ const Nav = () => {
       <Stepper>
         <ImageStyled src={logo} style={{marginBottom:"2rem"}} />
         <Step>
-          <StyledLink to="crypto">
-            <Title>CRYPTO</Title>
-          </StyledLink>
-        </Step>
-        <Step>
           <StyledLink to="inicio">
             <Title>INICIO</Title>
           </StyledLink>
