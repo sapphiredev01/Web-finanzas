@@ -73,7 +73,7 @@ export const Title = styled.h1`
 `;
 
 export const Div1 = styled.div`
-  grid-area: 3 / 1 / 7 / 6;
+  grid-area: 3 / 1 / 8 / 6;
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
   padding-left: 1rem;
@@ -86,14 +86,20 @@ export const Div1 = styled.div`
     padding-top: 0;
     margin: 2rem;
   }
+  & h2, p { 
+    padding: 0 1rem;
+  }
 `;
 
 export const Div2 = styled.div`
-  grid-area: 11 / 1 / 7 / 6;
+  grid-area: 14 / 1 / 8 / 6;
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
   padding-left: 1rem;
   overflow: hidden;
+  & h2, p { 
+    padding: 0 1rem;
+  }
 
   @media ${device.tablet} {
     grid-area: 8 / 1 / 11 / 13;
@@ -105,7 +111,7 @@ export const Div2 = styled.div`
 `;
 
 export const Div3 = styled.div`
-  grid-area: 3 / 6 / 11 / 13;
+  grid-area: 3 / 6 / 14 / 13;
   box-shadow: 0px 3px 6px #00000029;
   background-image: url(${Img});
   background-size: cover;
