@@ -2,6 +2,12 @@ import React, { useState } from "react";
 import * as Content from "./Content";
 
 const Form = ({ onSubmitFormHandler }) => {
+  const [hidden, setHidden] = useState(true);
+
+  const handleHidden = () => {
+    setHidden(!hidden);
+  }
+
   const [userInput, setUserInput] = useState({
     enteredAmount: "",
     enteredPaymentFrequency: "",
@@ -76,6 +82,7 @@ const Form = ({ onSubmitFormHandler }) => {
         <Content.Select
           onChange={paymentFrequencyInputHandler}
           value={userInput.enteredPaymentFrequency}
+          id="paymentFrequency"
         >
           <option value="" hidden>
             Seleccione una opción
@@ -93,7 +100,8 @@ const Form = ({ onSubmitFormHandler }) => {
           <option value="" hidden>
             Seleccione una opción
           </option>
-          <option value="6">Seis meses</option>
+          {}
+          <option value="6" onSelect={handleHidden}>Seis meses</option>
           <option value="12">Un año</option>
           <option value="3">Tres años</option>
           <option value="5">Cinco años</option>
