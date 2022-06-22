@@ -8,9 +8,28 @@ const Form = ({ onSubmitFormHandler }) => {
     enteredTime: "",
   });
 
-  const paymentFrequencyHandler = {
-    
-  }
+  const [time, setTime] = useState([
+    {
+      value: "6",
+      title: "Seis meses",
+    },
+    {
+      value: "12",
+      title: "Un año",
+    },
+    {
+      value: "3",
+      title: "Tres años",
+    },
+    {
+      value: "5",
+      title: "Cinco años",
+    },
+  ]);
+
+  const paymentFrequencyHandler = () => {
+    setTime(() => time.filter((option) => option.value != "6"));
+  };
 
   const amountInputHandler = (event) => {
     setUserInput((prevState) => {
@@ -78,7 +97,7 @@ const Form = ({ onSubmitFormHandler }) => {
         />
         <Content.LabelStyled>Pagos</Content.LabelStyled>
         <Content.Select
-          onChange={paymentFrequencyInputHandler}
+          onChange={paymentFrequencyHandler}
           value={userInput.enteredPaymentFrequency}
           id="paymentFrequency"
         >
@@ -88,7 +107,9 @@ const Form = ({ onSubmitFormHandler }) => {
           <option value="0.0146">Mensual</option>
           <option value="0.0557">Trimestral</option>
           <option value="0.1395">Semestral</option>
-          <option value="0.3499" onSelect={paymentFrequencyHandler}>Anual</option>
+          <option value="0.3499">
+            Anual
+          </option>
         </Content.Select>
         <Content.LabelStyled>Plazo</Content.LabelStyled>
         <Content.Select
@@ -99,10 +120,11 @@ const Form = ({ onSubmitFormHandler }) => {
           <option value="" hidden>
             Seleccione una opción
           </option>
-          <option value="6">Seis meses</option>
-          <option value="12">Un año</option>
-          <option value="3">Tres años</option>
-          <option value="5">Cinco años</option>
+          {time.map((obj, index) => (
+            <option key={index} value={obj.value}>
+              {obj.title}
+            </option>
+          ))}
         </Content.Select>
         <Content.ButtonStyled type="submit">
           Calcular rendimiento
