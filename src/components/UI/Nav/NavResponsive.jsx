@@ -32,8 +32,6 @@ const NavResponsive = () => {
       <Menu inactive={isChecked}>
         <Lista>
           <ListaItem>
-          </ListaItem>
-          <ListaItem>
             <StyledLinkR to="inicio" onClick={handleOnChange}>
               <TitleR>Inicio</TitleR>
             </StyledLinkR>

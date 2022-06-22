@@ -1,10 +1,18 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  z-index: 3;
   grid-area: 1 / 1 / 2 / 13;
   display: flex;
   justify-content: flex-end;
   margin-top: 1rem;
+  @media (max-width: 620px) {
+    justify-content: center;
+    margin-top: 65%;
+    padding: 0.5rem 0;
+    border-top: 12px solid #034e80;
+    border-bottom: 12px solid #034e80;
+  }
 `;
 
 export const MediaItem = styled.button`

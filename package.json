@@ -17,7 +17,10 @@
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
     "react-scroll": "^1.8.7",
-    "styled-components": "^5.3.5"
+    "react-slick": "^0.29.0",
+    "react-tsparticles": "^2.1.0",
+    "styled-components": "^5.3.5",
+    "tsparticles": "^2.1.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.7",
