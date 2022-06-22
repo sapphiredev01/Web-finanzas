@@ -10,23 +10,14 @@ const device = {
 
 export const Container = styled.div`
   grid-area: 1 / 1 / 13 / 13;
-
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-`;
-
-export const Background = styled.img`
-  grid-area: 1 / 1 / 5 / 5;
-  width: 100%;
-  height: auto;
-  position: relative;
-
-  @media ${device.tablet} {
-    
-  }
+  z-index: -1;
+  place-items: center;
+  height: 100vh;
 `;
 
 const idle = keyframes`
@@ -38,11 +29,11 @@ const idle = keyframes`
 export const Logo = styled.img`
   grid-area: 2 / 2 / 4 / 4;
 
-  animation: ${idle} 3s ease-in-out infinite;
-  width: 100vh;
+  //animation: ${idle} 3s ease-in-out infinite;
+  width: 100%;
   height: auto;
-  position: relative;
-
+  z-index: 1;
+  
   @media ${device.tablet} {
     width: 150%;
     left: -20%;

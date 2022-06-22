@@ -1,33 +1,21 @@
 import styled from "styled-components";
 
 const size = {
-  mobileS: "320px",
-  mobileM: "375px",
-  mobileL: "425px",
   tablet: "768px",
-  laptop: "1024px",
-  laptopL: "1440px",
-  desktop: "2560px",
 };
 
 const device = {
-  mobileS: `(max-width: ${size.mobileS})`,
-  mobileM: `(max-width: ${size.mobileM})`,
-  mobileL: `(max-width: ${size.mobileL})`,
   tablet: `(max-width: ${size.tablet})`,
-  laptop: `(max-width: ${size.laptop})`,
-  laptopL: `(max-width: ${size.laptopL})`,
-  desktop: `(max-width: ${size.desktop})`,
-  desktopL: `(max-width: ${size.desktop})`,
 };
 
 export const Content = styled.div`
   grid-area: 2 / 2 / 13 / 13;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  z-index: 1;
   @media ${device.tablet} {
     margin-bottom: 6rem;
     grid-area: 2 / 1 / 13 / 13;
@@ -35,7 +23,7 @@ export const Content = styled.div`
 `;
 
 export const Left = styled.div`
-  grid-area: 1 / 1 / 6 / 3;
+  grid-area: 2 / 1 / 7 / 3;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,12 +41,12 @@ export const Left = styled.div`
 
   @media (max-width: 620px) {
     grid-area: 4 / 1 / 6 / 13;
-    padding-top: 7rem;
+    padding-top: 35rem;
   }
 
   @media (max-width: 500px) {
     grid-area: 3 / 1 / 5 / 13;
-    padding-top: 12rem;
+    padding-top: 35rem;
   }
 `;
 
@@ -85,23 +73,24 @@ export const Text = styled.div`
 `;
 
 export const Right = styled.div`
-  grid-area: 1 / 3 / 6 / 5;
+  grid-area: 2 / 3 / 7 / 6;
   display: flex;
   justify-content: center;
   align-items: center;
   @media ${device.tablet} {
-    grid-area: 1 / 1 / 5 / 5;
+    grid-area: 3 / 1 / 5 / 13;
+    margin-bottom: 5rem;
   }
 `;
 
-export const Hexagon = styled.img`
-  width: 100%;
-  height: 100%;
-  padding-bottom: 5rem;
-
+export const Card = styled.div`
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 15px;
+  padding: 1rem;
+  overflow: hidden;
   @media ${device.tablet} {
-    padding: 0%;
-    width: 90%;
-    height: 90%;
+    margin: auto;
+    width: 80%;
   }
 `;
