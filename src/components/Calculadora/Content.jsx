@@ -117,7 +117,7 @@ export const FormStyled = styled.form`
 
 export const InputStyled = styled.input`
   width: 80%;
-  height: 10%;
+  height: 1%;
   outline: none;
   border: none;
   border-bottom: 1px solid #fff;
@@ -137,7 +137,7 @@ export const Select = styled.select`
   height: 20%;
   background: var(--blue);
   color: #fff;
-  font-size: 1rem;
+  font-size: .8rem;
   outline: none;
   border: none;
   border-bottom: 1px solid #fff;
@@ -161,7 +161,7 @@ export const ButtonStyled = styled.button`
   border-color: #fff;
   border-style: solid;
   border-width: 1px;
-  margin-top: 3rem;
+  margin-top: 1.6rem;
   font-size: 0.8rem;
   color: #fff;
   background-color: var(--blue);
