@@ -19,11 +19,11 @@ const Form = ({ onSubmitFormHandler }) => {
       title: "Un año",
     },
     {
-      value: "3",
+      value: "36",
       title: "Tres años",
     },
     {
-      value: "5",
+      value: "60",
       title: "Cinco años",
     },
   ]);
@@ -79,7 +79,6 @@ const Form = ({ onSubmitFormHandler }) => {
       userInput.enteredTime,
     ];
     onSubmitFormHandler(data);
-    console.log(data);
     setUserInput({
       enteredAmount: "",
       enteredPaymentFrequency: "",
@@ -93,22 +92,23 @@ const Form = ({ onSubmitFormHandler }) => {
         <Content.LabelStyled>Capital</Content.LabelStyled>
         <Content.InputStyled
           value={userInput.enteredAmount}
-          type="number"
+          type="text"
           onChange={amountInputHandler}
         />
         <Content.LabelStyled>Pagos</Content.LabelStyled>
         <Content.Select
-          onChange={paymentFrequencyHandler, paymentFrequencyInputHandler}
+          onSelect={paymentFrequencyHandler}
+          onChange={paymentFrequencyInputHandler}
           value={userInput.enteredPaymentFrequency}
           id="paymentFrequency"
         >
           <option value="" hidden>
             Seleccione una opción
           </option>
-          <option value="0.0146">Mensual</option>
-          <option value="0.0557">Trimestral</option>
-          <option value="0.1395">Semestral</option>
-          <option value="0.3499">
+          <option value="1.46">Mensual</option>
+          <option value="5.57">Trimestral</option>
+          <option value="13.95">Semestral</option>
+          <option value="34.99">
             Anual
           </option>
         </Content.Select>
