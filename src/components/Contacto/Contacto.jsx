@@ -15,17 +15,14 @@ const Contacto = () => {
     e.preventDefault();
 
     if (!nombre.trim()) {
-      console.log("Sin nombre");
       alert.show("Por favor, escriba su nombre", { type: "error" });
       return;
     }
     if (!correo.trim()) {
-      console.log("Sin correo");
       alert.show("Por favor, escriba su correo", { type: "error" });
       return;
     }
     if (!mensaje.trim()) {
-      console.log("Sin mensaje");
       alert.show("Por favor, escriba un mensaje", { type: "error" });
       return;
     }
@@ -45,14 +42,12 @@ const Contacto = () => {
           setNombre("");
           setCorreo("");
           setMensaje("");
-          console.log(result.text);
         },
         (error) => {
           alert.show(
             "Se produjo un error al enviar el correo, por favor intente de nuevo",
             { type: "error" }
           );
-          console.log(error.text);
         }
       );
   };
@@ -60,13 +55,13 @@ const Contacto = () => {
   return (
     <Container style={{ marginTop: "8rem", padding: "2rem, 0" }} id="contacto">
       <Content.Content>
-        <Content.ImageSquare src={Img} alt="Img" />
+        <Content.ImageSquare src={Img} />
         <Content.Form>
           <Content.Titulo>CONTACTANOS</Content.Titulo>
           <Content.Info>
-            <Content.InfoItem alt>Direccion</Content.InfoItem>
-            <Content.InfoItem alt>Correo</Content.InfoItem>
-            <Content.InfoItem alt>Telefono</Content.InfoItem>
+            <Content.InfoItemAlt>Direccion</Content.InfoItemAlt>
+            <Content.InfoItemAlt>Correo</Content.InfoItemAlt>
+            <Content.InfoItemAlt>Telefono</Content.InfoItemAlt>
           </Content.Info>
           <Content.Info>
             <Content.InfoItem>Barranca Granate 104</Content.InfoItem>
@@ -76,10 +71,10 @@ const Contacto = () => {
           <Content.Subtitle>Mandanos un mensaje</Content.Subtitle>
           <form onSubmit={mandarCorreo}>
             <Content.InputsLabelDiv>
-              <Content.Label for="name">Nombre</Content.Label>
-              <Content.Label for="email">Correo</Content.Label>
+              <Content.Label>Nombre</Content.Label>
+              <Content.Label>Correo</Content.Label>
             </Content.InputsLabelDiv>
-            <Content.LabelMovil for="name">Nombre</Content.LabelMovil>
+            <Content.LabelMovil>Nombre</Content.LabelMovil>
             <Content.InputsFormDiv>
               <Content.Inputs
                 type="text"
@@ -88,10 +83,10 @@ const Contacto = () => {
                 onChange={(e) => setNombre(e.target.value)}
                 value={nombre}
               />
-              <Content.LabelMovil middle for="email">
+              <Content.LabelMovil middle>
                 Email
               </Content.LabelMovil>
-              <Content.Inputs
+              <Content.Inputs email
                 type="email"
                 id="email"
                 name="email"
@@ -100,9 +95,9 @@ const Contacto = () => {
               />
             </Content.InputsFormDiv>
             <Content.InputsLabelDiv down>
-              <Content.Label for="message">Mensaje</Content.Label>
+              <Content.Label>Mensaje</Content.Label>
             </Content.InputsLabelDiv>
-            <Content.LabelMovil for="message">Mensaje</Content.LabelMovil>
+            <Content.LabelMovil>Mensaje</Content.LabelMovil>
             <Content.InputsFormDiv down>
               <Content.Input2
                 id="message"

@@ -26,29 +26,14 @@ function App() {
     <div className="app">
       <Nav />
       <Banner />
-      {isDesktop ? (
-        <>
-          {" "}
-          <Media />{" "}
-        </>
-      ) : (
-        <></>
-      )}
-
+      {isDesktop ? (<><Media /></>) : ( <></>)}
       <Inicio />
       <Nosotros />
       <Servicios />
       <Paquetes />
       <Calculadora />
       <Contacto />
-      {isDesktop ? (
-        <> </>
-      ) : (
-        <>
-          {" "}
-          <Media />
-        </>
-      )}
+      {isDesktop ? (<> </>) : (<><Media /></>)}
     </div>
   );
 }

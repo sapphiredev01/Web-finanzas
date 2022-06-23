@@ -13,6 +13,9 @@ export const Container = styled.div`
     border-top: 12px solid var(--blue);
     border-bottom: 12px solid var(--blue);
   }
+  @media (max-height: 740px) {
+   margin-top: 100%;
+  }
 `;
 
 export const MediaItem = styled.button`
