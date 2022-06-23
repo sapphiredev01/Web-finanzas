@@ -23,6 +23,9 @@ export const Wrapper = styled.div`
     margin: auto;
     padding-bottom: 3rem;
   }
+  @media (max-height: 667px) {
+   margin-bottom: 80%;
+  }
 `;
 
 export const Title = styled.h1`
@@ -36,6 +39,9 @@ export const Title = styled.h1`
     text-align: center;
     padding-top: 5rem;
     padding-left: 0;
+  }
+  @media (max-height: 667px) {
+   padding-top: 40%;
   }
 `;
 

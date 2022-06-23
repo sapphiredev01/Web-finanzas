@@ -16,7 +16,6 @@ export const Container = styled.div`
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   z-index: -1;
-  place-items: center;
   height: 100vh;
 `;
 
@@ -33,7 +32,8 @@ export const Logo = styled.img`
   width: 100%;
   height: auto;
   z-index: 1;
-  
+  align-self: center;
+  justify-self: center;
   @media ${device.tablet} {
     width: 150%;
     left: -20%;
