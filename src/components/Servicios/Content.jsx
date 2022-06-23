@@ -18,7 +18,10 @@ const device = {
 export const Wrapper = styled.div`
   grid-area: 1 / 2 / 11 / 13;
   @media (max-width: 768px) {
+    grid-area: 1 / 1 / 11 / 13;
     width: 100vw;
+    margin: auto;
+    padding-bottom: 3rem;
   }
 `;
 
@@ -26,9 +29,13 @@ export const Title = styled.h1`
   font-size: 4rem;
   color: var(--blue);
   padding-left: 1.5rem;
+  @media (max-width: 1380px) {
+    padding-left: 3rem;
+  }
   @media (max-width: 880px) {
     text-align: center;
-    padding-top: 15rem;
+    padding-top: 5rem;
+    padding-left: 0;
   }
 `;
 
@@ -39,11 +46,18 @@ const StyledDiv = styled.div`
 const StyledImg = styled.img`
   height: 15rem;
   width: 15rem;
+  @media (max-width: 768px) {
+    height: 10rem;
+    width: 10rem;
+  }
 `;
 
 const StyledTitle = styled.h3`
   font-size: 1.5rem;
   color: var(--blue);
+  @media (max-width: 880px) {
+    font-size: 1rem;
+  }
 `;
 
 const Item = ({ src, alt, title }) => {
@@ -58,7 +72,7 @@ const Item = ({ src, alt, title }) => {
 const Row = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  @media (max-width: 1350px) {
+  @media (max-width: 1380px) {
     grid-template-columns: repeat(3, 1fr);
   }
   @media (max-width: 1050px) {

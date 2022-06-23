@@ -79,7 +79,7 @@ export const Div1 = styled.div`
   padding-left: 1rem;
   overflow: hidden;
 
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     grid-area: 3 / 1 / 7 / 13;
     padding-left: 0;
     padding: 0.8rem;
@@ -101,7 +101,7 @@ export const Div2 = styled.div`
     padding: 0 1rem;
   }
 
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     grid-area: 8 / 1 / 11 / 13;
     padding-left: 0;
     padding: 0.8rem;
@@ -116,7 +116,7 @@ export const Div3 = styled.div`
   background-image: url(${Img});
   background-size: cover;
 
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     display: none;
   }
 `;
