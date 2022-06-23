@@ -83,11 +83,7 @@ export const CryptoRow = ({ coins }) => {
   return (
     <StyledSlider {...settings}>
       {coins.map((coin, index) => {
-        return (
-          <>
-            <Item key={index} coin={coin} />
-          </>
-        );
+        return <Item key={index} coin={coin} />;
       })}
     </StyledSlider>
   );

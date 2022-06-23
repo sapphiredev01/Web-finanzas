@@ -58,9 +58,9 @@ const Contacto = () => {
   };
 
   return (
-    <Container style={{marginTop : '8rem', padding : '2rem, 0'}} id="contacto">
+    <Container style={{ marginTop: "8rem", padding: "2rem, 0" }} id="contacto">
       <Content.Content>
-        <Content.ImageSquare src={Img} />
+        <Content.ImageSquare src={Img} alt="Img" />
         <Content.Form>
           <Content.Titulo>CONTACTANOS</Content.Titulo>
           <Content.Info>
@@ -88,7 +88,9 @@ const Contacto = () => {
                 onChange={(e) => setNombre(e.target.value)}
                 value={nombre}
               />
-            <Content.LabelMovil middle for="email">Email</Content.LabelMovil> 
+              <Content.LabelMovil middle for="email">
+                Email
+              </Content.LabelMovil>
               <Content.Inputs
                 type="email"
                 id="email"

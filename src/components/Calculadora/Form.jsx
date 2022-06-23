@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from "react";
 import * as Content from "./Content";
 
@@ -97,7 +98,7 @@ const Form = ({ onSubmitFormHandler }) => {
         />
         <Content.LabelStyled>Pagos</Content.LabelStyled>
         <Content.Select
-          onChange={paymentFrequencyHandler}
+          onChange={paymentFrequencyHandler, paymentFrequencyInputHandler}
           value={userInput.enteredPaymentFrequency}
           id="paymentFrequency"
         >

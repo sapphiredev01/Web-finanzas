@@ -44,7 +44,7 @@ export const TitleContainer = styled.div`
 `;
 export const Title = styled.h1`
   text-align: start;
-  color: #034e80;
+  color: var(--blue);
   letter-spacing: 0px;
   opacity: 1;
   text-transform: uppercase;

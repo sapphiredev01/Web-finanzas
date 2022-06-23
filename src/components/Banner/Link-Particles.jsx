@@ -11,7 +11,6 @@ const Background = styled.div`
 
 export const LinkParticles = () =>{
     const particlesInit = async (main) => {
-        console.log(main);
         await loadFull(main);
       };
     
@@ -25,7 +24,7 @@ export const LinkParticles = () =>{
         {   
             "background": {
               "color": {
-                "value": "#0d47a1"
+                "value": "#00345b"
               },
               "position": "center",
               "repeat": "repeat",

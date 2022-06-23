@@ -68,10 +68,10 @@ export const StyledLink = styled(Link).attrs(() => ({
     cursor: pointer;
     transform: scale(1.3);
     transition: 0.2s ease-in-out;
-    border-bottom: 3px solid #034e80;
+    border-bottom: 3px solid var(--blue);
   }
   &.active {
-    border-bottom: 3px solid #034e80;
+    border-bottom: 3px solid var(--blue);
     transition: 0.2s ease-in-out;
   }
 `;
@@ -89,7 +89,7 @@ export const Step = styled.li`
     flex: 0 0 var(--size);
     height: var(--size);
     border-radius: 50%;
-    background-color: #034e80;
+    background-color: var(--blue);
   }
   &:not(:last-child):after {
     content: "";
@@ -99,7 +99,7 @@ export const Step = styled.li`
     bottom: 0;
     transform: translateX(1.5rem);
     width: 2px;
-    background-color: #034e80;
+    background-color: var(--blue);
     top: calc(var(--size) + var(--spacing));
     transform: translateX(calc(var(--size) / 2));
     bottom: var(--spacing);

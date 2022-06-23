@@ -9,7 +9,7 @@ const device = {
 };
 
 export const Content = styled.div`
-  grid-area: 2 / 2 / 13 / 13;
+  grid-area: 1 / 2 / 13 / 13;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(6, 1fr);

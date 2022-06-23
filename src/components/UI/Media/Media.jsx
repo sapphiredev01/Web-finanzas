@@ -10,8 +10,8 @@ export const Container = styled.div`
     justify-content: center;
     margin-top: 65%;
     padding: 0.5rem 0;
-    border-top: 12px solid #034e80;
-    border-bottom: 12px solid #034e80;
+    border-top: 12px solid var(--blue);
+    border-bottom: 12px solid var(--blue);
   }
 `;
 

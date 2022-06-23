@@ -39,7 +39,7 @@ export const Content = styled.div`
     grid-template-rows: repeat(10, 1fr);
     grid-column-gap: 0;
     grid-row-gap: 0;
-    margin: 0;
+    margin: 7rem 0 0 0;
     width: 100%;
     place-items: center;
   }
@@ -60,7 +60,7 @@ export const TitleContainer = styled.div`
 
 export const Title = styled.h1`
   text-align: start;
-  color: #034e80;
+  color: var(--blue);
   letter-spacing: 0px;
   opacity: 1;
   text-transform: uppercase;

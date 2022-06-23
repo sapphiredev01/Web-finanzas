@@ -38,7 +38,7 @@ export const Title = styled.h1`
   font: Helvetica Neue;
   font-size: 3em;
   text-align: start;
-  color: #034e80;
+  color: var(--blue);
   letter-spacing: 0px;
   opacity: 1;
   text-transform: uppercase;
@@ -56,10 +56,10 @@ export const Table = styled.table`
   text-align: center;
   border-collapse: collapse;
   & th {
-    border-bottom: 1px solid #034e80;
+    border-bottom: 1px solid var(--blue);
   }
   & td {
-    border-bottom: 0.5px solid #034e80;
+    border-bottom: 0.5px solid var(--blue);
   }
   @media (max-width: 768px) {
     grid-area: 2 / 1 / 12 / 12;

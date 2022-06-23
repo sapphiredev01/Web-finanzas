@@ -76,7 +76,7 @@ export const Titulo = styled.h1`
   font-weight: bold;
   margin-left: 15px;
   margin-top: 10px;
-  color: #034e80;
+  color: var(--blue);
 `;
 
 export const Info = styled.div`
@@ -108,7 +108,7 @@ export const Subtitle = styled.h2`
   font-size: 25px;
   font-weight: bold;
   margin-left: 15px;
-  color: #034e80;
+  color: var(--blue);
 `;
 
 export const InputsLabelDiv = styled.div`
