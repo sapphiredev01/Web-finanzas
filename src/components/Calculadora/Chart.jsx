@@ -22,7 +22,7 @@ ChartJS.register(
 
 const Chart = ({ data }) => {
   const chartData = {
-    labels: data.map((item) => item.name),
+    labels: data.map((item) => item[2]),
     datasets: [
       {
         label: "Rendimiento de inversión",
