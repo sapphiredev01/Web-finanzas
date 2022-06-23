@@ -11,7 +11,7 @@ const Form = ({ onSubmitFormHandler }) => {
 
   const [time, setTime] = useState([
     {
-      value: "6",
+      value: "8",
       title: "Seis meses",
     },
     {
