@@ -28,7 +28,7 @@ export const Content = styled.div`
     margin-left: 0;
     margin-bottom: 6rem;
   }
-  @media (max-height: 667px) {
+  @media (max-height: 667px) and (max-width: 375px) {
    margin-top: 200%;
   }
 `;

@@ -40,7 +40,7 @@ export const Content = styled.div`
     margin: 0;
     width: 90%;
   }
-  @media (max-height: 667px) {
+  @media (max-height: 667px) and (max-width: 375px) {
    margin-top: 220%;
   }
 `;
@@ -60,7 +60,7 @@ export const ImageSquare = styled.img`
     height: auto;
     margin-top: 5rem;
   }
-  @media (max-height: 667px) {
+  @media (max-height: 667px) and (max-width: 375px) {
    margin-top: 12rem;
   }
 `;

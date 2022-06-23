@@ -43,7 +43,7 @@ export const Content = styled.div`
     width: 100%;
     place-items: center;
   }
-  @media (max-height: 667px) {
+  @media (max-height: 667px) and (max-width: 375px) {
    margin-top: 170%;
   }
 `;
@@ -93,7 +93,7 @@ export const Div1 = styled.div`
   & h2, p { 
     padding: 0 1rem;
   }
-  @media (max-height: 667px) {
+  @media (max-height: 667px) and (max-width: 375px) {
     grid-area: 2 / 1 / 11 / 13;
     font-size: .8rem;
   }
@@ -116,7 +116,7 @@ export const Div2 = styled.div`
     padding-top: 0;
     margin: 2rem;
   }
-  @media (max-height: 667px) {
+  @media (max-height: 667px) and (max-width: 375px) {
     grid-area: 11 / 1 / 11 / 13;
     font-size: .8rem;
   }
@@ -136,7 +136,7 @@ export const Div3 = styled.div`
 export const Desc = styled.p`
 font-weight: bold;
 font-size: 1rem;
-@media (max-height: 667px) {
+@media (max-height: 667px) and (max-width: 375px) {
     font-size: .8rem;
   }
 `;

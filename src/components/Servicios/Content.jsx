@@ -23,7 +23,7 @@ export const Wrapper = styled.div`
     margin: auto;
     padding-bottom: 3rem;
   }
-  @media (max-height: 667px) {
+  @media (max-height: 667px) and (max-width: 375px) {
    margin-bottom: 80%;
   }
 `;
@@ -40,7 +40,7 @@ export const Title = styled.h1`
     padding-top: 5rem;
     padding-left: 0;
   }
-  @media (max-height: 667px) {
+  @media (max-height: 667px) and (max-width: 375px) {
    padding-top: 40%;
   }
 `;
