@@ -16,6 +16,9 @@ export const Container = styled.div`
   @media (max-height: 740px) {
    margin-top: 100%;
   }
+  @media (max-height: 667px) {
+   margin-top: 210%;
+  }
 `;
 
 export const MediaItem = styled.button`

@@ -57,18 +57,18 @@ const Contacto = () => {
       <Content.Content>
         <Content.ImageSquare src={Img} />
         <Content.Form>
-          <Content.Titulo>CONTACTANOS</Content.Titulo>
+          <Content.Titulo>CONTÁCTANOS</Content.Titulo>
           <Content.Info>
-            <Content.InfoItemAlt>Direccion</Content.InfoItemAlt>
+            <Content.InfoItemAlt>Dirección</Content.InfoItemAlt>
             <Content.InfoItemAlt>Correo</Content.InfoItemAlt>
-            <Content.InfoItemAlt>Telefono</Content.InfoItemAlt>
+            <Content.InfoItemAlt>Teléfono</Content.InfoItemAlt>
           </Content.Info>
           <Content.Info>
             <Content.InfoItem>Barranca Granate 104</Content.InfoItem>
             <Content.InfoItem>correo@gmail.com</Content.InfoItem>
             <Content.InfoItem>477 378 0283</Content.InfoItem>
           </Content.Info>
-          <Content.Subtitle>Mandanos un mensaje</Content.Subtitle>
+          <Content.Subtitle>Mándanos un mensaje</Content.Subtitle>
           <form onSubmit={mandarCorreo}>
             <Content.InputsLabelDiv>
               <Content.Label>Nombre</Content.Label>

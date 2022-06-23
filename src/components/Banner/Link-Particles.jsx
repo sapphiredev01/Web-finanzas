@@ -37,6 +37,7 @@ export const LinkParticles = () =>{
             "interactivity": {
               "events": {
                 "onClick": {
+                  "enable": "true",
                   "mode": "push"
                 },
                 "onDiv": {
@@ -44,9 +45,15 @@ export const LinkParticles = () =>{
                   "enable": true,
                   "mode": "repulse"
                 },
-                "onHover": {
-                  "mode": "repulse"
-                }
+                "onHover":{
+                  "enable": true,
+                  "mode": "repulse",
+                  "parallax": {
+                    "enable": false,
+                    "force": 10,
+                    "smooth": 10
+                  }
+                },
               },
               "modes": {
                 "bubble": {
@@ -110,7 +117,7 @@ export const LinkParticles = () =>{
                 "density": {
                   "enable": true
                 },
-                "value": 100
+                "value": 80
               },
               "opacity": {
                 "random": {
@@ -122,7 +129,7 @@ export const LinkParticles = () =>{
                 },
                 "animation": {
                   "enable": true,
-                  "speed": 3,
+                  "speed": 5,
                   "minimumValue": 0.1
                 }
               },
