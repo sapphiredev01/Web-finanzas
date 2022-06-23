@@ -16,7 +16,7 @@ const Calculadora = () => {
       <Content.Content>
         <Content.TitleContainer>
           <Content.Title>
-            <h1>Calculadora</h1>
+            Calculadora
           </Content.Title>
         </Content.TitleContainer>
         <Content.DivImage>

@@ -8,7 +8,7 @@ const Paquetes = () => {
       <Content>
         <TitleContainer>
           <Title>
-            <h1>Paquetes</h1>
+            Paquetes
           </Title>
         </TitleContainer>
         <Div1>

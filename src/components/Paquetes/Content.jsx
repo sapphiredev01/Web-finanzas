@@ -66,8 +66,9 @@ export const Title = styled.h1`
   text-transform: uppercase;
   padding: 0;
   margin: 0;
+  font-size: 4rem;
   @media (max-width: 768px) {
-    font-size: 1.6rem;
+    font-size: 4rem;
     text-align: center;
   }
 `;

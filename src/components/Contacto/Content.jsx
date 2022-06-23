@@ -61,7 +61,7 @@ export const ImageSquare = styled.img`
 
 export const Form = styled.div`
   grid-area: 1 / 4 / 9 / 7;
-  padding: 1rem;
+  padding: 2rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
   @media ${device.tablet} {
@@ -74,14 +74,13 @@ export const Titulo = styled.h1`
   text-align: left;
   font-size: 40px;
   font-weight: bold;
-  margin-left: 15px;
   margin-top: 10px;
   color: var(--blue);
 `;
 
 export const Info = styled.div`
   grid-area: 2 / 4 / 3 / 7;
-  margin: 0px 15px;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -93,10 +92,20 @@ export const Info = styled.div`
 export const InfoItem = styled.div`
   text-align: left;
   font-size: 16px;
-  font-weight: ${(props) => (props.alt ? "bold" : "normal")};
   color: #000000;
   @media ${device.tablet} {
-    display:${(props) => (props.alt ? "none" : "")};
+    margin-bottom: 1rem;  
+    font-size: 18px;
+  }
+`;
+
+export const InfoItemAlt = styled.div`
+  text-align: left;
+  font-size: 16px;
+  font-weight:bold;
+  color: #000000;
+  @media ${device.tablet} {
+    display:none;
     margin-bottom: 1rem;  
     font-size: 18px;
   }
@@ -107,15 +116,14 @@ export const Subtitle = styled.h2`
   text-align: left;
   font-size: 25px;
   font-weight: bold;
-  margin-left: 15px;
   color: var(--blue);
 `;
 
 export const InputsLabelDiv = styled.div`
   grid-area: ${(props) => (props.down ? "6 / 4 / 7 / 7" : "4 / 4 / 5 / 7")};
-  margin: 0px 15px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
   @media ${device.tablet} {
     display: none;
   }
@@ -134,7 +142,6 @@ export const LabelMovil = styled.p`
   font-weight: bold;
   color: #000000;
   display: none;
-  margin-left: ${(props) => (props.middle ? "0" : "15px")};
   @media ${device.tablet} {
     display: flex;
   }
@@ -142,13 +149,15 @@ export const LabelMovil = styled.p`
 
 export const InputsFormDiv = styled.div`
   grid-area: ${(props) => (props.down ? "7 / 4 / 8 / 7" : "5 / 4 / 6 / 7")};
-  margin: 0px 15px;
-  display: flex;
+  display: grid;
+  grid-template-columns: ${(props) => (props.down ? "100%" : "1fr 1fr")};
+  gap: 2rem;
+  @media ${device.tablet} {
+    display: flex;
   justify-content: space-between;
   text-align: left;
-
-  @media ${device.tablet} {
-    flex-direction: column;
+  flex-direction: column;
+  gap: 0;
   }
 
 `;
@@ -157,12 +166,14 @@ export const Inputs = styled.input`
   border: none;
   border-bottom: 1px solid black;
   font-size: 15px;
+  @media ${device.tablet} {
+    margin-left: 0;
+  }
 `;
 
 export const Input2 = styled.textarea`
   border: none;
   border-bottom: 1px solid black;
-  width: 100%;
   font-size: 15px ;
 `;
 

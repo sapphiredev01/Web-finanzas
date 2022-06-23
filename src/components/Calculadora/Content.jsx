@@ -50,8 +50,9 @@ export const Title = styled.h1`
   text-transform: uppercase;
   padding: 0;
   margin: 0;
+  font-size: 4rem;
   @media (max-width: 768px) {
-    font-size: 1.2rem;
+    font-size: 4rem;
   }
 `;
 
