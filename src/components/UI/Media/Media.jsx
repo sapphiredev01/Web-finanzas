@@ -13,8 +13,11 @@ export const Container = styled.div`
     border-top: 12px solid var(--blue);
     border-bottom: 12px solid var(--blue);
   }
-  @media (max-height: 740px) {
+  @media (max-height: 740px) and (max-width: 375px) {
    margin-top: 100%;
+  }
+  @media (max-height: 667px) and (max-width: 375px) {
+   margin-top: 210%;
   }
 `;
 

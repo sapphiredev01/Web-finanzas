@@ -28,6 +28,9 @@ export const Content = styled.div`
     margin-left: 0;
     margin-bottom: 6rem;
   }
+  @media (max-height: 667px) and (max-width: 375px) {
+   margin-top: 200%;
+  }
 `;
 export const TitleContainer = styled.div`
   grid-area: 1 / 1 / 3 / 12;
@@ -52,7 +55,7 @@ export const Title = styled.h1`
   margin: 0;
   font-size: 4rem;
   @media (max-width: 768px) {
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
 `;
 

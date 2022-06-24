@@ -40,6 +40,9 @@ export const Content = styled.div`
     margin: 0;
     width: 90%;
   }
+  @media (max-height: 667px) and (max-width: 375px) {
+   margin-top: 220%;
+  }
 `;
 
 export const ImageSquare = styled.img`
@@ -56,6 +59,9 @@ export const ImageSquare = styled.img`
     width: 100%;
     height: auto;
     margin-top: 5rem;
+  }
+  @media (max-height: 667px) and (max-width: 375px) {
+   margin-top: 12rem;
   }
 `;
 
@@ -186,7 +192,8 @@ export const ButtonDiv = styled.div`
 
 export const ButtonSend = styled.button`
   background: #ffffff;
-  border: 1px inset #707070;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 8px;
   font-size: 20px;
   font-weight: bold;
   width: 30%;
