@@ -133,7 +133,7 @@ export const Div3 = styled.div`
   }
 `;
 
-export const Desc = styled.p`
+export const Desc = styled.ul`
 font-weight: bold;
 font-size: 1rem;
 @media (max-height: 667px) and (max-width: 375px) {

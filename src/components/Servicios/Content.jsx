@@ -37,11 +37,11 @@ export const Title = styled.h1`
   }
   @media (max-width: 880px) {
     text-align: center;
-    padding-top: 5rem;
+    padding-top: 15rem;
     padding-left: 0;
   }
   @media (max-height: 667px) and (max-width: 375px) {
-   padding-top: 40%;
+   padding-top: 70%;
   }
 `;
 
@@ -93,11 +93,6 @@ export const Content = () => {
       <Item src={crypto} alt={"Crypto"} title={"crypto"} />
       <Item src={stocks} alt={"Stocks"} title={"stocks"} />
       <Item src={startups} alt={"Startups"} title={"startups"} />
-      <Item
-        src={comerc}
-        alt={"Comercio exterior"}
-        title={"comercio exterior"}
-      />
     </Row>
   );
 };

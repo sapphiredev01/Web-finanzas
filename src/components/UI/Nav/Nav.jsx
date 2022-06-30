@@ -21,8 +21,8 @@ const Nav = () => {
           </StyledLink>
         </Step>
         <Step>
-          <StyledLink to="nosotros">
-            <Title>NOSOTROS</Title>
+          <StyledLink to="vision">
+            <Title>VISIÓN</Title>
           </StyledLink>
         </Step>
         <Step>
@@ -31,8 +31,8 @@ const Nav = () => {
           </StyledLink>
         </Step>
         <Step>
-          <StyledLink to="paquetes">
-            <Title>PAQUETES</Title>
+          <StyledLink to="perfil">
+            <Title>PERFIL</Title>
           </StyledLink>
         </Step>
         <Step>

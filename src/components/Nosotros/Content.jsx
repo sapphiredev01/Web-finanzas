@@ -1,24 +1,11 @@
 import styled from "styled-components";
 
 const size = {
-  mobileS: "320px",
-  mobileM: "375px",
-  mobileL: "425px",
   tablet: "768px",
-  laptop: "1024px",
-  laptopL: "1440px",
-  desktop: "2560px",
 };
 
 const device = {
-  mobileS: `(max-width: ${size.mobileS})`,
-  mobileM: `(max-width: ${size.mobileM})`,
-  mobileL: `(max-width: ${size.mobileL})`,
   tablet: `(max-width: ${size.tablet})`,
-  laptop: `(max-width: ${size.laptop})`,
-  laptopL: `(max-width: ${size.laptopL})`,
-  desktop: `(max-width: ${size.desktop})`,
-  desktopL: `(max-width: ${size.desktop})`,
 };
 
 export const Content = styled.div`
@@ -85,7 +72,6 @@ export const Title = styled.h1`
   width: 400px;
   height: 150px;
   margin-left: 20%;
-
   @media ${device.tablet} {
     display: flex;
     justify-content: center;
@@ -93,12 +79,12 @@ export const Title = styled.h1`
     margin-left: 0%;
     font-size: 2rem;
     width: 100%;
-    margin-left: 0;
     text-align: center;
     margin-top: 0;
     margin-bottom: 0;
     justify-self: center;
-    padding-top: 4rem;
+    padding-top: 20rem;
+    margin-bottom: -2rem;
   }
 `;
 
@@ -106,17 +92,16 @@ export const Text = styled.div`
   text-align: justify;
   text-justify: inter-word;
   font-size: 16px;
-  font-weight: bold;
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
-  margin-left: 40%;
+  margin-left: 10%;
   width: 100%;
-
+  padding-top: 2%;
   @media ${device.tablet} {
     margin-left: 0%;
     font-size: 1rem;
-    text-align: center;
+    text-align: justify;
   }
 `;
 

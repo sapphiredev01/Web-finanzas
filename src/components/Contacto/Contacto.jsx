@@ -59,14 +59,10 @@ const Contacto = () => {
         <Content.Form>
           <Content.Titulo>CONTÁCTANOS</Content.Titulo>
           <Content.Info>
-            <Content.InfoItemAlt>Dirección</Content.InfoItemAlt>
             <Content.InfoItemAlt>Correo</Content.InfoItemAlt>
-            <Content.InfoItemAlt>Teléfono</Content.InfoItemAlt>
           </Content.Info>
           <Content.Info>
-            <Content.InfoItem>Barranca Granate 104</Content.InfoItem>
-            <Content.InfoItem>correo@gmail.com</Content.InfoItem>
-            <Content.InfoItem>477 378 0283</Content.InfoItem>
+            <Content.InfoItem>info@finpei.com</Content.InfoItem>
           </Content.Info>
           <Content.Subtitle>Mándanos un mensaje</Content.Subtitle>
           <form onSubmit={mandarCorreo}>

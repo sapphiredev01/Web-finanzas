@@ -111,7 +111,6 @@ export const InfoItemAlt = styled.div`
   font-weight:bold;
   color: #000000;
   @media ${device.tablet} {
-    display:none;
     margin-bottom: 1rem;  
     font-size: 18px;
   }

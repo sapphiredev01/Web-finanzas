@@ -4,20 +4,26 @@ import { Content, TitleContainer, Title, Div1, Div2, Div3, Desc} from "./Content
 
 const Paquetes = () => {
   return (
-    <Container id="paquetes" grid>
+    <Container id="perfil" grid>
       <Content>
         <TitleContainer>
           <Title>
-            Paquetes
+            Perfil
           </Title>
         </TitleContainer>
         <Div1>
-          <h2 style={{color: 'var(--blue)'}}>Anual Tasa Fija</h2>
-          <Desc>Diseñado para inversores que quieren cubrir sus responsabilidades mensuales de manera inteligente, como pagar su casa, comprar un terreno, pagar colegiaturas o incrementar sus ingresos mensuales</Desc>
+          <h2 style={{color: 'var(--blue)'}}>Starter</h2>
+          <Desc>
+            <li>Capital menor: $5,000 USD - $25,000 USD</li>
+            <li>Horizonte de inversión de 6 a 12 meses</li>
+          </Desc>
         </Div1>
         <Div2>
-          <h2 style={{color: 'var(--blue)'}}>Anual Tasa Compuesta</h2>
-          <Desc>Aquellas personas que consideran el ahorro como parte vital de sus vidas financieras, querrán tomar un paso más grande, al no solamente ahorrar, sino también hacer que sus ahorros produzcan más capital, asegurar su futuro, e incluso vivir un retiro inmejorable.</Desc>
+          <h2 style={{color: 'var(--blue)'}}>Advanced</h2>
+          <Desc>
+            <li>Mayor capital: $25,000 USD en adelante</li>
+            <li>Horizonte de inversión de 1 a 5 años</li>
+          </Desc>
         </Div2>
         <Div3 />
       </Content>

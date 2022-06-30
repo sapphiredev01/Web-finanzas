@@ -24,7 +24,7 @@ export const LinkParticles = () =>{
         {   
             "background": {
               "color": {
-                "value": "#00345b"
+                "value": "#0d47a1"
               },
               "position": "center",
               "repeat": "repeat",
@@ -37,7 +37,7 @@ export const LinkParticles = () =>{
             "interactivity": {
               "events": {
                 "onClick": {
-                  "enable": "true",
+                  "enable": false,
                   "mode": "push"
                 },
                 "onDiv": {
@@ -46,7 +46,7 @@ export const LinkParticles = () =>{
                   "mode": "repulse"
                 },
                 "onHover":{
-                  "enable": true,
+                  "enable": false,
                   "mode": "repulse",
                   "parallax": {
                     "enable": false,
