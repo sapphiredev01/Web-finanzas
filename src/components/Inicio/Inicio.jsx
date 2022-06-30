@@ -3,7 +3,6 @@ import Container from "../UI/Containers/Containers";
 import { Content, Left, Right, Title, Text, Card } from "./Content";
 import { TableRender, CryptoRow } from "./CryptoContent";
 
-
 const Inicio = () => {
   const [coins, setCoins] = useState([]);
   const [coins2, setCoins2] = useState([]);
@@ -27,7 +26,7 @@ const Inicio = () => {
   }, []);
   return (
     <Container id="inicio" grid>
-      <CryptoRow coins={coins2}/>
+      <CryptoRow coins={coins2} />
       <Content>
         <Left>
           <Title>El crecimiento esta asegurado.</Title>
@@ -39,7 +38,7 @@ const Inicio = () => {
         </Left>
         <Right>
           <Card>
-            <TableRender coins={coins}/>
+            <TableRender coins={coins} />
           </Card>
         </Right>
       </Content>

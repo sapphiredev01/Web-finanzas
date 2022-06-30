@@ -82,7 +82,7 @@ export const ImageStyled = styled.img`
 
 export const Div1 = styled.div`
 
-  grid-area: 4 / 1 / 11 / 5;
+  grid-area: 14 / 1 / 4 / 5;
   background-color: var(--blue);
   overflow: hidden;
   border-radius: 0.5rem;
@@ -95,9 +95,9 @@ export const Div1 = styled.div`
   }
 `;
 export const Div2 = styled.div`
-  grid-area: 4 / 5 / 11 / 13;
+  grid-area: 4 / 5 / 13 / 13;
   box-shadow: 0px 3px 6px #00000029;
-  padding-left: 1rem;
+  padding: 1rem;
   overflow: hidden;
   border-radius: 0.5rem;
   width: 100%;

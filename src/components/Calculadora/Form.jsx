@@ -19,17 +19,29 @@ const Form = ({ onSubmitFormHandler }) => {
       title: "Un año",
     },
     {
-      value: "36",
+      value: "3",
       title: "Tres años",
     },
     {
-      value: "60",
+      value: "5",
       title: "Cinco años",
     },
   ]);
 
-  const paymentFrequencyHandler = () => {
-    setTime(() => time.filter((option) => option.value != "6"));
+  const paymentFrequencyHandler = (e) => {
+    const itExists = time.find((option) => option.value === "6");
+    if (!itExists) {
+      setTime([
+        {
+          value: "6",
+          title: "Seis meses",
+        },
+        ...time,
+      ]);
+    }
+    if (e.target.value === "34.99") {
+      setTime(() => time.filter((option) => option.value !== "6"));
+    }
   };
 
   const amountInputHandler = (event) => {
@@ -95,12 +107,13 @@ const Form = ({ onSubmitFormHandler }) => {
           type="text"
           onChange={amountInputHandler}
         />
-        <Content.LabelStyled>Pagos</Content.LabelStyled>
+        <Content.LabelStyled>Aportación</Content.LabelStyled>
         <Content.Select
-          onSelect={paymentFrequencyHandler}
-          onChange={paymentFrequencyInputHandler}
+          onChange={(e) => {
+            paymentFrequencyHandler(e);
+            paymentFrequencyInputHandler(e);
+          }}
           value={userInput.enteredPaymentFrequency}
-          id="paymentFrequency"
         >
           <option value="" hidden>
             Seleccione una opción
@@ -108,9 +121,7 @@ const Form = ({ onSubmitFormHandler }) => {
           <option value="1.46">Mensual</option>
           <option value="5.57">Trimestral</option>
           <option value="13.95">Semestral</option>
-          <option value="34.99">
-            Anual
-          </option>
+          <option value="34.99">Anual</option>
         </Content.Select>
         <Content.LabelStyled>Plazo</Content.LabelStyled>
         <Content.Select

@@ -82,6 +82,7 @@ export const Div1 = styled.div`
   box-shadow: 0px 3px 6px #00000029;
   padding-left: 1rem;
   overflow: hidden;
+  font-size: .9rem;
 
   @media ${device.laptop} {
     grid-area: 3 / 1 / 7 / 13;
@@ -105,6 +106,7 @@ export const Div2 = styled.div`
   box-shadow: 0px 3px 6px #00000029;
   padding-left: 1rem;
   overflow: hidden;
+  font-size: .9rem;
   & h2, p { 
     padding: 0 1rem;
   }
