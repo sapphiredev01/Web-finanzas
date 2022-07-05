@@ -1,52 +1,44 @@
 import React from "react";
-import {
-  Wrapper,
-  Stepper,
-  Step,
-  Title,
-  StyledLink,
-  ImageStyled,
-} from "./NavElements";
-import NavResponsive from "./NavResponsive";
+import * as Styles from "./Styles";
 import logo from "../../../images/LOGOTIPOS_FINPEI_28.png";
 
 const Nav = () => {
   return (
-    <Wrapper>
-      <Stepper>
-        <ImageStyled src={logo} style={{marginBottom:"2rem"}} />
-        <Step>
-          <StyledLink to="inicio">
-            <Title>INICIO</Title>
-          </StyledLink>
-        </Step>
-        <Step>
-          <StyledLink to="vision">
-            <Title>VISIÓN</Title>
-          </StyledLink>
-        </Step>
-        <Step>
-          <StyledLink to="servicios">
-            <Title>SERVICIOS</Title>
-          </StyledLink>
-        </Step>
-        <Step>
-          <StyledLink to="perfil">
-            <Title>PERFIL</Title>
-          </StyledLink>
-        </Step>
-        <Step>
-          <StyledLink to="calculadora">
-            <Title>CALCULADORA</Title>
-          </StyledLink>
-        </Step>
-        <Step>
-          <StyledLink to="contacto">
-            <Title>CONTACTO</Title>
-          </StyledLink>
-        </Step>
-      </Stepper>
-    </Wrapper>
+    <Styles.Wrapper>
+      <Styles.Stepper>
+        <Styles.ImageStyled src={logo} style={{ marginBottom: "2rem" }} />
+        <Styles.Step>
+          <Styles.StyledLink to="inicio">
+            <Styles.Title>INICIO</Styles.Title>
+          </Styles.StyledLink>
+        </Styles.Step>
+        <Styles.Step>
+          <Styles.StyledLink to="vision">
+            <Styles.Title>VISIÓN</Styles.Title>
+          </Styles.StyledLink>
+        </Styles.Step>
+        <Styles.Step>
+          <Styles.StyledLink to="servicios">
+            <Styles.Title>SERVICIOS</Styles.Title>
+          </Styles.StyledLink>
+        </Styles.Step>
+        <Styles.Step>
+          <Styles.StyledLink to="perfil">
+            <Styles.Title>PERFIL</Styles.Title>
+          </Styles.StyledLink>
+        </Styles.Step>
+        <Styles.Step>
+          <Styles.StyledLink to="calculadora">
+            <Styles.Title>CALCULADORA</Styles.Title>
+          </Styles.StyledLink>
+        </Styles.Step>
+        <Styles.Step>
+          <Styles.StyledLink to="contacto">
+            <Styles.Title>CONTACTO</Styles.Title>
+          </Styles.StyledLink>
+        </Styles.Step>
+      </Styles.Stepper>
+    </Styles.Wrapper>
   );
 };
 

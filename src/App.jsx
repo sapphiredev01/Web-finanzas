@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Banner from "./components/Banner/Banner";
+import Hero from "./components/Hero/Hero";
 import Inicio from "./components/Inicio/Inicio";
 import Nosotros from "./components/Nosotros/Nosotros";
 import Servicios from "./components/Servicios/Servicios";
 import Contacto from "./components/Contacto/Contacto";
 import Calculadora from "./components/Calculadora/Calculadora";
-import Paquetes from "./components/Paquetes/Paquetes";
+import Perfil from "./components/Perfil/Perfil";
 import Nav from "./components/UI/Nav/Nav";
 import Media from "./components/UI/Media/index";
 import "./App.css";
@@ -25,12 +25,12 @@ function App() {
   return (
     <div className="app">
       <Nav />
-      <Banner />
+      <Hero />
       {isDesktop ? (<><Media /></>) : ( <></>)}
       <Inicio />
       <Nosotros />
       <Servicios />
-      <Paquetes />
+      <Perfil />
       <Calculadora />
       <Contacto />
       {isDesktop ? (<> </>) : (<><Media /></>)}

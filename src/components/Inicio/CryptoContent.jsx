@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Component } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Slider from "react-slick";
 import Item from "./Item";

@@ -9,22 +9,18 @@ const Calculadora = () => {
   const [data, setData] = useState([]);
   const submitFormHandler = (data) => {
     setData(data);
-  }
+  };
 
   return (
-    <Container id="calculadora" grid>
-      <Content.Content>
-        <Content.TitleContainer>
-          <Content.Title>
-            Calculadora
-          </Content.Title>
-        </Content.TitleContainer>
-        <Content.DivImage>
-          <Content.ImageStyled src={imgBearBull} />
-        </Content.DivImage>
-        <Form onSubmitFormHandler={submitFormHandler} />
-        <Chart data={data} />
-      </Content.Content>
+    <Container id="calculadora">
+      <Content.TitleContainer>
+        <Content.Title>Calculadora</Content.Title>
+      </Content.TitleContainer>
+      <Content.DivImage>
+        <Content.ImageStyled src={imgBearBull} />
+      </Content.DivImage>
+      <Form onSubmitFormHandler={submitFormHandler} />
+      <Chart data={data} />
     </Container>
   );
 };
