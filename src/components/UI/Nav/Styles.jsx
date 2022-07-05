@@ -4,15 +4,15 @@ import device from "../../../utils/Variables";
 
 export const Wrapper = styled.div`
   position: fixed;
-  height: 100%;
+  left: 0;
+  top: 0;
+  width: 12vw;
+  height: 100vh;
   display: flex;
   align-items: center;
-  width: 10%;
 
   @media ${device.tablet} {
-    height: 0;
-    position: absolute;
-    top: 0%;
+    display: none;
   }
 `;
 
@@ -21,9 +21,6 @@ export const Stepper = styled.ol`
   --size: 1rem;
   --spacing: 0.5rem;
   padding-top: 1rem;
-  @media (max-width: 768px) {
-    display: none;
-  }
 `;
 
 export const Title = styled.p`
