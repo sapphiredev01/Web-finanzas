@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Container from "../UI/Containers/Containers";
+import { Container } from "../UI/Containers/Containers";
 import * as Content from "./Content";
 import imgBearBull from "../../images/bear_bull.png";
 import Chart from "./Chart";

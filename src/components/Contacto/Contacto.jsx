@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useAlert } from "react-alert";
 import emailjs from "emailjs-com";
-import Container from "../UI/Containers/Containers";
+import { Container } from "../UI/Containers/Containers";
 import * as Content from "./Content";
 import Img from "../../images/contact.jpg";
 

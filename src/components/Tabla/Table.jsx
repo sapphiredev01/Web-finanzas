@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import * as Content from "./Content";
-import Container from "../UI/Containers/Containers";
+import { Container } from "../UI/Containers/Containers";
 
 function Table() {
   const [coins, setCoins] = useState([]);

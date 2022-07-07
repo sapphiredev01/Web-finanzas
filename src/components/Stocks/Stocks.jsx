@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Container, Wrapper } from "../UI/Containers/Containers";
-import { Card } from "./Styles";
 import { Title } from "../UI/Typography/Typography";
-import { TableRender, CryptoRow } from "./CryptoContent";
+import Table from "./Table";
+import { CryptoRow } from "./Row";
+import { Chart } from "./Chart";
+import { CardsContainer } from "./Styles";
 
-const Inicio = () => {
+const Stocks = () => {
   const [coins, setCoins] = useState([]);
   const [coins2, setCoins2] = useState([]);
   const getData = async () => {
@@ -26,20 +28,18 @@ const Inicio = () => {
     getData2();
   }, []);
 
-
-
   return (
     <Container id="inicio">
       <Wrapper>
         <Title>Inicio</Title>
         <CryptoRow coins={coins2} />
+        <CardsContainer>
 
-        <Card>
-          <TableRender coins={coins} />
-        </Card>
+          <Table coins={coins} />
+        </CardsContainer>
       </Wrapper>
     </Container>
   );
 };
 
-export default Inicio;
+export default Stocks;

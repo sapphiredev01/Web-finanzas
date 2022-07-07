@@ -1,36 +1,37 @@
-import styled from "styled-components";
+import React from 'react'
+import { Container, MediaItem } from './Styles'
+import {
+  FaFacebookF,
+  AiOutlineInstagram,
+  BsWhatsapp,
+  HiOutlineMail,
+} from "react-icons/all";
 
-export const Container = styled.div`
-  z-index: 3;
-  grid-area: 1 / 1 / 2 / 13;
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 1rem;
-  @media (max-width: 620px) {
-    justify-content: center;
-    margin-top: 65%;
-    padding: 0.5rem 0;
-    border-top: 12px solid var(--blue);
-    border-bottom: 12px solid var(--blue);
-  }
-  @media (max-height: 740px) and (max-width: 375px) {
-   margin-top: 100%;
-  }
-  @media (max-height: 667px) and (max-width: 375px) {
-   margin-top: 210%;
-  }
-`;
+const Media = () => {
+  return (
+    <Container>
+        <a href="https://www.Facebook.com" target="_blank">
+          <MediaItem>
+            <FaFacebookF />
+          </MediaItem>
+        </a>
+        <a href="https://www.Instagram.com" target="_blank">
+          <MediaItem>
+            <AiOutlineInstagram />
+          </MediaItem>
+        </a>
+        <a href="https://www.Whatsapp.com" target="_blank">
+          <MediaItem>
+            <BsWhatsapp />
+          </MediaItem>
+        </a>
+        <a href="https://www.Outlook.com" target="_blank">
+          <MediaItem>
+            <HiOutlineMail />
+          </MediaItem>
+        </a>
+      </Container>
+  )
+}
 
-export const MediaItem = styled.button`
-  padding: 0 1.3rem;
-  font-size: 1.7rem;
-  border-radius: 5px;
-  border: none;
-  background-color: #ffffff;
-  cursor: pointer;
-
-  &:hover {
-    transform: scale(1.5);
-    transition: 0.2s ease-in-out;
-  }
-`;
+export default Media;

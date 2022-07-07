@@ -1,36 +1,39 @@
 import React from "react";
-import Container from "../UI/Containers/Containers";
-import * as content from "./Content";
+import { Container, Wrapper}  from "../UI/Containers/Containers";
+import * as S from "./Styles";
+import { Title, Text } from "../UI/Typography/Typography";
 import ImgVer from "../../images/business4.jpg";
 import ImgHor from "../../images/business1.jpg";
 
 export default function Nosotros() {
   return (
     <Container id="vision">
-      <content.Left>
-        <content.Title>VISIÓN</content.Title>
-        <content.Text>
+      <Wrapper>
+        <Title>VISIÓN</Title>
+        <S.WrapperFlex>
+        <S.ContentText>
+        <Text>
           En <b>FINPEI</b> facilitamos el acercamiento a proyectos comerciales,
           mercados financieros y criptográficos. Participando en el desarrollo
           de proyectos de éxito
-        </content.Text>
-        <content.Text>
+        </Text>
+        <Text>
           <b>Misión:</b> Crear más oportunidades de crecimiento en diversos
           mercados que brindan seguridad y estabilidad en nuestros proyectos
-        </content.Text>
-        <content.Text>
+        </Text>
+        <Text>
           <b>Visión:</b> Ser lideres en diversificación global a nivel nacional
-        </content.Text>
-        <content.Text>
+        </Text>
+        <Text>
           <b>Valores:</b> Las empresas con las que colaboramos siempre actúan
           con ética, confianza, honestidad y trabajo en equipo para brindar
           seguridad a nuestros clientes y a nosotros
-        </content.Text>
-      </content.Left>
-      <content.Right>
-        <content.ImageVer src={ImgVer} />
-        <content.ImageHor src={ImgHor} />
-      </content.Right>
+        </Text>
+        </S.ContentText>
+        <S.ImageVer src={ImgVer} />
+        <S.ImageHor src={ImgHor} />
+        </S.WrapperFlex>
+        </Wrapper>
     </Container>
   );
 }

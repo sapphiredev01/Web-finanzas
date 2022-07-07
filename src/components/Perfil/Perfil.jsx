@@ -1,5 +1,5 @@
 import React from "react";
-import Container from "../UI/Containers/Containers";
+import { Container } from "../UI/Containers/Containers";
 import {
   Content,
   TitleContainer,
