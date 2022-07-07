@@ -1,11 +1,16 @@
 import styled from "styled-components";
+import device from "../../../utils/Variables";
 
-const Container = styled.div`
-  width: 88vw;
-  margin-left: 12vw;
-  @media (max-width: 768px) {
-    
+export const Container = styled.div`
+  width: 85vw;
+  margin-left: 15vw;
+  @media ${device.tablet} {
+    width: 100vw;
+    margin-left: 0;
   }
 `;
 
-export default Container;
+export const Wrapper = styled.div`
+  width: 90%;
+  margin: auto;
+`;

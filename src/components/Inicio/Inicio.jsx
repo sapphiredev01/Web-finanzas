@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Container from "../UI/Containers/Containers";
-import { Left, Right, Title, Text, Card } from "./Content";
+import { Container, Wrapper } from "../UI/Containers/Containers";
+import { Card } from "./Styles";
+import { Title } from "../UI/Typography/Typography";
 import { TableRender, CryptoRow } from "./CryptoContent";
 
 const Inicio = () => {
@@ -24,22 +25,19 @@ const Inicio = () => {
     getData();
     getData2();
   }, []);
+
+
+
   return (
     <Container id="inicio">
-      <CryptoRow coins={coins2} />
-      <Left>
-        <Title>El crecimiento esta asegurado.</Title>
-        <Text>
-          Especialistas en financiamiento a la medida para su negocio, contamos
-          con experiencia apoyando a las empresas a obtener créditos a través de
-          instituciones internacionales.
-        </Text>
-      </Left>
-      <Right>
+      <Wrapper>
+        <Title>Inicio</Title>
+        <CryptoRow coins={coins2} />
+
         <Card>
           <TableRender coins={coins} />
         </Card>
-      </Right>
+      </Wrapper>
     </Container>
   );
 };

@@ -1,18 +1,17 @@
-html, body {
+html,
+body {
   height: 100vh;
   width: 100vw;
-  margin: auto;
-  background: #ffffff;
-  font-family: Helvetica, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
-:root{
+:root {
   --blue: #00345b;
   --white: #fff;
 }
@@ -22,41 +21,41 @@ body::-webkit-scrollbar {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-@font-face{
+@font-face {
   font-family: "ALTONE-REGULAR";
-  src:local('ALTONE-REGULAR'), url("fonts/ALTONE-REGULAR.TTF");
+  src: local("ALTONE-REGULAR"), url("fonts/ALTONE-REGULAR.TTF");
 }
-@font-face{
+@font-face {
   font-family: "BwMitga-Regular";
-  src:local('BwMitga-RegularALTONE-REGULAR'), url("fonts/BwMitga-Regular.otf");
+  src: local("BwMitga-RegularALTONE-REGULAR"), url("fonts/BwMitga-Regular.otf");
 }
 
-h1{
+h1 {
   font-family: "ALTONE-REGULAR";
 }
-h2{
+h2 {
   font-family: "ALTONE-REGULAR";
 }
-h3{
+h3 {
   font-family: "ALTONE-REGULAR";
 }
-h4{
+h4 {
   font-family: "ALTONE-REGULAR";
 }
-h5{
+h5 {
   font-family: "ALTONE-REGULAR";
 }
 
-div{
+div {
   font-family: "BwMitga-Regular";
 }
-p{
+p {
   font-family: "BwMitga-Regular";
 }
-button{
+button {
   font-family: "BwMitga-Regular";
 }

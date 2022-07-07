@@ -6,10 +6,10 @@ export const Wrapper = styled.div`
   position: fixed;
   left: 0;
   top: 0;
-  width: 12vw;
+  width: 15vw;
   height: 100vh;
-  display: flex;
-  align-items: center;
+  display: grid;
+  place-items: center;
 
   @media ${device.tablet} {
     display: none;
@@ -25,9 +25,7 @@ export const Stepper = styled.ol`
 
 export const Title = styled.p`
   font-weight: 700;
-  color: #000000;
-  opacity: 1;
-  display: flex;
+  color: var(--black);
   margin-block-start: 0;
   font-size: 0.8rem;
 `;
@@ -83,6 +81,7 @@ export const Step = styled.li`
 `;
 
 export const ImageStyled = styled.img`
-  width: 100%;
+  width: 75%;
   height: auto;
+  margin-bottom: 2rem;
 `;

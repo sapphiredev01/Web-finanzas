@@ -6,7 +6,7 @@ const Nav = () => {
   return (
     <Styles.Wrapper>
       <Styles.Stepper>
-        <Styles.ImageStyled src={logo} style={{ marginBottom: "2rem" }} />
+        <Styles.ImageStyled src={logo} />
         <Styles.Step>
           <Styles.StyledLink to="inicio">
             <Styles.Title>INICIO</Styles.Title>
@@ -29,7 +29,7 @@ const Nav = () => {
         </Styles.Step>
         <Styles.Step>
           <Styles.StyledLink to="calculadora">
-            <Styles.Title>CALCULADORA</Styles.Title>
+            <Styles.Title>INVERSIÓN</Styles.Title>
           </Styles.StyledLink>
         </Styles.Step>
         <Styles.Step>

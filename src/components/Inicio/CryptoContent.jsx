@@ -37,13 +37,11 @@ export const TdChange = styled.td`
 `;
 
 export const Row = styled.div`
-  grid-area: 1 / 2 / 2 / 13;
   display: flex;
   justify-content: space-around;
-  margin: 2rem 0 0 0;
   padding: 1rem 0;
   overflow: hidden;
-  height: 5rem;
+  width: 70%;
   @media (max-width: 768px) {
     display: none;
   }
@@ -52,19 +50,16 @@ export const Row = styled.div`
 const StyledSlider = styled(Slider)`
   box-shadow: 0px 3px 6px #00000029;
   border-radius: 5px;
-  grid-area: 2 / 3 / 2 / 12;
   height: auto;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   overflow: hidden;
   & div {
     float: left;
   }
-  width: 100%;
-  margin: auto;
   @media (max-width: 768px) {
-    margin-bottom: 15rem;
-    width: 90vw;
   }
 `;
 
