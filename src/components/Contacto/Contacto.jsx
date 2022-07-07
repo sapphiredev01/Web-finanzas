@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useAlert } from "react-alert";
 import emailjs from "emailjs-com";
-import { Container } from "../UI/Containers/Containers";
-import * as Content from "./Content";
+import { Container, Wrapper } from "../UI/Containers/Containers";
+import * as S from "./Styles";
 import Img from "../../images/contact.jpg";
 
 const Contacto = () => {
@@ -53,33 +53,35 @@ const Contacto = () => {
   };
 
   return (
-    <Container style={{ marginTop: "8rem", padding: "2rem, 0" }} id="contacto">
-      <Content.ImageSquare src={Img} />
-      <Content.Form>
-        <Content.Titulo>CONTÁCTANOS</Content.Titulo>
-        <Content.Info>
-          <Content.InfoItemAlt>Correo</Content.InfoItemAlt>
-        </Content.Info>
-        <Content.Info>
-          <Content.InfoItem>info@finpei.com</Content.InfoItem>
-        </Content.Info>
-        <Content.Subtitle>Mándanos un mensaje</Content.Subtitle>
+    <Container style={{ marginTop: "35rem" }} id="contacto">
+      <Wrapper>
+        <S.WrapperFlex>
+      <S.ImageSquare src={Img} />
+      <S.Form>
+        <S.Titulo>CONTÁCTANOS</S.Titulo>
+        <S.Info>
+          <S.InfoItemAlt>Correo</S.InfoItemAlt>
+        </S.Info>
+        <S.Info>
+          <S.InfoItem>info@finpei.com</S.InfoItem>
+        </S.Info>
+        <S.Subtitle>Mándanos un mensaje</S.Subtitle>
         <form onSubmit={mandarCorreo}>
-          <Content.InputsLabelDiv>
-            <Content.Label>Nombre</Content.Label>
-            <Content.Label>Correo</Content.Label>
-          </Content.InputsLabelDiv>
-          <Content.LabelMovil>Nombre</Content.LabelMovil>
-          <Content.InputsFormDiv>
-            <Content.Inputs
+          <S.InputsLabelDiv>
+            <S.Label>Nombre</S.Label>
+            <S.Label>Correo</S.Label>
+          </S.InputsLabelDiv>
+          <S.LabelMovil>Nombre</S.LabelMovil>
+          <S.InputsFormDiv>
+            <S.Inputs
               type="text"
               id="name"
               name="name"
               onChange={(e) => setNombre(e.target.value)}
               value={nombre}
             />
-            <Content.LabelMovil middle>Email</Content.LabelMovil>
-            <Content.Inputs
+            <S.LabelMovil middle>Email</S.LabelMovil>
+            <S.Inputs
               email
               type="email"
               id="email"
@@ -87,24 +89,26 @@ const Contacto = () => {
               onChange={(e) => setCorreo(e.target.value)}
               value={correo}
             />
-          </Content.InputsFormDiv>
-          <Content.InputsLabelDiv down>
-            <Content.Label>Mensaje</Content.Label>
-          </Content.InputsLabelDiv>
-          <Content.LabelMovil>Mensaje</Content.LabelMovil>
-          <Content.InputsFormDiv down>
-            <Content.Input2
+          </S.InputsFormDiv>
+          <S.InputsLabelDiv down>
+            <S.Label>Mensaje</S.Label>
+          </S.InputsLabelDiv>
+          <S.LabelMovil>Mensaje</S.LabelMovil>
+          <S.InputsFormDiv down>
+            <S.Input2
               id="message"
               name="message"
               onChange={(e) => setMensaje(e.target.value)}
               value={mensaje}
             />
-          </Content.InputsFormDiv>
-          <Content.ButtonDiv>
-            <Content.ButtonSend type="submit">ENVIAR</Content.ButtonSend>
-          </Content.ButtonDiv>
+          </S.InputsFormDiv>
+          <S.ButtonDiv>
+            <S.ButtonSend type="submit">ENVIAR</S.ButtonSend>
+          </S.ButtonDiv>
         </form>
-      </Content.Form>
+      </S.Form>
+      </S.WrapperFlex>
+      </Wrapper>
     </Container>
   );
 };

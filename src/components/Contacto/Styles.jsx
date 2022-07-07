@@ -1,61 +1,23 @@
 import styled from "styled-components";
+import device from "../../utils/Variables";
 
-const size = {
-  mobileS: "320px",
-  mobileM: "375px",
-  mobileL: "425px",
-  tablet: "768px",
-  laptop: "1024px",
-  laptopL: "1440px",
-  desktop: "2560px",
-};
-
-const device = {
-  mobileS: `(max-width: ${size.mobileS})`,
-  mobileM: `(max-width: ${size.mobileM})`,
-  mobileL: `(max-width: ${size.mobileL})`,
-  tablet: `(max-width: ${size.tablet})`,
-  laptop: `(max-width: ${size.laptop})`,
-  laptopL: `(max-width: ${size.laptopL})`,
-  desktop: `(max-width: ${size.desktop})`,
-  desktopL: `(max-width: ${size.desktop})`,
-};
-
-export const Content = styled.div`
-  grid-area: 1 / 2 / 11 / 13;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(8, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  margin-left: 8rem;
-
+export const WrapperFlex = styled.div`
+  display: flex;
+  flex-direction: row;
   @media ${device.tablet} {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    margin: auto;
-    margin: 0;
-    width: 90%;
-  }
-  @media (max-height: 667px) and (max-width: 375px) {
-   margin-top: 220%;
+    flex-direction: column;
   }
 `;
 
 export const ImageSquare = styled.img`
-  grid-area: 1 / 1 / 9 / 4;
   background-image: url(${(props) => props.src});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 100%;
-  height: 100%;
+  width: 40vw;
+  height: auto;
 
   @media ${device.tablet} {
-    grid-area: 2 / 1 / 8 / 8;
     width: 100%;
     height: auto;
     margin-top: 5rem;
@@ -66,17 +28,13 @@ export const ImageSquare = styled.img`
 `;
 
 export const Form = styled.div`
-  grid-area: 1 / 4 / 9 / 7;
   padding: 2rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
   @media ${device.tablet} {
-    grid-area: 5 / 1 / 13 / 4;
   }
 `;
 
 export const Titulo = styled.h1`
-  grid-area: 1 / 4 / 2 / 7;
   text-align: left;
   font-size: 40px;
   font-weight: bold;
@@ -85,7 +43,6 @@ export const Titulo = styled.h1`
 `;
 
 export const Info = styled.div`
-  grid-area: 2 / 4 / 3 / 7;
 
   display: flex;
   flex-direction: row;
@@ -117,7 +74,6 @@ export const InfoItemAlt = styled.div`
 `;
 
 export const Subtitle = styled.h2`
-  grid-area: 3 / 4 / 4 / 7;
   text-align: left;
   font-size: 25px;
   font-weight: bold;
@@ -125,7 +81,6 @@ export const Subtitle = styled.h2`
 `;
 
 export const InputsLabelDiv = styled.div`
-  grid-area: ${(props) => (props.down ? "6 / 4 / 7 / 7" : "4 / 4 / 5 / 7")};
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
@@ -153,7 +108,6 @@ export const LabelMovil = styled.p`
 `;
 
 export const InputsFormDiv = styled.div`
-  grid-area: ${(props) => (props.down ? "7 / 4 / 8 / 7" : "5 / 4 / 6 / 7")};
   display: grid;
   grid-template-columns: ${(props) => (props.down ? "100%" : "1fr 1fr")};
   gap: 2rem;
@@ -183,7 +137,6 @@ export const Input2 = styled.textarea`
 `;
 
 export const ButtonDiv = styled.div`
-  grid-area: 8 / 4 / 9 / 7;
   display: flex;
   justify-content: center;
   margin-top: 20px;

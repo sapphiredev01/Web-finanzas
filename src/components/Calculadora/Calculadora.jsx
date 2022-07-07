@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container } from "../UI/Containers/Containers";
+import { Container, Wrapper } from "../UI/Containers/Containers";
 import * as Content from "./Content";
 import imgBearBull from "../../images/bear_bull.png";
 import Chart from "./Chart";
@@ -13,6 +13,7 @@ const Calculadora = () => {
 
   return (
     <Container id="calculadora">
+      <Wrapper>
       <Content.TitleContainer>
         <Content.Title>Calculadora</Content.Title>
       </Content.TitleContainer>
@@ -21,6 +22,7 @@ const Calculadora = () => {
       </Content.DivImage>
       <Form onSubmitFormHandler={submitFormHandler} />
       <Chart data={data} />
+      </Wrapper>
     </Container>
   );
 };

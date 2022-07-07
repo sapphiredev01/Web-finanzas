@@ -1,12 +1,15 @@
 import React from "react";
 import * as Styles from "./Styles";
+import { Link } from "react-scroll";
 import logo from "../../../images/LOGOTIPOS_FINPEI_28.png";
 
 const Nav = () => {
   return (
     <Styles.Wrapper>
       <Styles.Stepper>
+        <Styles.StyledLinkLogo to="hero">
         <Styles.ImageStyled src={logo} />
+        </Styles.StyledLinkLogo>
         <Styles.Step>
           <Styles.StyledLink to="inicio">
             <Styles.Title>INICIO</Styles.Title>

@@ -80,8 +80,21 @@ export const Step = styled.li`
   }
 `;
 
+export const StyledLinkLogo = styled(Link).attrs(() => ({
+  activeClass: "active",
+  spy: true,
+  smooth: true,
+  duration: 500,
+  offset: -70,
+}))`
+  &.active {
+    transition: 0.2s ease-in-out;
+  }
+`;
+
 export const ImageStyled = styled.img`
   width: 75%;
   height: auto;
   margin-bottom: 2rem;
+  cursor: pointer;
 `;

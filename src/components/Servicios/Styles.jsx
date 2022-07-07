@@ -7,43 +7,6 @@ import stocks from "../../images/LOGOTIPOS_FINPEI_101.png";
 import startups from "../../images/LOGOTIPOS_FINPEI_102.png";
 import comerc from "../../images/LOGOTIPOS_FINPEI_103.png";
 
-const size = {
-  tablet: "768px",
-};
-
-const device = {
-  tablet: `(max-width: ${size.tablet})`,
-};
-
-export const Wrapper = styled.div`
-  grid-area: 1 / 2 / 11 / 13;
-  @media (max-width: 768px) {
-    grid-area: 1 / 1 / 11 / 13;
-    width: 100vw;
-    margin: auto;
-    padding-bottom: 3rem;
-  }
-  @media (max-height: 667px) and (max-width: 375px) {
-   margin-bottom: 80%;
-  }
-`;
-
-export const Title = styled.h1`
-  font-size: 4rem;
-  color: var(--blue);
-  padding-left: 1.5rem;
-  @media (max-width: 1380px) {
-    padding-left: 3rem;
-  }
-  @media (max-width: 880px) {
-    text-align: center;
-    padding-top: 15rem;
-    padding-left: 0;
-  }
-  @media (max-height: 667px) and (max-width: 375px) {
-   padding-top: 70%;
-  }
-`;
 
 const StyledDiv = styled.div`
   text-align: center;
@@ -61,6 +24,7 @@ const StyledImg = styled.img`
 const StyledTitle = styled.h3`
   font-size: 1.5rem;
   color: var(--blue);
+  margin-top: -15%;
   @media (max-width: 880px) {
     font-size: 1rem;
   }

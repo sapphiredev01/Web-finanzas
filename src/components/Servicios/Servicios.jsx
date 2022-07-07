@@ -1,12 +1,15 @@
 import React from "react";
-import * as Content from "./Content";
-import { Container } from "../UI/Containers/Containers";
+import * as S from "./Styles";
+import { Container, Wrapper } from "../UI/Containers/Containers";
+import { Title, Text } from "../UI/Typography/Typography";
 
 const Servicios = () => {
   return (
     <Container id="servicios">
-      <Content.Title>SERVICIOS</Content.Title>
-      <Content.Content />
+      <Wrapper>
+      <Title>SERVICIOS</Title>
+      <S.Content />
+      </Wrapper>
     </Container>
   );
 };

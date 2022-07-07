@@ -5,7 +5,7 @@ import { LinkParticles } from "./LinkParticles";
 
 const Banner = () => {
   return (
-    <Content.Container>
+    <Content.Container id="hero">
       <LinkParticles />
       <Content.Logo src={logo} />
     </Content.Container>
