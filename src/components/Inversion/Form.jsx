@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from "react";
-import * as Content from "./Content";
+import * as S from "./Styles";
 
 const Form = ({ onSubmitFormHandler }) => {
   const [userInput, setUserInput] = useState({
@@ -99,16 +99,16 @@ const Form = ({ onSubmitFormHandler }) => {
   };
 
   return (
-    <Content.Div1>
-      <Content.FormStyled onSubmit={submitHandler}>
-        <Content.LabelStyled>Capital</Content.LabelStyled>
-        <Content.InputStyled
+    <S.Div1>
+      <S.FormStyled onSubmit={submitHandler}>
+        <S.LabelStyled>Capital</S.LabelStyled>
+        <S.InputStyled
           value={userInput.enteredAmount}
           type="text"
           onChange={amountInputHandler}
         />
-        <Content.LabelStyled>Aportación</Content.LabelStyled>
-        <Content.Select
+        <S.LabelStyled>Aportación</S.LabelStyled>
+        <S.Select
           onChange={(e) => {
             paymentFrequencyHandler(e);
             paymentFrequencyInputHandler(e);
@@ -122,9 +122,9 @@ const Form = ({ onSubmitFormHandler }) => {
           <option value="5.57">Trimestral</option>
           <option value="13.95">Semestral</option>
           <option value="34.99">Anual</option>
-        </Content.Select>
-        <Content.LabelStyled>Plazo</Content.LabelStyled>
-        <Content.Select
+        </S.Select>
+        <S.LabelStyled>Plazo</S.LabelStyled>
+        <S.Select
           onChange={timeInputHandler}
           value={userInput.enteredTime}
           id="time"
@@ -137,12 +137,12 @@ const Form = ({ onSubmitFormHandler }) => {
               {obj.title}
             </option>
           ))}
-        </Content.Select>
-        <Content.ButtonStyled type="submit">
+        </S.Select>
+        <S.ButtonStyled type="submit">
           Calcular rendimiento
-        </Content.ButtonStyled>
-      </Content.FormStyled>
-    </Content.Div1>
+        </S.ButtonStyled>
+      </S.FormStyled>
+    </S.Div1>
   );
 };
 
