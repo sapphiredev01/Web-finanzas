@@ -11,10 +11,10 @@ import Media from "./components/UI/Media/Media";
 import "./App.css";
 
 function App() {
-  const [isDesktop, setDesktop] = useState(window.innerWidth > 768);
+  const [isDesktop, setDesktop] = useState(window.innerWidth > 820);
 
   const updateMedia = () => {
-    setDesktop(window.innerWidth > 768);
+    setDesktop(window.innerWidth > 820);
   };
 
   useEffect(() => {

@@ -14,7 +14,7 @@ const Inversion = () => {
 
   return (
     <Container id="inversion">
-      <Wrapper>
+      <Wrapper style={{marginBottom: "2rem"}}>
         <Title>Inversión</Title>
         <S.Img src={imgBearBull} alt="Bear and Bull" />
         <S.Grid>

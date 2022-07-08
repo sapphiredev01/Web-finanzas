@@ -76,7 +76,6 @@ const Chart = ({ data }) => {
       );
       return values;
     });
-    console.log(interest);
     return interest;
   };
 
@@ -91,7 +90,7 @@ const Chart = ({ data }) => {
       case "5":
         return years;
       default:
-        return months;
+        return months.slice(0, 6);
     }
   };
 

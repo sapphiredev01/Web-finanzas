@@ -23,16 +23,20 @@ export const Div1 = styled.div`
   border-radius: 0.5rem;
   box-shadow: 0px 20px 30px #00000011;
   height: 25rem;
-
-  @media ${device.tablet} {
+  padding: 1rem;
+  @media ${device.laptopL} {
+    height: 20rem;
   }
 `;
 export const Div2 = styled.div`
   box-shadow: 0px 20px 30px #00000011;
   padding: 1rem;
   overflow: hidden;
-  border-radius: 0.5rem;
   height: 25rem;
+  border-radius: 0.5rem;
+  @media ${device.laptopL} {
+    height: 20rem;
+  }
 `;
 
 export const FormStyled = styled.form`
@@ -51,8 +55,6 @@ export const InputStyled = styled.input`
   width: 100%;
   color: var(--white);
   background-color: var(--blue);
-  @media (max-width: 768px) {
-  }
 `;
 
 export const Select = styled.select`

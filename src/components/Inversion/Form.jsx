@@ -99,7 +99,6 @@ const Form = ({ onSubmitFormHandler }) => {
   };
 
   return (
-    <S.Div1>
       <S.FormStyled onSubmit={submitHandler}>
         <S.LabelStyled>Capital</S.LabelStyled>
         <S.InputStyled
@@ -142,7 +141,6 @@ const Form = ({ onSubmitFormHandler }) => {
           Calcular rendimiento
         </S.ButtonStyled>
       </S.FormStyled>
-    </S.Div1>
   );
 };
 

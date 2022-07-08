@@ -80,6 +80,9 @@ export const Step = styled.li`
     transform: translateX(calc(var(--size) / 2));
     bottom: var(--spacing);
   }
+  @media ${device.laptopL} {
+    padding-bottom: 3rem;
+  }
 `;
 
 export const StyledLinkLogo = styled(Link).attrs(() => ({
@@ -96,6 +99,6 @@ export const ImageStyled = styled.img`
   margin-bottom: 2rem;
   cursor: pointer;
   @media ${device.laptopL} {
-    width: 110%;
+    width: 100%;
   }
 `;
