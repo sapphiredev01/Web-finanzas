@@ -1,5 +1,4 @@
 import { React, useState, useEffect } from "react";
-import * as Content from "./Content";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import {
   Chart as ChartJS,
@@ -23,6 +22,16 @@ ChartJS.register(
 );
 
 const Chart = ({ data }) => {
+  const [isDesktop, setDesktop] = useState(window.innerWidth > 820);
+  
+  const updateMedia = () => {
+    setDesktop(window.innerWidth > 820);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
+  });
   const [chartData, setChartData] = useState({
     labels: [],
     datasets: [
@@ -100,32 +109,30 @@ const Chart = ({ data }) => {
   }, [time, paymentFrequency, amount]);
 
   return (
-    <Content.Div2>
-      <Bar
-        data={chartData}
-        options={{
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              position: "top",
-            },
-            title: {
-              display: true,
-              text: "Inversión",
-            },
-            hover: {
-              mode: "nearest",
-              intersect: true,
-            },
-            datalabels: {
-              display: true,
-              color: "#fff",
-            }
+    <Bar
+      data={chartData}
+      options={{
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: "top",
           },
-        }}
-      />
-    </Content.Div2>
+          title: {
+            display: true,
+            text: "Inversión",
+          },
+          hover: {
+            mode: "nearest",
+            intersect: true,
+          },
+          datalabels: {
+            display: isDesktop ? true : false,
+            color: "#fff",
+          },
+        },
+      }}
+    />
   );
 };
 

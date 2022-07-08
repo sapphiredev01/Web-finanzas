@@ -27,7 +27,7 @@ export const Title = styled.p`
   font-weight: 700;
   color: var(--black);
   margin-block-start: 0;
-  font-size: 0.8rem;
+  font-size: clamp(0.8rem, 1vw, 1.1rem);
 `;
 
 export const StyledLink = styled(Link).attrs(() => ({
@@ -37,16 +37,18 @@ export const StyledLink = styled(Link).attrs(() => ({
   duration: 500,
   offset: -70,
 }))`
-  height: 15px;
+  opacity: 0.6;
+  transition: all 0.3s ease-in-out;
   &:hover {
     cursor: pointer;
+    margin-left: 0.7rem;
     transform: scale(1.3);
-    transition: 0.2s ease-in-out;
-    border-bottom: 3px solid var(--blue);
+    opacity: 1;
   }
   &.active {
-    border-bottom: 3px solid var(--blue);
-    transition: 0.2s ease-in-out;
+    opacity: 1;
+    transform: scale(1.3);
+    margin-left: 0.7rem;
   }
 `;
 
@@ -86,15 +88,14 @@ export const StyledLinkLogo = styled(Link).attrs(() => ({
   smooth: true,
   duration: 500,
   offset: -70,
-}))`
-  &.active {
-    transition: 0.2s ease-in-out;
-  }
-`;
+}))``;
 
 export const ImageStyled = styled.img`
   width: 75%;
   height: auto;
   margin-bottom: 2rem;
   cursor: pointer;
+  @media ${device.laptopL} {
+    width: 110%;
+  }
 `;

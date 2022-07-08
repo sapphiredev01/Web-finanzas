@@ -1,6 +1,5 @@
 import React from "react";
 import * as Styles from "./Styles";
-import { Link } from "react-scroll";
 import logo from "../../../images/LOGOTIPOS_FINPEI_28.png";
 
 const Nav = () => {
@@ -31,7 +30,7 @@ const Nav = () => {
           </Styles.StyledLink>
         </Styles.Step>
         <Styles.Step>
-          <Styles.StyledLink to="calculadora">
+          <Styles.StyledLink to="inversion">
             <Styles.Title>INVERSIÓN</Styles.Title>
           </Styles.StyledLink>
         </Styles.Step>

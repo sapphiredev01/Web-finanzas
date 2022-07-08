@@ -4,7 +4,7 @@ import Stocks from "./components/Stocks/Stocks";
 import Vision from "./components/Visión/Vision";
 import Servicios from "./components/Servicios/Servicios";
 import Contacto from "./components/Contacto/Contacto";
-import Calculadora from "./components/Calculadora/Calculadora";
+import Inversion from "./components/Inversion/Inversion";
 import Perfil from "./components/Perfil/Perfil";
 import Nav from "./components/UI/Nav/Nav";
 import Media from "./components/UI/Media/Media";
@@ -37,7 +37,7 @@ function App() {
       <Vision />
       <Servicios />
       <Perfil />
-      <Calculadora />
+      <Inversion />
       <Contacto />
       {isDesktop ? (
         <> </>
