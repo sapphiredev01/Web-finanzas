@@ -93,6 +93,4 @@ export const StyledSlider = styled(Slider)`
   & div {
     float: left;
   }
-  @media (max-width: 768px) {
-  }
 `;

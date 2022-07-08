@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import device from "../../../utils/Variables";
 
 export const Container = styled.div`
   z-index: 3;
@@ -6,18 +7,11 @@ export const Container = styled.div`
   display: flex;
   justify-content: flex-end;
   margin-top: 1rem;
-  @media (max-width: 620px) {
+  @media ${device.tablet} {
     justify-content: center;
-    margin-top: 65%;
     padding: 0.5rem 0;
     border-top: 12px solid var(--blue);
     border-bottom: 12px solid var(--blue);
-  }
-  @media (max-height: 740px) and (max-width: 375px) {
-   margin-top: 100%;
-  }
-  @media (max-height: 667px) and (max-width: 375px) {
-   margin-top: 210%;
   }
 `;
 

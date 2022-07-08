@@ -2,7 +2,7 @@
 import React from "react";
 import * as S from "./Styles";
 
-const Item = ({ coin }) => {
+export const ItemCrypto = ({ coin }) => {
   return (
     <S.RowItem>
       <S.Img src={coin.image} alt={coin.name} />
@@ -14,4 +14,11 @@ const Item = ({ coin }) => {
   );
 };
 
-export default Item;
+export const ItemStock = ({ stock }) => {
+  return (
+    <S.RowItem>
+      <span>{stock.Symbol.toUpperCase()}</span>
+      <span>{stock.volume}</span>
+    </S.RowItem>
+  );
+};

@@ -9,6 +9,7 @@ const Paquetes = () => {
       <Wrapper>
         <Title>Perfil</Title>
         <S.WrapperFlex>
+          <S.Image movil />
           <S.CardContainer>
             <S.Card>
               <h1 style={{ color: "var(--blue)" }}>Starter</h1>
@@ -25,7 +26,7 @@ const Paquetes = () => {
               </S.Description>
             </S.Card>
           </S.CardContainer>
-          <S.Image />
+          <S.Image desktop />
         </S.WrapperFlex>
       </Wrapper>
     </Container>

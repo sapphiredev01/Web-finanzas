@@ -29,15 +29,16 @@ export const Card = styled.div`
   }
 `;
 
-export const Image = styled.div`
+export const Image = styled.img`
   flex-basis: 60%;
   box-shadow: 0px 3px 6px #00000029;
-  background-image: url(${Img});
-  background-size: cover;
-  background-position: center;
-  padding: 0 0 40% 0;
+  content: url(${Img});
+  align-self: center;
+  width: 50%;
+  display: ${(props) => (props.desktop ? "block" : "none")};
   @media ${device.tablet} {
-    display: none;
+    width: 80vw;
+    display: ${(props) => (props.movil ? "block" : "none")};
   }
 `;
 

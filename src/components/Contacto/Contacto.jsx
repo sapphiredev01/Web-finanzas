@@ -53,7 +53,7 @@ const Contacto = () => {
   };
 
   return (
-    <Container style={{ marginTop: "35rem" }} id="contacto">
+    <Container id="contacto">
       <Wrapper>
         <S.WrapperFlex>
       <S.ImageSquare src={Img} />
