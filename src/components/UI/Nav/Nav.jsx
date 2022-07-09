@@ -21,7 +21,7 @@ const Nav = () => {
         </Styles.Step>
         <Styles.Step>
           <Styles.StyledLink to="servicios">
-            <Styles.Title>SERVICIOS</Styles.Title>
+            <Styles.Title>VEHÍCULOS FINANCIEROS</Styles.Title>
           </Styles.StyledLink>
         </Styles.Step>
         <Styles.Step>

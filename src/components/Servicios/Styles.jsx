@@ -53,10 +53,10 @@ const Row = styled.div`
 export const Content = () => {
   return (
     <Row>
-      <Item src={agricultura} alt={"Agricultura"} title={"agricultura"} />
-      <Item src={crypto} alt={"Crypto"} title={"crypto"} />
-      <Item src={stocks} alt={"Stocks"} title={"stocks"} />
-      <Item src={startups} alt={"Startups"} title={"startups"} />
+      <Item src={agricultura} alt={"Agricultura"} title={"Agricultura"} />
+      <Item src={crypto} alt={"Crypto"} title={"Crypto"} />
+      <Item src={stocks} alt={"Stocks"} title={"Stocks"} />
+      <Item src={startups} alt={"Startups"} title={"Boosting"} />
     </Row>
   );
 };

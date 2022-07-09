@@ -7,7 +7,7 @@ const Servicios = () => {
   return (
     <Container id="servicios">
       <Wrapper>
-      <Title>SERVICIOS</Title>
+      <Title>VEHÍCULOS FINANCIEROS</Title>
       <S.Content />
       </Wrapper>
     </Container>
