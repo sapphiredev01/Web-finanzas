@@ -24,7 +24,7 @@ const StyledImg = styled.img`
 const StyledTitle = styled.h3`
   font-size: 1.5rem;
   color: var(--blue);
-  margin-top: -15%;
+  margin-top: -20%;
   @media (max-width: 880px) {
     font-size: 1rem;
   }
