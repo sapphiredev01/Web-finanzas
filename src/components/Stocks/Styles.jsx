@@ -1,30 +1,43 @@
 import styled from "styled-components";
-import device from "../../utils/Variables";
+import { device } from "../../utils/Variables";
 import Slider from "react-slick";
 
 export const Card = styled.div`
   background: #ffffff 0% 0% no-repeat padding-box;
-  box-shadow: 0px 3px 6px #00000029;
+  box-shadow: 0px 20px 30px #00000011;
   border-radius: 15px;
-  padding: 1rem;
+  padding: 2rem;
   overflow: hidden;
-  width: fit-content;
-  @media ${device.tablet} {
-    :not(:first-child) {
-      margin-top: 1rem;
-    }
+  width: 100%;
+  :not(:last-child) {
+    margin-top: 1rem;
   }
 `;
 
+export const CardTitle = styled.h3`
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+  margin-top: 0;
+`;
+
+export const Symbol = styled.p`
+  font-size: clamp(1rem, 1vw, 2rem);
+  margin-bottom: 1rem;
+  text-align: center;
+`;
+
 export const CardsContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr;
   margin-top: 4rem;
+  place-items: center;
+  width: 60%;
+  margin: 0 auto;
   @media ${device.tablet} {
-    flex-direction: column;
-    align-items: center;
+    width: 80%;
   }
 `;
 
@@ -42,14 +55,15 @@ export const Img = styled.img`
   padding-right: 0.3rem;
 `;
 
-export const TdChange = styled.span`
+export const TdChange = styled.td`
   color: ${(props) => (props.change > 0 ? "green" : "red")};
   padding-left: 0.5rem;
 `;
 
 export const Table = styled.table`
   height: 100%;
-  width: auto;
+  width: 100%;
+  margin: auto;
   text-align: left;
   border-collapse: collapse;
   & th {
@@ -60,7 +74,7 @@ export const Table = styled.table`
     padding-top: 3%;
     padding-bottom: 3%;
     padding-right: 1rem;
-    font-size: 12px;
+    font-size: 14px;
   }
   @media (max-width: 768px) {
     text-align: center;
@@ -82,7 +96,7 @@ export const Row = styled.div`
 `;
 
 export const StyledSlider = styled(Slider)`
-  box-shadow: 0px 3px 6px #00000029;
+  box-shadow: 0px 20px 30px #00000011;
   border-radius: 5px;
   height: auto;
   width: 100%;
@@ -90,6 +104,9 @@ export const StyledSlider = styled(Slider)`
   display: flex;
   flex-direction: row;
   overflow: hidden;
+  :not(:last-child) {
+    margin-top: 1rem;
+  }
   & div {
     float: left;
   }

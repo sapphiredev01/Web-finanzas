@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import device from "../../../utils/Variables";
+import { device } from "../../../utils/Variables";
 
 export const Container = styled.div`
   width: 85vw;
@@ -13,7 +13,7 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
   width: 90%;
   margin: auto;
-  height: 100vh;
+  height: props => props ? "auto" : "100vh";
   @media ${device.tablet} {
     height: auto;
   }

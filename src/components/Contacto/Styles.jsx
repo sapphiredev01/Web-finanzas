@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import device from "../../utils/Variables";
+import { device } from "../../utils/Variables";
 
 export const WrapperFlex = styled.div`
   display: flex;
   flex-direction: row;
+  padding: 2rem 0 5rem 0;
   @media ${device.tablet} {
     flex-direction: column;
   }
@@ -29,14 +30,14 @@ export const ImageSquare = styled.img`
 
 export const Form = styled.div`
   padding: 2rem;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: 0px 20px 30px #00000011;
   @media ${device.tablet} {
   }
 `;
 
 export const Titulo = styled.h1`
   text-align: left;
-  font-size: 40px;
+  font-size: clamp(34px, 4vw, 72px);
   font-weight: bold;
   margin-top: 10px;
   color: var(--blue);
@@ -144,11 +145,18 @@ export const ButtonDiv = styled.div`
 
 export const ButtonSend = styled.button`
   background: #ffffff;
-  border: none;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 8px;
+  border: 1px solid var(--blue);
+  box-shadow: 0px 20px 30px #00000011;
   font-size: 20px;
   font-weight: bold;
   width: 30%;
+  transition: all 0.3s ease-in-out;
+
+  :hover {
+    background: var(--blue);
+    color: #ffffff;
+    transform: translateY(-3px);
+  }
 
   @media ${device.tablet} {
     width: 70%;

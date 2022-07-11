@@ -56,58 +56,58 @@ const Contacto = () => {
     <Container id="contacto">
       <Wrapper>
         <S.WrapperFlex>
-      <S.ImageSquare src={Img} />
-      <S.Form>
-        <S.Titulo>CONTÁCTANOS</S.Titulo>
-        <S.Info>
-          <S.InfoItemAlt>Correo</S.InfoItemAlt>
-        </S.Info>
-        <S.Info>
-          <S.InfoItem>info@finpei.com</S.InfoItem>
-        </S.Info>
-        <S.Subtitle>Mándanos un mensaje</S.Subtitle>
-        <form onSubmit={mandarCorreo}>
-          <S.InputsLabelDiv>
-            <S.Label>Nombre</S.Label>
-            <S.Label>Correo</S.Label>
-          </S.InputsLabelDiv>
-          <S.LabelMovil>Nombre</S.LabelMovil>
-          <S.InputsFormDiv>
-            <S.Inputs
-              type="text"
-              id="name"
-              name="name"
-              onChange={(e) => setNombre(e.target.value)}
-              value={nombre}
-            />
-            <S.LabelMovil middle>Email</S.LabelMovil>
-            <S.Inputs
-              email
-              type="email"
-              id="email"
-              name="email"
-              onChange={(e) => setCorreo(e.target.value)}
-              value={correo}
-            />
-          </S.InputsFormDiv>
-          <S.InputsLabelDiv down>
-            <S.Label>Mensaje</S.Label>
-          </S.InputsLabelDiv>
-          <S.LabelMovil>Mensaje</S.LabelMovil>
-          <S.InputsFormDiv down>
-            <S.Input2
-              id="message"
-              name="message"
-              onChange={(e) => setMensaje(e.target.value)}
-              value={mensaje}
-            />
-          </S.InputsFormDiv>
-          <S.ButtonDiv>
-            <S.ButtonSend type="submit">ENVIAR</S.ButtonSend>
-          </S.ButtonDiv>
-        </form>
-      </S.Form>
-      </S.WrapperFlex>
+          <S.ImageSquare src={Img} />
+          <S.Form>
+            <S.Titulo>CONTÁCTANOS</S.Titulo>
+            <S.Info>
+              <S.InfoItemAlt>Correo</S.InfoItemAlt>
+            </S.Info>
+            <S.Info>
+              <S.InfoItem>info@finpei.com</S.InfoItem>
+            </S.Info>
+            <S.Subtitle>Mándanos un mensaje</S.Subtitle>
+            <form onSubmit={mandarCorreo}>
+              <S.InputsLabelDiv>
+                <S.Label>Nombre</S.Label>
+                <S.Label>Correo</S.Label>
+              </S.InputsLabelDiv>
+              <S.LabelMovil>Nombre</S.LabelMovil>
+              <S.InputsFormDiv>
+                <S.Inputs
+                  type="text"
+                  id="name"
+                  name="name"
+                  onChange={(e) => setNombre(e.target.value)}
+                  value={nombre}
+                />
+                <S.LabelMovil middle>Email</S.LabelMovil>
+                <S.Inputs
+                  email
+                  type="email"
+                  id="email"
+                  name="email"
+                  onChange={(e) => setCorreo(e.target.value)}
+                  value={correo}
+                />
+              </S.InputsFormDiv>
+              <S.InputsLabelDiv down>
+                <S.Label>Mensaje</S.Label>
+              </S.InputsLabelDiv>
+              <S.LabelMovil>Mensaje</S.LabelMovil>
+              <S.InputsFormDiv down>
+                <S.Input2
+                  id="message"
+                  name="message"
+                  onChange={(e) => setMensaje(e.target.value)}
+                  value={mensaje}
+                />
+              </S.InputsFormDiv>
+              <S.ButtonDiv>
+                <S.ButtonSend type="submit">ENVIAR</S.ButtonSend>
+              </S.ButtonDiv>
+            </form>
+          </S.Form>
+        </S.WrapperFlex>
       </Wrapper>
     </Container>
   );

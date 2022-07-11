@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Hero from "./components/Hero/Hero";
 import Stocks from "./components/Stocks/Stocks";
-import Vision from "./components/Visión/Vision";
+import Vision from "./components/Vision/Vision";
 import Servicios from "./components/Servicios/Servicios";
 import Contacto from "./components/Contacto/Contacto";
 import Inversion from "./components/Inversion/Inversion";

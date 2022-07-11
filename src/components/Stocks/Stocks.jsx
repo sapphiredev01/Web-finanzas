@@ -2,15 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Container, Wrapper } from "../UI/Containers/Containers";
 import { Title } from "../UI/Typography/Typography";
 import Table from "./Table";
-import { CryptoRow, StockRow } from "./Row";
+import { CryptoRow } from "./Row";
 import { Chart } from "./Chart";
 import { CardsContainer } from "./Styles";
 
 const Stocks = () => {
   const [coins, setCoins] = useState([]);
   const [coins2, setCoins2] = useState([]);
-  const [stocks, setStocks] = useState([]);
-
 
   const getCrypto = async () => {
     const response = await fetch(
@@ -26,36 +24,20 @@ const Stocks = () => {
     const data = await response.json();
     setCoins2(data);
   };
-  
-  const getStocks = async () => {
-    const NDAQ = await fetch(
-      "https://api.polygon.io/v1/open-close/NDAQ/2022-07-07?adjusted=true&apiKey=PTNf8AL4p4GVH8ukZAw9R528cXPJP1US"
-    );
-    const data1 = await NDAQ.json();
-    setStocks(data1);
-
-    const SP = await fetch(
-      "https://api.polygon.io/v1/open-close/SP/2022-07-07?adjusted=true&apiKey=PTNf8AL4p4GVH8ukZAw9R528cXPJP1US"
-    );
-    const data2 = await SP.json();
-    stocks.add(data2);
-    console.log(stocks);
-  }
 
   useEffect(() => {
     getCrypto();
     getCrypto2();
-    //getStocks();
   }, []);
 
   return (
-    <Container id="inicio">
+    <Container height="auto" id="inicio">
       <Wrapper>
         <Title>Inicio</Title>
         <CryptoRow coins={coins2} />
         <CryptoRow coins={coins2} />
         <CardsContainer>
-          <Table coins={coins} />
+          <Chart />
           <Table coins={coins} />
         </CardsContainer>
       </Wrapper>
