@@ -11,31 +11,29 @@ export const Chart = () => {
   ]);
 
   const symbol = "NDAQ";
-  const proxyUrl = "https://cors-anywhere.herokuapp.com/";
-  const url = `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}`;
+  const url = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=${
+    import.meta.env.ALPHA_KEY
+  }`;
 
   const getStocks = async () => {
-    const response = await fetch(`${proxyUrl}${url}`);
+    const response = await fetch(`${url}`);
     const result = await response.json();
-    const data = result.chart.result[0];
-    console.log(data);
-    const quote = data.indicators.quote[0];
-    const prices = data.timestamp.map((timestamp, index) => ({
-      x: new Date(timestamp * 1000),
+    const data = Object.entries(result["Time Series (Daily)"]);
+    const prices = data.map((date) => ({
+      x: date[0],
       y: [
-        quote.open[index],
-        quote.high[index],
-        quote.low[index],
-        quote.close[index],
-      ].map((price) => round(price)),
+        date[1]["1. open"],
+        date[1]["2. high"],
+        date[1]["3. low"],
+        date[1]["4. close"],
+      ],
     }));
+    console.log(prices);
     setSeries([
       {
         data: prices,
       },
     ]);
-
-    console.log(prices);
   };
 
   useEffect(() => {
@@ -45,7 +43,7 @@ export const Chart = () => {
   const chart = {
     options: {
       title: {
-        text: "NDAQ Stock Price",
+        text: "NDAQ",
         align: "left",
       },
       xaxis: {
