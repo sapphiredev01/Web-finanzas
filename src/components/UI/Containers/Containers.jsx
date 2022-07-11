@@ -13,8 +13,5 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
   width: 90%;
   margin: auto;
-  height: props => props ? "auto" : "100vh";
-  @media ${device.tablet} {
-    height: auto;
-  }
+  height: ${(props) => (props.auto ? "auto" : "100vh")};
 `;

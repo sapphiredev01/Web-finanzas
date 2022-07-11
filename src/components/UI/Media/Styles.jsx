@@ -3,7 +3,6 @@ import { device } from "../../../utils/Variables";
 
 export const Container = styled.div`
   z-index: 3;
-  grid-area: 1 / 1 / 2 / 13;
   display: flex;
   justify-content: flex-end;
   margin-top: 1rem;

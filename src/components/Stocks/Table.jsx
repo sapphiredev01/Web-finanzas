@@ -3,10 +3,10 @@ import React, { useState, useEffect } from "react";
 import * as S from "./Styles";
 
 const Table = ({ coins }) => {
-  const [isDesktop, setDesktop] = useState(window.innerWidth > 768);
+  const [isDesktop, setDesktop] = useState(window.innerWidth > 820);
   
   const updateMedia = () => {
-    setDesktop(window.innerWidth > 768);
+    setDesktop(window.innerWidth > 820);
   };
 
   useEffect(() => {

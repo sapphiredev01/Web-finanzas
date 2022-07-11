@@ -5,7 +5,7 @@ export const WrapperFlex = styled.div`
   display: flex;
   flex-direction: row;
   padding: 2rem 0 5rem 0;
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     flex-direction: column;
   }
 `;
@@ -17,14 +17,10 @@ export const ImageSquare = styled.img`
   background-position: center;
   width: 40vw;
   height: auto;
-
-  @media ${device.tablet} {
+  object-fit: cover;
+  @media ${device.laptop} {
     width: 100%;
     height: auto;
-    margin-top: 5rem;
-  }
-  @media (max-height: 667px) and (max-width: 375px) {
-   margin-top: 12rem;
   }
 `;
 

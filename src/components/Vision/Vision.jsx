@@ -4,11 +4,18 @@ import * as S from "./Styles";
 import { Title, Text } from "../UI/Typography/Typography";
 import ImgVer from "../../images/business4.jpg";
 import ImgHor from "../../images/business1.jpg";
+import { useMobile } from "../../hooks/useMobile";
 
 export default function Nosotros() {
+  const isMobile = useMobile();
+
+  const props = {
+    "auto": !isMobile,
+  };
+
   return (
     <Container id="vision">
-      <Wrapper>
+      <Wrapper {...props}>
         <Title>VISIÓN</Title>
         <S.WrapperFlex>
           <S.ContentText>

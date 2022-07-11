@@ -5,8 +5,15 @@ import * as S from "./Styles";
 import imgBearBull from "../../images/bear_bull.png";
 import Chart from "./Chart";
 import Form from "./Form";
+import { useMobile } from "../../hooks/useMobile";
 
 const Inversion = () => {
+  const isMobile = useMobile();
+
+  const props = {
+    "auto": !isMobile,
+  };
+  
   const [data, setData] = useState([]);
   const submitFormHandler = (data) => {
     setData(data);
@@ -14,7 +21,7 @@ const Inversion = () => {
 
   return (
     <Container id="inversion">
-      <Wrapper style={{marginBottom: "4rem"}}>
+      <Wrapper style={{marginBottom: "4rem"}} {...props}>
         <Title>Inversión</Title>
         <S.Img src={imgBearBull} alt="Bear and Bull" />
         <S.Grid>

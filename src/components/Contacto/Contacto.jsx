@@ -4,8 +4,16 @@ import emailjs from "emailjs-com";
 import { Container, Wrapper } from "../UI/Containers/Containers";
 import * as S from "./Styles";
 import Img from "../../images/contact.jpg";
+import { useMobile } from "../../hooks/useMobile";
+
 
 const Contacto = () => {
+  const isMobile = useMobile();
+
+  const props = {
+    "auto": !isMobile,
+  };
+
   const alert = useAlert();
   const [nombre, setNombre] = useState("");
   const [correo, setCorreo] = useState("");
@@ -54,7 +62,7 @@ const Contacto = () => {
 
   return (
     <Container id="contacto">
-      <Wrapper>
+      <Wrapper {...props}>
         <S.WrapperFlex>
           <S.ImageSquare src={Img} />
           <S.Form>

@@ -31,8 +31,8 @@ const Stocks = () => {
   }, []);
 
   return (
-    <Container height="auto" id="inicio">
-      <Wrapper>
+    <Container id="inicio">
+      <Wrapper auto>
         <Title>Inicio</Title>
         <CryptoRow coins={coins2} />
         <CryptoRow coins={coins2} />

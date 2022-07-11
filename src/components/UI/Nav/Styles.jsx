@@ -40,14 +40,14 @@ export const StyledLink = styled(Link).attrs(() => ({
   transition: all 0.3s ease-in-out;
   &:hover {
     cursor: pointer;
-    margin-left: 0.7rem;
+    margin-left: 1.5rem;
     transform: scale(1.3);
     opacity: 1;
   }
   &.active {
     opacity: 1;
     transform: scale(1.3);
-    margin-left: 0.7rem;
+    margin-left: 1.5rem;
   }
 `;
 
