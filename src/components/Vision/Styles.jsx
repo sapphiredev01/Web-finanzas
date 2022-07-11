@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import device from "../../utils/Variables";
+import { device } from "../../utils/Variables";
 
 export const WrapperFlex = styled.div`
   display: flex;

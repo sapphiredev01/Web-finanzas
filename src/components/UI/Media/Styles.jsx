@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import device from "../../../utils/Variables";
+import { device } from "../../../utils/Variables";
 
 export const Container = styled.div`
   z-index: 3;
@@ -9,9 +9,7 @@ export const Container = styled.div`
   margin-top: 1rem;
   @media ${device.tablet} {
     justify-content: center;
-    padding: 0.5rem 0;
-    border-top: 12px solid var(--blue);
-    border-bottom: 12px solid var(--blue);
+    padding: 2rem;
   }
 `;
 

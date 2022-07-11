@@ -5,7 +5,6 @@ import agricultura from "../../images/LOGOTIPOS_FINPEI_99.png";
 import crypto from "../../images/LOGOTIPOS_FINPEI_100.png";
 import stocks from "../../images/LOGOTIPOS_FINPEI_101.png";
 import startups from "../../images/LOGOTIPOS_FINPEI_102.png";
-import comerc from "../../images/LOGOTIPOS_FINPEI_103.png";
 
 
 const StyledDiv = styled.div`

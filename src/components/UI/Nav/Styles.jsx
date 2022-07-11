@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-scroll";
-import device from "../../../utils/Variables";
+import { device } from "../../../utils/Variables";
 
 export const Wrapper = styled.div`
   position: fixed;
@@ -8,8 +8,8 @@ export const Wrapper = styled.div`
   top: 0;
   width: 15vw;
   height: 100vh;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
 
   @media ${device.tablet} {
     display: none;
@@ -20,7 +20,6 @@ export const Stepper = styled.ol`
   padding-left: 1.5rem;
   --size: 1rem;
   --spacing: 0.5rem;
-  padding-top: 1rem;
 `;
 
 export const Title = styled.p`
@@ -55,7 +54,7 @@ export const StyledLink = styled(Link).attrs(() => ({
 export const Step = styled.li`
   display: flex;
   gap: 1rem;
-  padding-bottom: 4rem;
+  padding-bottom: 9vh;
   position: relative;
   &:before {
     --size: 1rem;
@@ -81,7 +80,7 @@ export const Step = styled.li`
     bottom: var(--spacing);
   }
   @media ${device.laptopL} {
-    padding-bottom: 3rem;
+    padding-bottom: 7vh;
   }
 `;
 
