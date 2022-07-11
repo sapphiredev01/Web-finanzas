@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { transitions, positions, Provider as AlertProvider } from "react-alert";
+import { QueryClient, QueryClientProvider } from "react-query";
 import AlertTemplate from "react-alert-template-basic";
 import "./index.css";
 import App from "./App";
@@ -12,9 +13,13 @@ const options = {
   transition: transitions.SCALE,
 };
 
+const queryClient = new QueryClient();
+
 ReactDOM.render(
   <AlertProvider template={AlertTemplate} {...options}>
-    <App />
+    <QueryClientProvider client={queryClient}>
+      <App />
+    </QueryClientProvider>
   </AlertProvider>,
   document.getElementById("root")
 );

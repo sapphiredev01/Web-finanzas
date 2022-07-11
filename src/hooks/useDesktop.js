@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const useMobile = () => {
+export const useDesktop = () => {
   const [isDesktop, setDesktop] = useState(window.innerWidth > 820);
 
   const updateMedia = () => {

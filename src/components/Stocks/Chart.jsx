@@ -2,6 +2,7 @@
 import { React, useState, useEffect } from "react";
 import * as S from "./Styles";
 import ApexChart from "react-apexcharts";
+import { useQuery } from "react-query";
 
 export const Chart = () => {
   const [series, setSeries] = useState([
@@ -15,8 +16,8 @@ export const Chart = () => {
     import.meta.env.ALPHA_KEY
   }`;
 
-  const getStocks = async () => {
-    const response = await fetch(`${url}`);
+  const { data } = useQuery("chart", async () => {
+    const response = await fetch(url);
     const result = await response.json();
     const data = Object.entries(result["Time Series (Daily)"]);
     const prices = data.map((date) => ({
@@ -28,17 +29,14 @@ export const Chart = () => {
         date[1]["4. close"],
       ],
     }));
-    console.log(prices);
     setSeries([
       {
         data: prices,
       },
     ]);
-  };
-
-  useEffect(() => {
-    getStocks();
-  }, []);
+  }, {
+    staleTime: 300000,
+  });
 
   const chart = {
     options: {
@@ -55,10 +53,6 @@ export const Chart = () => {
         },
       },
     },
-  };
-
-  const round = (value) => {
-    return value ? +value.toFixed(2) : null;
   };
 
   return (

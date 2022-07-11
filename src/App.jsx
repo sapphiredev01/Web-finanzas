@@ -9,18 +9,10 @@ import Perfil from "./components/Perfil/Perfil";
 import Nav from "./components/UI/Nav/Nav";
 import Media from "./components/UI/Media/Media";
 import "./App.css";
+import { useDesktop } from "./hooks/useDesktop";
 
 function App() {
-  const [isDesktop, setDesktop] = useState(window.innerWidth > 820);
-
-  const updateMedia = () => {
-    setDesktop(window.innerWidth > 820);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", updateMedia);
-    return () => window.removeEventListener("resize", updateMedia);
-  });
+  const isDesktop = useDesktop();
 
   return (
     <div className="app">

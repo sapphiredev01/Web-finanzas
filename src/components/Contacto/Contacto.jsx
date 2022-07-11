@@ -4,14 +4,14 @@ import emailjs from "emailjs-com";
 import { Container, Wrapper } from "../UI/Containers/Containers";
 import * as S from "./Styles";
 import Img from "../../images/contact.jpg";
-import { useMobile } from "../../hooks/useMobile";
+import { useDesktop } from "../../hooks/useDesktop";
 
 
 const Contacto = () => {
-  const isMobile = useMobile();
+  const isDesktop = useDesktop();
 
   const props = {
-    "auto": !isMobile,
+    "auto": !isDesktop,
   };
 
   const alert = useAlert();

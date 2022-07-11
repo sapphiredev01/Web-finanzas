@@ -5,13 +5,13 @@ import * as S from "./Styles";
 import imgBearBull from "../../images/bear_bull.png";
 import Chart from "./Chart";
 import Form from "./Form";
-import { useMobile } from "../../hooks/useMobile";
+import { useDesktop } from "../../hooks/useDesktop";
 
 const Inversion = () => {
-  const isMobile = useMobile();
+  const isDesktop = useDesktop();
 
   const props = {
-    "auto": !isMobile,
+    "auto": !isDesktop,
   };
   
   const [data, setData] = useState([]);
