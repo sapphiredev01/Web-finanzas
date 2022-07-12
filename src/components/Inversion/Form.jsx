@@ -1,8 +1,12 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from "react";
 import * as S from "./Styles";
+import { useAlert } from "react-alert";
+
 
 const Form = ({ onSubmitFormHandler }) => {
+  const alert = useAlert();
+
   const [userInput, setUserInput] = useState({
     enteredAmount: "",
     enteredPaymentFrequency: "",
@@ -74,15 +78,15 @@ const Form = ({ onSubmitFormHandler }) => {
   const submitHandler = (event) => {
     event.preventDefault();
     if (userInput.enteredAmount === "" || userInput.enteredTime === "") {
-      alert("Por favor ingrese un valor para el monto y el tiempo");
+      alert.show("Por favor ingrese un valor para el monto y el tiempo", { type: "error" });
       return;
     }
     if (userInput.enteredAmount <= 0 || userInput.enteredTime <= 0) {
-      alert("Por favor ingrese un valor mayor a cero para el monto");
+      alert.show("Por favor ingrese un valor mayor a cero para el monto", { type: "error" });
       return;
     }
     if (userInput.enteredPaymentFrequency === "") {
-      alert("Por favor ingrese un valor para el periodo de pago");
+      alert.show("Por favor ingrese un valor para el periodo de pago", { type: "error" });
       return;
     }
     const data = [

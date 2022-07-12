@@ -5,8 +5,15 @@ import Table from "./Table";
 import { CryptoRow } from "./Row";
 import { Chart } from "./Chart";
 import { CardsContainer } from "./Styles";
+import { useDesktop } from "../../hooks/useDesktop";
 
 const Stocks = () => {
+  const isDesktop = useDesktop();
+
+  const props = {
+    "auto": !isDesktop,
+  };
+
   const [coins, setCoins] = useState([]);
   const [coins2, setCoins2] = useState([]);
 
@@ -32,7 +39,7 @@ const Stocks = () => {
 
   return (
     <Container id="inicio">
-      <Wrapper auto>
+      <Wrapper {...props}>
         <Title>Inicio</Title>
         <CryptoRow coins={coins2} />
         <CryptoRow coins={coins2} />

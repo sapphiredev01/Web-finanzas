@@ -3,10 +3,10 @@ import React, { useState, useEffect } from "react";
 import * as S from "./Styles";
 
 const Table = ({ coins }) => {
-  const [isDesktop, setDesktop] = useState(window.innerWidth > 820);
+  const [isDesktop, setDesktop] = useState(window.innerWidth > 1440);
   
   const updateMedia = () => {
-    setDesktop(window.innerWidth > 820);
+    setDesktop(window.innerWidth > 1440);
   };
 
   useEffect(() => {
@@ -21,12 +21,12 @@ const Table = ({ coins }) => {
           <tr>
             <th>Moneda</th>
             <th>Precio</th>
-            <th>Capital de mercado</th>
             {isDesktop && (
               <>
-                <th>Cambio</th>
+                <th>Capital de mercado</th>
               </>
             )}
+            <th>cambio</th>
           </tr>
         </thead>
         <tbody>

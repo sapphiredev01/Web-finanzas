@@ -71,7 +71,7 @@ const Contacto = () => {
               <S.InfoItemAlt>Correo</S.InfoItemAlt>
             </S.Info>
             <S.Info>
-              <S.InfoItem>info@finpei.com</S.InfoItem>
+              <S.InfoItem>finpei@contacto.com.mx</S.InfoItem>
             </S.Info>
             <S.Subtitle>Mándanos un mensaje</S.Subtitle>
             <form onSubmit={mandarCorreo}>

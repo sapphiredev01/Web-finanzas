@@ -38,16 +38,19 @@ export const StyledLink = styled(Link).attrs(() => ({
 }))`
   opacity: 0.6;
   transition: all 0.3s ease-in-out;
+  margin-top: ${(props) => (props.vehiculo ? "-0.5rem" : "")};
   &:hover {
     cursor: pointer;
-    margin-left: 1.5rem;
+    margin-left:${(props) => (props.vehiculo ? "1.5rem" : "0.5rem")};
     transform: scale(1.3);
     opacity: 1;
+    margin-top: ${(props) => (props.vehiculo ? "-0.5rem" : "")};
   }
   &.active {
     opacity: 1;
     transform: scale(1.3);
-    margin-left: 1.5rem;
+    margin-left: ${(props) => (props.vehiculo ? "1.5rem" : "0.5rem")};
+    margin-top: ${(props) => (props.vehiculo ? "-0.5rem" : "")};
   }
 `;
 

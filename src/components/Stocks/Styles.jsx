@@ -9,9 +9,8 @@ export const Card = styled.div`
   padding: 2rem;
   overflow: hidden;
   width: 100%;
-  :not(:last-child) {
-    margin-top: 1rem;
-  }
+  margin: 3rem 1rem;
+  
 `;
 
 export const CardTitle = styled.h3`
@@ -29,15 +28,14 @@ export const Symbol = styled.p`
 `;
 
 export const CardsContainer = styled.div`
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: 1fr;
-  margin-top: 4rem;
+  display: flex;
+  flex-direction: row;
   place-items: center;
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
   @media ${device.tablet} {
     width: 80%;
+    flex-direction: column;
   }
 `;
 
