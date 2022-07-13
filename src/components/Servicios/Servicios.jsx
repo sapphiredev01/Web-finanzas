@@ -6,7 +6,7 @@ import { Title, Text } from "../UI/Typography/Typography";
 const Servicios = () => {
   return (
     <Container id="servicios">
-      <Wrapper>
+      <Wrapper auto>
       <Title>VEHÍCULOS FINANCIEROS</Title>
       <S.Content />
       </Wrapper>

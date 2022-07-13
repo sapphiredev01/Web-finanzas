@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Hero from "./components/Hero/Hero";
 import Stocks from "./components/Stocks/Stocks";
 import Vision from "./components/Vision/Vision";
@@ -10,6 +10,8 @@ import Nav from "./components/UI/Nav/Nav";
 import Media from "./components/UI/Media/Media";
 import "./App.css";
 import { useDesktop } from "./hooks/useDesktop";
+
+
 
 function App() {
   const isDesktop = useDesktop();
