@@ -7,6 +7,7 @@ import crypto from "../../images/LOGOTIPOS_FINPEI_100.png";
 import stocks from "../../images/LOGOTIPOS_FINPEI_101.png";
 import startups from "../../images/LOGOTIPOS_FINPEI_102.png";
 import { useDesktop } from "../../hooks/useDesktop";
+import Fade from 'react-reveal/Fade';
 
 const Servicios = () => {
   const isDesktop = useDesktop();
@@ -63,6 +64,7 @@ const Servicios = () => {
   }
   return (
     <Container id="servicios" onMouseLeave={hideAll}>
+      <Fade>
       <Wrapper auto={isExpanded}>
         <Title>VEHÍCULOS FINANCIEROS</Title>
         <div>
@@ -121,6 +123,7 @@ const Servicios = () => {
           {showBoosting && <S.DivBoosting />}
         </div>
       </Wrapper>
+      </Fade>
     </Container>
   );
 };

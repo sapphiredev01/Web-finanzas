@@ -6,6 +6,7 @@ import imgBearBull from "../../images/bear_bull.png";
 import Chart from "./Chart";
 import Form from "./Form";
 import { useDesktop } from "../../hooks/useDesktop";
+import Fade from 'react-reveal/Fade';
 
 const Inversion = () => {
   const isDesktop = useDesktop();
@@ -21,6 +22,7 @@ const Inversion = () => {
 
   return (
     <Container id="inversion">
+      <Fade>
       <Wrapper style={{marginBottom: "4rem"}} {...props}>
         <Title>Inversión</Title>
         <S.Img src={imgBearBull} alt="Bear and Bull" />
@@ -33,6 +35,7 @@ const Inversion = () => {
           </S.Div2>
         </S.Grid>
       </Wrapper>
+      </Fade>
     </Container>
   );
 };

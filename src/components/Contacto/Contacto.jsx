@@ -5,7 +5,7 @@ import { Container, Wrapper } from "../UI/Containers/Containers";
 import * as S from "./Styles";
 import Img from "../../images/contact.jpg";
 import { useDesktop } from "../../hooks/useDesktop";
-
+import Fade from 'react-reveal/Fade';
 
 const Contacto = () => {
   const isDesktop = useDesktop();
@@ -62,6 +62,7 @@ const Contacto = () => {
 
   return (
     <Container id="contacto">
+      <Fade>
       <Wrapper {...props}>
         <S.WrapperFlex>
           <S.ImageSquare src={Img} />
@@ -117,6 +118,7 @@ const Contacto = () => {
           </S.Form>
         </S.WrapperFlex>
       </Wrapper>
+      </Fade>
     </Container>
   );
 };

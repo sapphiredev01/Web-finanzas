@@ -6,6 +6,7 @@ import { CryptoRow } from "./Row";
 import { Chart } from "./Chart";
 import { CardsContainer } from "./Styles";
 import { useDesktop } from "../../hooks/useDesktop";
+import Fade from 'react-reveal/Fade';
 
 const Stocks = () => {
   const isDesktop = useDesktop();
@@ -39,6 +40,7 @@ const Stocks = () => {
 
   return (
     <Container id="inicio">
+    <Fade>
       <Wrapper {...props}>
         <Title>Inicio</Title>
         <CryptoRow coins={coins2} />
@@ -48,6 +50,7 @@ const Stocks = () => {
           <Table coins={coins} />
         </CardsContainer>
       </Wrapper>
+      </Fade>
     </Container>
   );
 };

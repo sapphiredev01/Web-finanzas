@@ -5,6 +5,7 @@ import { Title, Text } from "../UI/Typography/Typography";
 import ImgVer from "../../images/business4.jpg";
 import ImgHor from "../../images/business1.jpg";
 import { useDesktop } from "../../hooks/useDesktop";
+import Fade from 'react-reveal/Fade';
 
 export default function Nosotros() {
   const isDesktop = useDesktop();
@@ -15,6 +16,7 @@ export default function Nosotros() {
 
   return (
     <Container id="nosotros">
+      <Fade>
       <Wrapper {...props}>
         <Title>Nosotros</Title>
         <S.WrapperFlex>
@@ -44,6 +46,7 @@ export default function Nosotros() {
           </S.ContentImages>
         </S.WrapperFlex>
       </Wrapper>
+      </Fade>
     </Container>
   );
 }
