@@ -15,8 +15,8 @@ const Nav = () => {
           </Styles.StyledLink>
         </Styles.Step>
         <Styles.Step>
-          <Styles.StyledLink to="vision">
-            <Styles.Title>VISIÓN</Styles.Title>
+          <Styles.StyledLink to="nosotros">
+            <Styles.Title>NOSOTROS</Styles.Title>
           </Styles.StyledLink>
         </Styles.Step>
         <Styles.Step>

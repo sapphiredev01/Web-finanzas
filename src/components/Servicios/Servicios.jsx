@@ -67,9 +67,9 @@ const Servicios = () => {
         <Title>VEHÍCULOS FINANCIEROS</Title>
         <div>
           <S.Row>
-            <div onMouseOver={changeAgricultura}>
+            <S.divAnimationAgro onMouseOver={changeAgricultura}>
               <S.Item src={agricultura} alt={"Agricultura"}title={"Agricultura"}/>
-            </div>
+            </S.divAnimationAgro>
 
             {showAgricultura && isDesktop ? 
             <> 
@@ -77,17 +77,17 @@ const Servicios = () => {
             </> 
             : 
             <>
-             <div onMouseOver={changeCrypto}>
+             <S.divAnimationRow onMouseOver={changeCrypto}>
               <S.Item src={crypto} alt={"Crypto"} title={"Crypto"} />
-            </div>
+            </S.divAnimationRow>
 
-            <div onMouseOver={changeStocks}>
+            <S.divAnimationRow onMouseOver={changeStocks}>
             <S.Item src={stocks} alt={"Stocks"} title={"Stocks"} />
-            </div>
+            </S.divAnimationRow>
 
-            <div onMouseOver={changeBoosting}>
+            <S.divAnimationRow onMouseOver={changeBoosting}>
             <S.Item src={startups} alt={"Startups"} title={"Boosting"} />
-            </div>
+            </S.divAnimationRow>
             </>
             }
        
@@ -95,6 +95,7 @@ const Servicios = () => {
 
           {showAgricultura && isDesktop ? 
             <> 
+            <S.divAnimationRow>
             <S.Row>
             <div onMouseOver={changeCrypto}>
               <S.Item src={crypto} alt={"Crypto"} title={"Crypto"} />
@@ -108,6 +109,7 @@ const Servicios = () => {
             <S.Item src={startups} alt={"Startups"} title={"Boosting"} />
             </div>
             </S.Row>
+            </S.divAnimationRow>
             </> 
             : 
             <>

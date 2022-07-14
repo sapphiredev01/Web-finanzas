@@ -15,7 +15,7 @@ import staking from "../../images/staking.png";
 
 import { Text } from "../UI/Typography/Typography";
 import { device } from "../../utils/Variables";
-import { fadeInUp, fadeInRight, zoomIn } from "react-animations";
+import { fadeInUp, fadeInRight, zoomIn, fadeOut, fadeIn, lightSpeedIn } from "react-animations";
 
 const StyledDiv = styled.div`
   text-align: center;
@@ -100,6 +100,17 @@ export const Row = styled.div`
 const downAnimation = keyframes`${fadeInUp}`;
 const rightAnimation = keyframes`${fadeInRight}`;
 const ZoomAnimation = keyframes`${zoomIn}`;
+const FadeOutAnimation = keyframes`${fadeOut}`;
+const FadeAnimation = keyframes`${fadeIn}`;
+const AgroAnimation = keyframes`${lightSpeedIn}`;
+
+export const divAnimationRow = styled.div`
+  animation: 1s ${FadeAnimation};
+`;
+export const divAnimationAgro = styled.div`
+  transition: all 0.5s ease-in-out;
+`;
+
 
 const DinamicDivAgro = styled.div`
   text-align: justify;
@@ -134,7 +145,7 @@ const ContainerCrypto = styled.div`
   }
 `;
 const DescriptionCrypto = styled.p`
-  animation: 1s ${ZoomAnimation};
+  animation: 0.5s ${ZoomAnimation};
   font-size: 1.5rem;
 `;
 

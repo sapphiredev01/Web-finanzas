@@ -14,9 +14,9 @@ export default function Nosotros() {
   };
 
   return (
-    <Container id="vision">
+    <Container id="nosotros">
       <Wrapper {...props}>
-        <Title>VISIÓN</Title>
+        <Title>Nosotros</Title>
         <S.WrapperFlex>
           <S.ContentText>
             <Text>
