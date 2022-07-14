@@ -12,10 +12,10 @@ import stocks3 from "../../images/stocks3.jpg";
 import hodl from "../../images/hodl.jpg";
 import arbitrage from "../../images/arbitrage.jpg";
 import staking from "../../images/staking.png";
-
 import { Text } from "../UI/Typography/Typography";
 import { device } from "../../utils/Variables";
 import { fadeInUp, fadeInRight, zoomIn, fadeOut, fadeIn, lightSpeedIn } from "react-animations";
+import { useDesktop } from "../../hooks/useDesktop";
 
 const StyledDiv = styled.div`
   text-align: center;
@@ -195,6 +195,7 @@ export const DivAgricultura = () => {
 };
 
 export const DivCrypto = () => {
+  const isDesktop = useDesktop();
   const [showHodl, setHodl] = useState(false);
   const [showArbitrage, setArbitrage] = useState(false);
   const [showStaking, setStaking] = useState(false);
@@ -225,29 +226,45 @@ export const DivCrypto = () => {
       <StyledTitleDinamic>Crypto</StyledTitleDinamic>
       <h3>Estrategia muy diversificada para minimizar riesgos</h3>
       <h2>Portafolio</h2>
+      {isDesktop && 
       <ContainerCrypto>
         <h2>Hodl</h2>
         <h2>Arbitrage</h2>
         <h2>Stacking</h2>
       </ContainerCrypto>
+      }
       <ContainerCrypto>
         <DinamicImg src={hodl} alt={"Hodl"} onMouseEnter={changeHodl}/>
+        {showHodl && !isDesktop ?
+          <><DescriptionCrypto>El holding consiste en la compra y venta de activos criptográficos en el 
+          mercado a un horizonte de inversión más largo.</DescriptionCrypto></> : <></>}
+
         <DinamicImg src={arbitrage} alt={"Arbitrage"} onMouseEnter={changeArbitrage}/>
-        <DinamicImg src={staking} alt={"Staking"} onMouseEnter={changeStaking}/>
-      </ContainerCrypto>
-          {showHodl && 
-          <DescriptionCrypto>El holding consiste en la compra y venta de activos criptográficos en el 
-          mercado a un horizonte de inversión más largo.</DescriptionCrypto>}
-
-          {showArbitrage && 
-          <DescriptionCrypto>El arbitraje es una estrategia financiera que consiste en aprovechar la 
+        {showArbitrage && !isDesktop ?
+          <><DescriptionCrypto>El arbitraje es una estrategia financiera que consiste en aprovechar la 
           diferencia de precio entre distintos mercados sobre un mismo activo 
-          financiero para obtener un beneficio económico sin riesgo.</DescriptionCrypto>}
+          financiero para obtener un beneficio económico sin riesgo.</DescriptionCrypto></> : <></>}
 
-          {showStaking && 
-          <DescriptionCrypto>Stacking consiste en guardar una parte del portafolio de inversión en 
+        <DinamicImg src={staking} alt={"Staking"} onMouseEnter={changeStaking}/>
+        {showStaking && !isDesktop ?
+          <><DescriptionCrypto>Stacking consiste en guardar una parte del portafolio de inversión en 
           un activo en específico, y a cambio de eso los intercambios nos 
-          brindan un interés que asegura nuestros rendimientos</DescriptionCrypto>}
+          brindan un interés que asegura nuestros rendimientos</DescriptionCrypto></> : <></>}
+
+      </ContainerCrypto>
+          {showHodl && isDesktop ?
+          <><DescriptionCrypto>El holding consiste en la compra y venta de activos criptográficos en el 
+          mercado a un horizonte de inversión más largo.</DescriptionCrypto></> : <></>}
+
+          {showArbitrage && isDesktop ?
+          <><DescriptionCrypto>El arbitraje es una estrategia financiera que consiste en aprovechar la 
+          diferencia de precio entre distintos mercados sobre un mismo activo 
+          financiero para obtener un beneficio económico sin riesgo.</DescriptionCrypto></> : <></>}
+
+          {showStaking && isDesktop ?
+          <><DescriptionCrypto>Stacking consiste en guardar una parte del portafolio de inversión en 
+          un activo en específico, y a cambio de eso los intercambios nos 
+          brindan un interés que asegura nuestros rendimientos</DescriptionCrypto></> : <></>}
     </DinamicDivCrypto>
   );
 };
