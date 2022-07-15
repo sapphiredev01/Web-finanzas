@@ -1,14 +1,10 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
-import agricultura from "../../images/LOGOTIPOS_FINPEI_99.png";
-import crypto from "../../images/LOGOTIPOS_FINPEI_100.png";
-import stocks from "../../images/LOGOTIPOS_FINPEI_101.png";
-import startups from "../../images/LOGOTIPOS_FINPEI_102.png";
 import agave from "../../images/agave.png";
 import carretera from "../../images/carretera.jpg";
 import stocks2 from "../../images/stocks2.jpg";
-import stocks3 from "../../images/stocks3.jpg";
+import stocks3 from "../../images/Stocks3.jpg";
 import hodl from "../../images/hodl.jpg";
 import arbitrage from "../../images/arbitrage.jpg";
 import staking from "../../images/staking.png";

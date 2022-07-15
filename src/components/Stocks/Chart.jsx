@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { React, useState, useEffect } from "react";
+import { React, useState } from "react";
 import * as S from "./Styles";
 import ApexChart from "react-apexcharts";
 import { useQuery } from "react-query";
@@ -16,27 +16,31 @@ export const Chart = () => {
     import.meta.env.ALPHA_KEY
   }`;
 
-  const { data } = useQuery("chart", async () => {
-    const response = await fetch(url);
-    const result = await response.json();
-    const data = Object.entries(result["Time Series (Daily)"]);
-    const prices = data.map((date) => ({
-      x: date[0],
-      y: [
-        date[1]["1. open"],
-        date[1]["2. high"],
-        date[1]["3. low"],
-        date[1]["4. close"],
-      ],
-    }));
-    setSeries([
-      {
-        data: prices,
-      },
-    ]);
-  }, {
-    staleTime: 300000,
-  });
+  const { data } = useQuery(
+    "chart",
+    async () => {
+      const response = await fetch(url);
+      const result = await response.json();
+      const data = Object.entries(result["Time Series (Daily)"]);
+      const prices = data.map((date) => ({
+        x: date[0],
+        y: [
+          date[1]["1. open"],
+          date[1]["2. high"],
+          date[1]["3. low"],
+          date[1]["4. close"],
+        ],
+      }));
+      setSeries([
+        {
+          data: prices,
+        },
+      ]);
+    },
+    {
+      cacheTime: 300000,
+    }
+  );
 
   const chart = {
     options: {

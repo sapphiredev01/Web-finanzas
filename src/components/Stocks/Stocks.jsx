@@ -2,22 +2,21 @@ import React, { useEffect, useState } from "react";
 import { Container, Wrapper } from "../UI/Containers/Containers";
 import { Title } from "../UI/Typography/Typography";
 import Table from "./Table";
-import { CryptoRow, StockRow } from "./Row";
+import { CryptoRow } from "./CryptoRow";
+import { StockRow } from "./StockRow";
 import { Chart } from "./Chart";
 import { CardsContainer } from "./Styles";
 import { useDesktop } from "../../hooks/useDesktop";
-import Fade from 'react-reveal/Fade';
+import Fade from "react-reveal/Fade";
 
 const Stocks = () => {
   const isDesktop = useDesktop();
 
   const props = {
-    "auto": !isDesktop,
+    auto: !isDesktop,
   };
-
   const [coins, setCoins] = useState([]);
   const [coins2, setCoins2] = useState([]);
-  const [stocks, setStocks] = useState([]);
 
   const getCrypto = async () => {
     const response = await fetch(
@@ -34,36 +33,23 @@ const Stocks = () => {
     setCoins2(data);
   };
 
-  const symbols = ["SPX", "NDAQ"];
-  const getStocks = async () => {
-    symbols.forEach(async (symbol) => {
-    const url = `https://api.twelvedata.com/quote?symbol=${symbol}&apikey=4f26cd4907b046838d42aa1d051e929f`;
-    const response = await fetch(url);
-    const result = await response.json();
-    console.log(result);
-    stocks.push(result);
-    });
-  }
-
   useEffect(() => {
     getCrypto();
     getCrypto2();
-    getStocks();
-    console.log(stocks);
   }, []);
 
   return (
     <Container id="inicio">
-    <Fade>
-      <Wrapper {...props}>
-        <Title>Inicio</Title>
-        <CryptoRow coins={coins2} />
-        <StockRow stocks={stocks}/>
-        <CardsContainer>
-          <Chart />
-          <Table coins={coins} />
-        </CardsContainer>
-      </Wrapper>
+      <Fade>
+        <Wrapper {...props}>
+          <Title>Inicio</Title>
+          <CryptoRow coins={coins2} />
+          <StockRow />
+          <CardsContainer>
+            <Chart />
+            <Table coins={coins} />
+          </CardsContainer>
+        </Wrapper>
       </Fade>
     </Container>
   );

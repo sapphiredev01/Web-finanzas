@@ -25,7 +25,7 @@ export const ItemStock = ({ stock }) => {
     <S.RowItem>
       <DivSymbol>{stock.name}</DivSymbol>
       <span >${Number(stock.close).toFixed(2)}</span>
-      <S.DivChange change={stock.percent_change}>{Number(stock.percent_change).toFixed(2)}%</S.DivChange>
+      <S.DivChange change={stock.changePercent}>{Number(stock.changePercent).toFixed(2)}%</S.DivChange>
     </S.RowItem>
   );
 };

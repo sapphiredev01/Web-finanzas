@@ -7,10 +7,14 @@ export const Card = styled.div`
   box-shadow: 0px 20px 30px #00000011;
   border-radius: 15px;
   padding: 2rem;
+  margin: 0;
   overflow: hidden;
-  width: 100%;
+  width: 80%;
   margin: 3rem 1rem;
-  
+  @media ${device.tablet} {
+    margin: unset;
+    margin: 2rem auto;
+  }
 `;
 
 export const CardTitle = styled.h3`
@@ -28,14 +32,15 @@ export const Symbol = styled.p`
 `;
 
 export const CardsContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  place-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   width: 100%;
   margin: 0 auto;
+  gap: 1rem;
   @media ${device.tablet} {
     width: 80%;
-    flex-direction: column;
+    gap: unset;
+    grid-template-columns: 1fr;
   }
 `;
 
