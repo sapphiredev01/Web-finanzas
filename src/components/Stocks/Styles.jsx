@@ -58,6 +58,11 @@ export const TdChange = styled.td`
   padding-left: 0.5rem;
 `;
 
+export const DivChange = styled.div`
+  color: ${(props) => (props.change > 0 ? "green" : "red")};
+  padding-left: 0.5rem;
+`;
+
 export const Table = styled.table`
   height: 100%;
   width: 100%;

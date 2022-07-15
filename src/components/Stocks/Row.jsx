@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import * as S from "./Styles";
 import {ItemCrypto, ItemStock } from "./RowItem";
 
@@ -23,7 +23,7 @@ export const CryptoRow = ({ coins }) => {
   );
 };
 
-export const StockRow = ({ stocks }) => {
+export const StockRow = ({stocks}) => {
   const settings = {
     infinite: true,
     swipeToSlide: true,

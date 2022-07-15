@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Container, Wrapper } from "../UI/Containers/Containers";
 import { Title } from "../UI/Typography/Typography";
 import Table from "./Table";
-import { CryptoRow } from "./Row";
+import { CryptoRow, StockRow } from "./Row";
 import { Chart } from "./Chart";
 import { CardsContainer } from "./Styles";
 import { useDesktop } from "../../hooks/useDesktop";
@@ -17,6 +17,7 @@ const Stocks = () => {
 
   const [coins, setCoins] = useState([]);
   const [coins2, setCoins2] = useState([]);
+  const [stocks, setStocks] = useState([]);
 
   const getCrypto = async () => {
     const response = await fetch(
@@ -33,9 +34,22 @@ const Stocks = () => {
     setCoins2(data);
   };
 
+  const symbols = ["SPX", "NDAQ"];
+  const getStocks = async () => {
+    symbols.forEach(async (symbol) => {
+    const url = `https://api.twelvedata.com/quote?symbol=${symbol}&apikey=4f26cd4907b046838d42aa1d051e929f`;
+    const response = await fetch(url);
+    const result = await response.json();
+    console.log(result);
+    stocks.push(result);
+    });
+  }
+
   useEffect(() => {
     getCrypto();
     getCrypto2();
+    getStocks();
+    console.log(stocks);
   }, []);
 
   return (
@@ -44,7 +58,7 @@ const Stocks = () => {
       <Wrapper {...props}>
         <Title>Inicio</Title>
         <CryptoRow coins={coins2} />
-        <CryptoRow coins={coins2} />
+        <StockRow stocks={stocks}/>
         <CardsContainer>
           <Chart />
           <Table coins={coins} />
