@@ -119,3 +119,14 @@ export const StyledSlider = styled(Slider)`
     float: left;
   }
 `;
+
+export const StyledSliderChart = styled(Slider)`
+  box-shadow: 0px 20px 30px #00000011;
+  border-radius: 5px;
+  height: 35em;
+  width: 100%;
+  overflow: hidden;
+  & div {
+    float: left;
+  }
+`;

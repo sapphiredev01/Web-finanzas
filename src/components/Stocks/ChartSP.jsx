@@ -4,48 +4,43 @@ import * as S from "./Styles";
 import ApexChart from "react-apexcharts";
 import { useQuery } from "react-query";
 
-export const Chart = () => {
+export const ChartSP = () => {
+
   const [series, setSeries] = useState([
     {
       data: [],
     },
   ]);
 
-  const symbol = "NDAQ";
-  const url = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=${
-    import.meta.env.ALPHA_KEY
-  }`;
+  const url = `https://api.twelvedata.com/time_series?symbol=SPX&interval=1day&apikey=4f26cd4907b046838d42aa1d051e929f`;
 
   const { data } = useQuery(
     "chart",
     async () => {
       const response = await fetch(url);
       const result = await response.json();
-      const data = Object.entries(result["Time Series (Daily)"]);
-      const prices = data.map((date) => ({
-        x: date[0],
-        y: [
-          date[1]["1. open"],
-          date[1]["2. high"],
-          date[1]["3. low"],
-          date[1]["4. close"],
-        ],
+      const data = result.values;
+      const prices = data.map((index) => ({
+        x: index.datetime,
+        y: [index.open, index.high, index.low, index.close],
       }));
-      setSeries([
-        {
-          data: prices,
-        },
-      ]);
+      setSeries(
+        [
+          {
+            data: prices,
+          },
+        ]
+      );
     },
     {
-      cacheTime: 300000,
+      staleTime: 600000,
     }
   );
 
   const chart = {
     options: {
       title: {
-        text: "NDAQ",
+        text: "S&P500",
         align: "left",
       },
       xaxis: {

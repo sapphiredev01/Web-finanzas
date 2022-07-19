@@ -23,7 +23,7 @@ export const StockRow = () => {
       return stocks;
     },
     {
-      staleTime: 300000,
+      staleTime: 600000,
     }
   );
   const settings = {

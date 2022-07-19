@@ -4,7 +4,7 @@ import { Title } from "../UI/Typography/Typography";
 import Table from "./Table";
 import { CryptoRow } from "./CryptoRow";
 import { StockRow } from "./StockRow";
-import { Chart } from "./Chart";
+import { ChartSlider } from "./ChartSlider";
 import { CardsContainer } from "./Styles";
 import { useDesktop } from "../../hooks/useDesktop";
 import Fade from "react-reveal/Fade";
@@ -46,7 +46,7 @@ const Stocks = () => {
           <CryptoRow coins={coins2} />
           <StockRow />
           <CardsContainer>
-            <Chart />
+            <ChartSlider />
             <Table coins={coins} />
           </CardsContainer>
         </Wrapper>
