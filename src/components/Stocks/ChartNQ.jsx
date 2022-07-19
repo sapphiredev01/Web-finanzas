@@ -6,7 +6,7 @@ import { useQuery } from "react-query";
 
 export const ChartNQ = () => {
 
-  const [series, setSeries] = useState([
+  const [series2, setSeries2] = useState([
     {
       data: [],
     },
@@ -15,7 +15,7 @@ export const ChartNQ = () => {
   const url = `https://api.twelvedata.com/time_series?symbol=NDAQ&interval=1day&apikey=4f26cd4907b046838d42aa1d051e929f`;
 
   const { data } = useQuery(
-    "chart",
+    "chart2",
     async () => {
       const response = await fetch(url);
       const result = await response.json();
@@ -24,7 +24,7 @@ export const ChartNQ = () => {
         x: index.datetime,
         y: [index.open, index.high, index.low, index.close],
       }));
-      setSeries(
+      setSeries2(
         [
           {
             data: prices,
@@ -58,7 +58,7 @@ export const ChartNQ = () => {
     <S.Card>
       <ApexChart
         options={chart.options}
-        series={series}
+        series={series2}
         type="candlestick"
         width="100%"
         height={300}

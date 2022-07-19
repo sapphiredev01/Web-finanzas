@@ -7,6 +7,8 @@ import { StockRow } from "./StockRow";
 import { ChartSlider } from "./ChartSlider";
 import { CardsContainer } from "./Styles";
 import { useDesktop } from "../../hooks/useDesktop";
+import { ChartSP } from "./ChartSP";
+import { ChartNQ } from "./ChartNQ";
 import Fade from "react-reveal/Fade";
 
 const Stocks = () => {

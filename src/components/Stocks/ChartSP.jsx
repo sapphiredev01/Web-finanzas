@@ -40,7 +40,7 @@ export const ChartSP = () => {
   const chart = {
     options: {
       title: {
-        text: "S&P500",
+        text: "S&P 500",
         align: "left",
       },
       xaxis: {

@@ -1,23 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { ChartSP } from "./ChartSP";
 import { ChartNQ } from "./ChartNQ";
 import * as S from "./Styles";
-
+import ReactCardFlip from "react-card-flip";
 import Slider from "react-slick";
 
 export const ChartSlider = () => {
-  const settings = {
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    pauseOnHover: true,
-    arrows: false,
-  };
+  const [isFlipped, setFlipped] = useState(false);
+  
+  setTimeout(() => {
+      setFlipped(!isFlipped);
+  }, 10000);
+
+ 
+
   return (
-    <S.StyledSliderChart {...settings}>
+    <ReactCardFlip isFlipped={isFlipped} flipDirection={"horizontal"}>
+      <div>
         <ChartSP />
-      <ChartNQ/>
-    </S.StyledSliderChart>
+      </div>
+      <div>
+        <ChartNQ />
+      </div>
+    </ReactCardFlip>
   );
 };

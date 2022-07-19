@@ -7,7 +7,7 @@ export const StockRow = () => {
   const { data: stocks, isLoading } = useQuery(
     "stocks",
     async () => {
-      const symbols = ["SPX", "NDAQ", "OIL", "SPY", "USD"];
+      const symbols = ["SPX", "NDAQ", "SIX", "SPY", "USD"];
       const stocks = [];
       for (const symbol of symbols) {
         const url = `https://api.twelvedata.com/quote?symbol=${symbol}&apikey=4f26cd4907b046838d42aa1d051e929f`;
