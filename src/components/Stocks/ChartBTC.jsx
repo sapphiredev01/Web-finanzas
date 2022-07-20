@@ -30,11 +30,14 @@ export const options = {
   maintainAspectRatio: false,
   plugins: {
     legend: {
+      display: false,
       position: "top",
     },
     title: {
       display: true,
       text: "Bitcoin",
+      fontSize: 20,
+      
     },
     datalabels: {
       display: false,
@@ -60,7 +63,6 @@ export const ChartBTC = () => {
       data.forEach((index) => {
         series.push(index[1].toFixed(2));
       });
-      console.log(series);
       return series;
     },
     {
@@ -77,6 +79,7 @@ export const ChartBTC = () => {
       {
         label: "Bitcoin",
         backgroundColor: "#00345b",
+        borderColor: "#00345b",
         data: series,
       },
     ],
