@@ -5,10 +5,9 @@ import Table from "./Table";
 import { CryptoRow } from "./CryptoRow";
 import { StockRow } from "./StockRow";
 import { ChartSlider } from "./ChartSlider";
+import { ChartBTC } from "./ChartBTC";
 import { CardsContainer } from "./Styles";
 import { useDesktop } from "../../hooks/useDesktop";
-import { ChartSP } from "./ChartSP";
-import { ChartNQ } from "./ChartNQ";
 import Fade from "react-reveal/Fade";
 
 const Stocks = () => {
@@ -49,7 +48,7 @@ const Stocks = () => {
           <StockRow />
           <CardsContainer>
             <ChartSlider />
-            <Table coins={coins} />
+            <ChartBTC />
           </CardsContainer>
         </Wrapper>
       </Fade>

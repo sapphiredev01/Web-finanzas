@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { transitions, positions, Provider as AlertProvider } from "react-alert";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from 'react-query/devtools'
 import AlertTemplate from "react-alert-template-basic";
 import "./index.css";
 import App from "./App";
@@ -19,6 +20,7 @@ ReactDOM.render(
   <AlertProvider template={AlertTemplate} {...options}>
     <QueryClientProvider client={queryClient}>
       <App />
+      <ReactQueryDevtools />
     </QueryClientProvider>
   </AlertProvider>,
   document.getElementById("root")

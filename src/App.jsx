@@ -11,8 +11,6 @@ import Media from "./components/UI/Media/Media";
 import "./App.css";
 import { useDesktop } from "./hooks/useDesktop";
 
-
-
 function App() {
   const isDesktop = useDesktop();
 

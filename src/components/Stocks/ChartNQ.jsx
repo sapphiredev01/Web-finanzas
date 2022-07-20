@@ -1,20 +1,20 @@
 /* eslint-disable react/prop-types */
-import { React, useState } from "react";
+import { React } from "react";
 import * as S from "./Styles";
 import ApexChart from "react-apexcharts";
 import { useQuery } from "react-query";
+import { useRound } from "../../hooks/useRound";
 
 export const ChartNQ = () => {
-
-  const [series2, setSeries2] = useState([
-    {
-      data: [],
-    },
-  ]);
-
   const url = `https://api.twelvedata.com/time_series?symbol=NDAQ&interval=1day&apikey=4f26cd4907b046838d42aa1d051e929f`;
 
-  const { data } = useQuery(
+  const {
+    data: series = [
+      {
+        data: [],
+      },
+    ],
+  } = useQuery(
     "chart2",
     async () => {
       const response = await fetch(url);
@@ -22,18 +22,18 @@ export const ChartNQ = () => {
       const data = result.values;
       const prices = data.map((index) => ({
         x: index.datetime,
-        y: [index.open, index.high, index.low, index.close],
+        y: [index.open, index.high, index.low, index.close].map(useRound),
       }));
-      setSeries2(
-        [
-          {
-            data: prices,
-          },
-        ]
-      );
+      return [
+        {
+          data: prices,
+        },
+      ];
     },
     {
-      staleTime: 600000,
+      refetchOnWindowFocus: false,
+      refetchOnReconnect: false,
+      staleTime: 864000000,
     }
   );
 
@@ -58,7 +58,7 @@ export const ChartNQ = () => {
     <S.Card>
       <ApexChart
         options={chart.options}
-        series={series2}
+        series={series}
         type="candlestick"
         width="100%"
         height={300}

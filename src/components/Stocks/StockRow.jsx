@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { ItemStock } from "./RowItem";
 import * as S from "./Styles";
 import { useQuery } from "react-query";
@@ -23,7 +23,10 @@ export const StockRow = () => {
       return stocks;
     },
     {
-      staleTime: 600000,
+      refetchOnMount: false,
+      refetchOnWindowFocus: false,
+      refetchOnReconnect: false,
+      staleTime: 864000000,
     }
   );
   const settings = {
@@ -41,7 +44,7 @@ export const StockRow = () => {
   return (
     <>
       {isLoading ? (
-        <></>
+        <>Loading...</>
       ) : (
         <S.StyledSlider {...settings}>
           {stocks.map((stock, index) => {
