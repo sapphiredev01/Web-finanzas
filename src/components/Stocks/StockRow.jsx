@@ -44,7 +44,7 @@ export const StockRow = () => {
   return (
     <>
       {isLoading ? (
-        <>Loading...</>
+        <></>
       ) : (
         <S.StyledSlider {...settings}>
           {stocks.map((stock, index) => {
