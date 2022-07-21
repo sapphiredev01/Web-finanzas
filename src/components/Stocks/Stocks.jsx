@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Container, Wrapper } from "../UI/Containers/Containers";
 import { Title } from "../UI/Typography/Typography";
-import Table from "./Table";
 import { CryptoRow } from "./CryptoRow";
 import { StockRow } from "./StockRow";
 import { ChartSlider } from "./ChartSlider";

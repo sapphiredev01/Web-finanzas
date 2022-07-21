@@ -3,91 +3,87 @@ import { React } from "react";
 import { useRound } from "../../hooks/useRound";
 import { useQuery } from "react-query";
 import * as S from "./Styles";
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
-} from "chart.js";
-import { Line } from "react-chartjs-2";
-
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend
-);
-
-export const options = {
-  responsive: true,
-  maintainAspectRatio: false,
-  plugins: {
-    legend: {
-      display: false,
-      position: "top",
-    },
-    title: {
-      display: true,
-      text: "Bitcoin",
-      fontSize: 20,
-      
-    },
-    datalabels: {
-      display: false,
-    },
-  },
-  elements: {
-    point: {
-      radius: 0,
-    },
-  },
-};
+import ApexChart from "react-apexcharts";
 
 export const ChartBTC = () => {
   const url = `https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=360`;
 
-  const { data: series, isLoading } = useQuery(
+  const formatYmd = (date) => date.toISOString().slice(0, 10);
+
+  const { data: series = [] } = useQuery(
     "chartBTC",
     async () => {
-      const series = [];
       const response = await fetch(url);
       const result = await response.json();
       const data = result.prices;
-      data.forEach((index) => {
-        series.push(index[1].toFixed(2));
-      });
+      const series = data.map((index) => [
+        formatYmd(new Date(index[0])),
+        useRound(index[1]),
+      ]);
       return series;
     },
     {
-      refetchOnMount: false,
-      refetchOnWindowFocus: false,
-      refetchOnReconnect: false,
-      staleTime: 864000000,
+      staleTime: Infinity,
+      refetchInterval: 300000,
+      refetchIntervalInBackground: 300000,
     }
   );
 
-  const data = {
-    labels: series,
-    datasets: [
+  const chart = {
+    series: [
       {
-        label: "Bitcoin",
-        backgroundColor: "#00345b",
-        borderColor: "#00345b",
+        name: "Bitcoin",
         data: series,
       },
     ],
+    options: {
+      chart: {
+        id: "area-datetime",
+        type: "area",
+        height: 350,
+        zoom: {
+          autoScaleYaxis: true,
+        },
+      },
+      title: {
+        text: "Bitcoin Price",
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      markers: {
+        size: 0,
+        style: "hollow",
+      },
+      xaxis: {
+        type: "datetime",
+      },
+      tooltip: {
+        x: {
+          format: "dd MMM yyyy",
+        },
+      },
+      fill: {
+        type: "gradient",
+        gradient: {
+          shadeIntensity: 1,
+          opacityFrom: 0.7,
+          opacityTo: 0.9,
+          stops: [0, 100],
+        },
+      },
+    },
   };
 
   return (
     <S.Card>
-      <Line data={data} options={options} />
+      <ApexChart
+        options={chart.options}
+        series={chart.series}
+        type="area"
+        width="100%"
+        height={300}
+      />
     </S.Card>
   );
 };
