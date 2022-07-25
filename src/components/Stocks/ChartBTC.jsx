@@ -46,7 +46,7 @@ export const ChartBTC = () => {
         },
       },
       title: {
-        text: "Bitcoin Price",
+        text: "Bitcoin",
       },
       dataLabels: {
         enabled: false,
@@ -58,6 +58,10 @@ export const ChartBTC = () => {
       xaxis: {
         type: "datetime",
       },
+      stroke: {
+        curve: 'smooth',
+        colors: ['#F39C12'],
+      },
       tooltip: {
         x: {
           format: "dd MMM yyyy",
@@ -65,6 +69,7 @@ export const ChartBTC = () => {
       },
       fill: {
         type: "gradient",
+        colors: ['#F39C12'],
         gradient: {
           shadeIntensity: 1,
           opacityFrom: 0.7,

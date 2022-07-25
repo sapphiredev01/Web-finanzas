@@ -8,7 +8,7 @@ export const ChartSlider = () => {
   
   setTimeout(() => {
       setFlipped(!isFlipped);
-  }, 15000);
+  }, 10000);
 
   return (
     <ReactCardFlip isFlipped={isFlipped} flipDirection={"horizontal"}>

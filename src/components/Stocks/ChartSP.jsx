@@ -4,45 +4,14 @@ import * as S from "./Styles";
 import ApexChart from "react-apexcharts";
 import { useQuery } from "react-query";
 import { useRound } from "../../hooks/useRound";
-import { getStocks } from "../../api/stocksCall";
+import { getStocksSPX } from "../../api/stocksCall";
 
 export const ChartSP = () => {
-  // const url = `https://api.twelvedata.com/time_series?symbol=SPX&interval=1day&apikey=4f26cd4907b046838d42aa1d051e929f`;
-
-  // const {
-  //   data: series = [
-  //     {
-  //       data: [],
-  //     },
-  //   ],
-  // } = useQuery(
-  //   "chart",
-  //   async () => {
-  //     const response = await fetch(url);
-  //     const result = await response.json();
-  //     const data = result.values;
-  //     const prices = data.map((index) => ({
-  //       x: index.datetime,
-  //       y: [index.open, index.high, index.low, index.close].map(useRound),
-  //     }));
-  //     return [
-  //       {
-  //         data: prices,
-  //       },
-  //     ];
-  //   },
-  //   {
-  //     refetchOnMount: false,
-  //     refetchOnWindowFocus: false,
-  //     refetchOnReconnect: false,
-  //     staleTime: 864000000,
-  //   }
-  // );
 
   const [stocksSP, setStocksSP] = useState([]);
 
   const getStocksDataSP = () => {
-    getStocks()
+    getStocksSPX()
       .then((data) => {
         setStocksSP(data.SPX);
       })

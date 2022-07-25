@@ -8,7 +8,6 @@ import { ChartBTC } from "./ChartBTC";
 import { CardsContainer } from "./Styles";
 import { useDesktop } from "../../hooks/useDesktop";
 import Fade from "react-reveal/Fade";
-import { getStocks } from "../../api/stocksCall";
 
 const Stocks = () => {
   const isDesktop = useDesktop();
@@ -36,7 +35,7 @@ const Stocks = () => {
         <Wrapper {...props}>
           <Title>Inicio</Title>
           <CryptoRow coins={coins} />
-          <StockRow/> 
+          <StockRow />
           <CardsContainer>
             <ChartSlider />
             <ChartBTC />
