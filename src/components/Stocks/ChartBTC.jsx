@@ -60,7 +60,6 @@ export const ChartBTC = () => {
       },
       stroke: {
         curve: 'smooth',
-        colors: ['#F39C12'],
       },
       tooltip: {
         x: {
@@ -69,7 +68,6 @@ export const ChartBTC = () => {
       },
       fill: {
         type: "gradient",
-        colors: ['#F39C12'],
         gradient: {
           shadeIntensity: 1,
           opacityFrom: 0.7,
