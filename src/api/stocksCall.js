@@ -55,8 +55,6 @@ export const getStocks = async () => {
       ROW: stocks,
     };
 
-    console.log(newData);
-
     await updateDoc(doc(db, "stocks", "data"), newData);
   }
 
@@ -122,8 +120,6 @@ export const getStocksSPX = async () => {
       SPX: pricesSPX,
     };
 
-    console.log(newData);
-
     await updateDoc(doc(db, "stocks", "data"), newData);
   }
 
@@ -153,8 +149,6 @@ export const getStocksNDAQ = async () => {
       DATE3: newDate,
       NDAQ: pricesNDAQ
     };
-
-    console.log(newData);
 
     await updateDoc(doc(db, "stocks", "data"), newData);
   }

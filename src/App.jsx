@@ -8,6 +8,7 @@ import Inversion from "./components/Inversion/Inversion";
 import Perfil from "./components/Perfil/Perfil";
 import Nav from "./components/UI/Nav/Nav";
 import Media from "./components/UI/Media/Media";
+import Banner from "./components/Banner/Banner";
 import "./App.css";
 import { useDesktop } from "./hooks/useDesktop";
 
@@ -18,6 +19,7 @@ function App() {
     <div className="app">
       <Nav />
       <Hero />
+      <Banner />
       {isDesktop ? (
         <>
           <Media />
