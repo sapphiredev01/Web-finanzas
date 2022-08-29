@@ -9,6 +9,7 @@ import Perfil from "./components/Perfil/Perfil";
 import Nav from "./components/UI/Nav/Nav";
 import Media from "./components/UI/Media/Media";
 import Banner from "./components/Banner/Banner";
+import Inicio from "./components/Inicio/inicio";
 import "./App.css";
 import { useDesktop } from "./hooks/useDesktop";
 
@@ -27,7 +28,7 @@ function App() {
       ) : (
         <></>
       )}
-      <Stocks />
+      <Inicio />
       <Vision />
       <Servicios />
       <Perfil />
