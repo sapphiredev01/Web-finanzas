@@ -20,22 +20,6 @@ export const divContainer = styled.div`
   }
 `;
 
-export const PreTitle = styled.h3`
-  color: var(--blue);
-  font-size: 1.5rem;
-  @media ${device.tablet} {
-    text-align: center;
-  }
-`;
-
-export const niceTitle = styled.h1`
-  font-size: 2rem;
-  font-weight: bold;
-  @media ${device.tablet} {
-    text-align: center;
-  }
-`;
-
 export const Description = styled.p`
   font-size: 1rem;
   text-align: justify;

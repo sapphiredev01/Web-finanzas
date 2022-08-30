@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { Container, Wrapper } from "../UI/Containers/Containers";
-import { Title } from "../UI/Typography/Typography";
+import { Container, Wrapper, Separator } from "../UI/Containers/Containers";
+import { PreTitle, NiceTitle } from "../UI/Typography/Typography";
 import { useDesktop } from "../../hooks/useDesktop";
 import * as S from "./Styles";
 import Fade from "react-reveal/Fade";
@@ -37,8 +37,8 @@ const Inicio = () => {
         <Wrapper auto>
             <S.GridContainer>
                 <S.divContainer>
-                    <S.PreTitle>Acerca de nosotros</S.PreTitle>
-                    <S.niceTitle>Hacemos crecer <br/> tu capital</S.niceTitle>
+                    <PreTitle>Acerca de nosotros</PreTitle>
+                    <NiceTitle>Hacemos crecer <br/> tu capital</NiceTitle>
                     <S.Description>En FINPEI facilitamos el acercamiento a proyectos comerciales,
                     mercados financieros y criptográficos. Participando en el
                     desarrollo de proyectos de éxito.</S.Description>
@@ -52,6 +52,8 @@ const Inicio = () => {
                     <S.ImageBus src={woman}/>
                 </S.divContainer>
             </S.GridContainer>
+            <Separator/>
+            <br/>
         </Wrapper>
       </Fade>
     </Container>

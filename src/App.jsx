@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "./components/Hero/Hero";
 import Stocks from "./components/Stocks/Stocks";
-import Vision from "./components/Vision/Vision";
+import Nosotros from "./components/Nosotros/Nosotros";
 import Servicios from "./components/Servicios/Servicios";
 import Contacto from "./components/Contacto/Contacto";
 import Inversion from "./components/Inversion/Inversion";
@@ -29,7 +29,7 @@ function App() {
         <></>
       )}
       <Inicio />
-      <Vision />
+      <Nosotros />
       <Servicios />
       <Perfil />
       <Inversion />

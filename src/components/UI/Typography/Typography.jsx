@@ -13,3 +13,19 @@ export const Title = styled.h1`
 export const Text = styled.p`
   font-size: clamp(14px, 4vw, 20px);
 `;
+
+export const PreTitle = styled.h3`
+  color: var(--blue);
+  font-size: 1.5rem;
+  @media ${device.tablet} {
+    text-align: center;
+  }
+`;
+
+export const NiceTitle = styled.h1`
+  font-size: 2rem;
+  font-weight: bold;
+  @media ${device.tablet} {
+    text-align: center;
+  }
+`;

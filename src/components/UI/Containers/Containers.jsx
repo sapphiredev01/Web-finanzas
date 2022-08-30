@@ -15,3 +15,11 @@ export const Wrapper = styled.div`
   margin: auto;
   height: ${(props) => (props.auto ? "auto" : "100vh")};
 `;
+
+export const Separator = styled.hr`
+  width: 100%;
+  height: 0.5rem;
+  background-color: var(--blue);
+  border-radius: 1rem;
+  margin: 0;
+`;
