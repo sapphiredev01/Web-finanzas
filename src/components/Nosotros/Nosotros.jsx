@@ -6,6 +6,8 @@ import ImgVer from "../../images/bw2.png";
 import ImgHor from "../../images/hands.png";
 import iconGraph from "../../images/grafica.png";
 import iconTrophy from "../../images/trophy.png";
+import iconCoins from "../../images/coins.png";
+import iconInvestigate from "../../images/investigar.png";
 import { useDesktop } from "../../hooks/useDesktop";
 import Fade from 'react-reveal/Fade';
 
@@ -19,7 +21,7 @@ export default function Nosotros() {
   return (
     <Container id="nosotros">
       <Fade>
-      <Wrapper {...props}>
+      <Wrapper auto>
         <S.WrapperFlex>
 
         { isDesktop ? (
@@ -77,6 +79,23 @@ export default function Nosotros() {
           </S.ContentImages>
           </>
         )}
+        </S.WrapperFlex>
+        <S.WrapperFlex>
+          <S.ContainerIdeo>
+            <S.Icon2 src={iconCoins} />
+            <S.IdeoText title >Misión</S.IdeoText>
+            <S.IdeoText>Crear más oportunidades de crecimiento en diversos mercados que brindan seguridad y estabilidad en nuestros proyectos.</S.IdeoText>
+          </S.ContainerIdeo>
+          <S.ContainerIdeo>
+            <S.Icon2 src={iconInvestigate} />
+            <S.IdeoText title>Visión</S.IdeoText>
+            <S.IdeoText>Ser lideres en diversificación global a nivel nacional.</S.IdeoText>
+          </S.ContainerIdeo>
+          <S.ContainerIdeo>
+            <S.Icon2 src={iconCoins} />
+            <S.IdeoText title>Valores</S.IdeoText>
+            <S.IdeoText>Las empresas con las que colaboramos siempre actúan con ética, confianza, honestidad y trabajo en equipo para brindar seguridad a nuestros clientes y a nosotros.</S.IdeoText>
+          </S.ContainerIdeo>
         </S.WrapperFlex>
       </Wrapper>
       </Fade>

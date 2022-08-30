@@ -16,7 +16,7 @@ export const divContainer = styled.div`
   margin: auto;
   width: 35vw;
   @media ${device.tablet} {
-    width: 80vw;
+    width: 90vw;
   }
 `;
 
@@ -50,8 +50,8 @@ export const Experience = styled.div`
   @media ${device.tablet} {
     width: 50%;
     margin: auto;
-    margin-left: 40%;
-    margin-bottom: -10%;
+    margin-left: 35%;
+    margin-bottom: -12%;
   }
 
   @media ${device.laptopL} {

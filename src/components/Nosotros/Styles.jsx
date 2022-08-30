@@ -84,7 +84,19 @@ export const Icon = styled.img`
     width:  3rem;
     align-self: center;
   }
+`;
 
+export const Icon2 = styled.img`
+  background-image: url(${(props) => props.src});
+  height: 4rem;
+  width: auto;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  @media ${device.tablet} {
+    height: 4rem;
+    width:  4rem;
+    align-self: center;
+  }
 `;
 
 export const boton = styled.button`
@@ -111,5 +123,36 @@ export const boton = styled.button`
     margin: 0;
     margin-bottom: 2rem;
     padding: 0.5rem;
+  }
+`;
+
+export const ContainerIdeo = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 1rem;
+  box-shadow: 0px 20px 50px #00000011;
+  text-align: justify;
+  padding: 2rem;
+  width: 30%;
+  height: 15rem;
+  margin: 1rem;
+  @media ${device.laptopL} {
+    height: 15rem;
+  }
+  @media ${device.tablet} {
+    width: 80%;
+  }
+`;
+
+export const IdeoText = styled.p`
+  font-size: 1.2rem;
+  font-weight: ${(props) => (props.title ? "bold" : "normal")};
+  @media ${device.laptopL} {
+    font-size: 1rem;
+  }
+  @media ${device.tablet} {
+    font-size: 1.1rem;
   }
 `;
