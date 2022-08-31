@@ -84,7 +84,8 @@ export const Input = styled.input`
     }
     
   @media ${device.tablet} {
-    margin-left: 0;
+    width: 80%;
+    margin: 1rem 0;
   }
 `;
 
@@ -96,7 +97,6 @@ export const InputArea = styled.textarea`
   margin: 1rem;
   width: 85%;
   height: 6rem;
-
   &:focus {
     outline: none;
     transition: 0.2s ease-in-out;
