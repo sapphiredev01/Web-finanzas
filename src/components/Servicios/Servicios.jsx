@@ -1,11 +1,12 @@
 import React, {useState} from "react";
 import * as S from "./Styles";
-import { Container, Wrapper } from "../UI/Containers/Containers";
+import { Container, Separator, Wrapper } from "../UI/Containers/Containers";
 import { Title, Text } from "../UI/Typography/Typography";
 import agricultura from "../../images/LOGOTIPOS_FINPEI_99.png";
 import crypto from "../../images/LOGOTIPOS_FINPEI_100.png";
 import stocks from "../../images/LOGOTIPOS_FINPEI_101.png";
 import startups from "../../images/LOGOTIPOS_FINPEI_102.png";
+import bg from "../../images/vhback.png";
 import { useDesktop } from "../../hooks/useDesktop";
 import Fade from 'react-reveal/Fade';
 

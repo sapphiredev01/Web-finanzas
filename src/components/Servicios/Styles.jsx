@@ -17,6 +17,17 @@ const StyledDiv = styled.div`
   text-align: center;
 `;
 
+export const Background = styled.div`
+  background-image: url(${(props) => props.src});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+`;
+
 const StyledImg = styled.img`
   height: 15rem;
   width: 15rem;
@@ -47,6 +58,7 @@ export const Item = ({ src, alt, title }) => {
 export const Row = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  z-index: 1;
   @media (max-width: 1050px) {
     grid-template-columns: repeat(2, 1fr);
   }

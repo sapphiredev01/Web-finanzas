@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { device } from "../../utils/Variables";
+import { Link } from "react-scroll";
 
 export const WrapperFlex = styled.div`
   display: flex;
@@ -124,6 +125,17 @@ export const boton = styled.button`
     margin-bottom: 2rem;
     padding: 0.5rem;
   }
+`;
+
+export const StyledLink = styled(Link).attrs(() => ({
+  activeClass: "active",
+  spy: true,
+  smooth: true,
+  duration: 500,
+  offset: -70,
+}))`
+  transition: all 0.3s ease-in-out;
+  margin-top: ${(props) => (props.vehiculo ? "-0.5rem" : "")};
 `;
 
 export const ContainerIdeo = styled.div`

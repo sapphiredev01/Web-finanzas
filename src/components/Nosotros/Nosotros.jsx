@@ -10,6 +10,7 @@ import iconCoins from "../../images/coins.png";
 import iconInvestigate from "../../images/investigar.png";
 import { useDesktop } from "../../hooks/useDesktop";
 import Fade from 'react-reveal/Fade';
+import { Link } from "react-scroll";
 
 export default function Nosotros() {
   const isDesktop = useDesktop();
@@ -48,7 +49,7 @@ export default function Nosotros() {
               <S.Info>Hacemos crecer tu capital a mediano y largo plazo.</S.Info>
             </S.ContainerInfo>
           </S.WrapperFlex>
-          <S.boton>Contáctanos</S.boton>
+          <S.boton><S.StyledLink to="contacto">Contáctanos</S.StyledLink></S.boton>
           </S.ContentInfo>
           </>
         ) : (
@@ -97,6 +98,8 @@ export default function Nosotros() {
             <S.IdeoText>Las empresas con las que colaboramos siempre actúan con ética, confianza, honestidad y trabajo en equipo para brindar seguridad a nuestros clientes y a nosotros.</S.IdeoText>
           </S.ContainerIdeo>
         </S.WrapperFlex>
+        <Separator />
+        <br/>
       </Wrapper>
       </Fade>
     </Container>
