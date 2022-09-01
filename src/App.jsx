@@ -16,32 +16,45 @@ import { useDesktop } from "./hooks/useDesktop";
 
 function App() {
   const isDesktop = useDesktop();
+  const [splash, setSplash] = React.useState(true);
+
+    setTimeout(() => {
+      setSplash(false);
+  }, 2000);
 
   return (
     <div className="app">
-      <Nav />
-      <Hero />
-      <Banner />
-      {isDesktop ? (
+      {splash ? (
         <>
-          <Media />
+        <Hero />
         </>
-      ) : (
-        <></>
-      )}
-      <Inicio />
-      <Nosotros />
-      <Servicios />
-      <Perfil />
-      <Inversion />
-      <Contacto />
-      {isDesktop ? (
-        <> </>
-      ) : (
+        ) : (
         <>
-          <Media />
+          <Nav />
+          <Banner />
+          {isDesktop ? (
+            <>
+              <Media />
+            </>
+          ) : (
+            <></>
+          )}
+          <Inicio />
+          <Nosotros />
+          <Servicios />
+          <Perfil />
+          <Inversion />
+          <Contacto />
+          {isDesktop ? (
+            <> </>
+          ) : (
+            <>
+              <Media />
+            </>
+          )}
         </>
-      )}
+        )
+      }
     </div>
   );
 }

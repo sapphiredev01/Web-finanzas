@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { device } from "../../utils/Variables";
+import { Link } from "react-scroll";
 
 export const Background = styled.div`
   width: 100vw;
@@ -12,7 +13,6 @@ export const Background = styled.div`
 export const Container = styled.div`
   display: grid;
   height: 100vh;
-  place-items: center;
 `;
 
 export const Title = styled.div`
@@ -78,3 +78,15 @@ export const boton = styled.button`
     font-size: 2rem;
   }
 `;
+
+export const StyledLink = styled(Link).attrs(() => ({
+  activeClass: "active",
+  spy: true,
+  smooth: true,
+  duration: 500,
+  offset: -70,
+}))`
+  transition: all 0.3s ease-in-out;
+  margin-top: ${(props) => (props.vehiculo ? "-0.5rem" : "")};
+`;
+
