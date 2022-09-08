@@ -47,15 +47,6 @@ export const ChartSP = () => {
           enabled: true,
         },
       },
-      fill: {
-        type: "gradient",
-        gradient: {
-          shadeIntensity: 1,
-          opacityFrom: 0.7,
-          opacityTo: 0.9,
-          stops: [0, 100],
-        },
-      },
     },
   };
 
@@ -64,7 +55,7 @@ export const ChartSP = () => {
       <ApexChart
         options={chart.options}
         series={chart.series}
-        type="area"
+        type="candlestick"
         width="100%"
         height={300}
       />

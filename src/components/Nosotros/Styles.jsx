@@ -160,6 +160,7 @@ export const ContainerIdeo = styled.div`
 
 export const IdeoText = styled.p`
   font-size: 1.2rem;
+  text-align: center;
   font-weight: ${(props) => (props.title ? "bold" : "normal")};
   @media ${device.laptopL} {
     font-size: 1rem;

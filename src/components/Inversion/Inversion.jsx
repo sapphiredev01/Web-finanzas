@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Wrapper } from "../UI/Containers/Containers";
+import { Container, Wrapper, Separator } from "../UI/Containers/Containers";
 import { Title } from "../UI/Typography/Typography";
 import * as S from "./Styles";
 import imgBearBull from "../../images/bear_bull.png";
@@ -36,6 +36,8 @@ const Inversion = () => {
         </S.Grid>
       </Wrapper>
       </Fade>
+      <Separator />
+      <br/>
     </Container>
   );
 };

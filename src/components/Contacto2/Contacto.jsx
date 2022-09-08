@@ -87,27 +87,6 @@ const Contacto = () => {
             <S.Info>info@Finpei.com</S.Info>
           </S.infoContent>
         </S.WrapperFlex>
-        <br/>
-        <br/>
-        <br/>
-        <PreTitle style={{textAlign:"center"}}>Contáctanos</PreTitle>
-        <NiceTitle style={{textAlign:"center", fontSize:"3rem"}}>
-          ¡Déjanos tus datos y nosotros <br/> nos pondremos en contacto!
-        </NiceTitle>
-        <form onSubmit={mandarCorreo}>
-          <S.WrapperFlex>
-              <S.Input type="text" name="name" id="name" placeholder="Nombre" value={nombre} onChange={(e) => setNombre(e.target.value)} />
-              <S.Input type="email" name="email" id="email" placeholder="Correo" value={correo} onChange={(e) => setCorreo(e.target.value)} />
-              <S.Input type="number" name="cellphone" id="cellphone" placeholder="Teléfono" value={telefono} onChange={(e) => setTelefono(e.target.value)} />
-          </S.WrapperFlex>
-          <S.WrapperFlex>
-            <S.InputArea name="message" id="message" placeholder="Mensaje" value={mensaje} onChange={(e) => setMensaje(e.target.value)} />
-          </S.WrapperFlex>
-          <S.WrapperFlex>
-          <S.Boton type="submit">Enviar mensaje</S.Boton>
-          </S.WrapperFlex>
-        </form>
-
       </Wrapper>
       </Fade>
     </Container>

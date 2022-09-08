@@ -125,6 +125,8 @@ const Servicios = () => {
         </div>
       </Wrapper>
       </Fade>
+      <Separator />
+      <br/>
     </Container>
   );
 };

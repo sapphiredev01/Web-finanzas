@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
 export const Separator = styled.hr`
   width: 100%;
   height: 0.5rem;
-  background-color: var(--blue);
+  background-color: black;
   border-radius: 1rem;
   margin: 0;
 `;

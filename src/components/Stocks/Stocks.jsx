@@ -1,16 +1,24 @@
 import React, { useEffect, useState } from "react";
-import { Container, Wrapper } from "../UI/Containers/Containers";
+import { Container, Wrapper, Separator } from "../UI/Containers/Containers";
 import { Title } from "../UI/Typography/Typography";
 import { CryptoRow } from "./CryptoRow";
 import { StockRow } from "./StockRow";
 import { ChartSlider } from "./ChartSlider";
 import { ChartBTC } from "./ChartBTC";
 import { CardsContainer } from "./Styles";
-import { useDesktop } from "../../hooks/useDesktop";
 import Fade from "react-reveal/Fade";
 
 const Stocks = () => {
-  const isDesktop = useDesktop();
+  const [isDesktop, setDesktop] = useState(window.innerWidth > 1440);
+  
+  const updateMedia = () => {
+    setDesktop(window.innerWidth > 1440);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
+  });
 
   const props = {
     auto: !isDesktop,
@@ -42,6 +50,8 @@ const Stocks = () => {
           </CardsContainer>
         </Wrapper>
       </Fade>
+      <Separator/>
+            <br/>
     </Container>
   );
 };

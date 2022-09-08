@@ -16,22 +16,16 @@ import { useDesktop } from "./hooks/useDesktop";
 
 function App() {
   const isDesktop = useDesktop();
-  const [splash, setSplash] = React.useState(true);
+  /*const [splash, setSplash] = React.useState(true);
 
     setTimeout(() => {
       setSplash(false);
-  }, 2000);
+  }, 2000);*/
 
   return (
     <div className="app">
-      {splash ? (
-        <>
-        <Hero />
-        </>
-        ) : (
-        <>
           <Nav />
-          <Banner />
+          <Hero />
           {isDesktop ? (
             <>
               <Media />
@@ -39,7 +33,7 @@ function App() {
           ) : (
             <></>
           )}
-          <Inicio />
+          <Stocks />
           <Nosotros />
           <Servicios />
           <Perfil />
@@ -51,10 +45,7 @@ function App() {
             <>
               <Media />
             </>
-          )}
-        </>
-        )
-      }
+          )}        
     </div>
   );
 }

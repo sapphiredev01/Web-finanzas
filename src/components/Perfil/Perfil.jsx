@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Wrapper } from "../UI/Containers/Containers";
+import { Container, Wrapper, Separator } from "../UI/Containers/Containers";
 import { Title } from "../UI/Typography/Typography";
 import * as S from "./Styles";
 import Fade from 'react-reveal/Fade';
@@ -34,6 +34,8 @@ const Paquetes = () => {
         </S.ContainerCards>
       </Wrapper>
       </Fade>
+      <Separator/>
+        <br/>
     </Container>
   );
 };

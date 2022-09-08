@@ -3,15 +3,14 @@ import * as Styles from "./Styles";
 import logo from "../../../images/LOGOTIPOS_FINPEI_28.png";
 
 const Nav = () => {
-  const [splash, setSplash] = React.useState(false);
+  /*const [splash, setSplash] = React.useState(false);
 
   setTimeout(() => {
     setSplash(true);
-}, 1500);
+}, 1500);*/
 
   return (
     <Styles.Wrapper>
-      {splash && 
       <Styles.Stepper>
         <Styles.StyledLinkLogo to="banner">
         <Styles.ImageStyled src={logo} />
@@ -47,7 +46,6 @@ const Nav = () => {
           </Styles.StyledLink>
         </Styles.Step>
       </Styles.Stepper>
-      }
     </Styles.Wrapper>
     
   );
