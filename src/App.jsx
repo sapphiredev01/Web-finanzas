@@ -7,6 +7,7 @@ import ContactoGod from "./components/Contacto/Contacto";
 import Contacto from "./components/Contacto2/Contacto";
 import Inversion from "./components/Inversion/Inversion";
 import Perfil from "./components/Perfil/Perfil";
+import Perfil2 from "./components/Perfil2/Perfil";
 import Nav from "./components/UI/Nav/Nav";
 import Media from "./components/UI/Media/Media";
 import Banner from "./components/Banner/Banner";
@@ -36,7 +37,7 @@ function App() {
           <Stocks />
           <Nosotros />
           <Servicios />
-          <Perfil />
+          <Perfil2 />
           <Inversion />
           <Contacto />
           {isDesktop ? (

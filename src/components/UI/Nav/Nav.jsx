@@ -12,7 +12,7 @@ const Nav = () => {
   return (
     <Styles.Wrapper>
       <Styles.Stepper>
-        <Styles.StyledLinkLogo to="banner">
+        <Styles.StyledLinkLogo to="hero">
         <Styles.ImageStyled src={logo} />
         </Styles.StyledLinkLogo>
         <Styles.Step>
@@ -32,7 +32,7 @@ const Nav = () => {
         </Styles.Step>
         <Styles.Step>
           <Styles.StyledLink to="perfil">
-            <Styles.Title>PERFIL</Styles.Title>
+            <Styles.Title>PERFILES</Styles.Title>
           </Styles.StyledLink>
         </Styles.Step>
         <Styles.Step>
