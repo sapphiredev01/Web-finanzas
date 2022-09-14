@@ -31,7 +31,7 @@ export const getStocks = async () => {
       y: [index.open, index.high, index.low, index.close].map(useRound),
     }));
 
-    const symbols = ["SPX", "NDAQ", "SIX", "SPY", "USD"];
+    const symbols = ["AAPL", "TSLA", "NVDA", "NFLX", "META", "NDAQ", "QQQ", "DXY"];
     const stocks = [];
     for (const symbol of symbols) {
       const url3 = `https://api.twelvedata.com/quote?symbol=${symbol}&apikey=4f26cd4907b046838d42aa1d051e929f`;
@@ -67,7 +67,7 @@ export const getStocksRow = async () => {
   const dataDay = stocks.data().DATE1.toDate();
 
   if (actualDay.toDate() > dataDay) {
-    const symbols = ["SPX", "NDAQ", "SIX", "SPY", "USD"];
+    const symbols = ["AAPL", "TSLA", "NVDA", "NFLX", "META", "NDAQ", "QQQ", "DXY"];
     const stocks = [];
     for (const symbol of symbols) {
       const url3 = `https://api.twelvedata.com/quote?symbol=${symbol}&apikey=4f26cd4907b046838d42aa1d051e929f`;
