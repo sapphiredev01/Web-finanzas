@@ -91,12 +91,10 @@ export const Icon2 = styled.img`
   background-image: url(${(props) => props.src});
   height: 4rem;
   width: auto;
-  margin-right: 1rem;
-  margin-top: 1rem;
+  align-self: center;
   @media ${device.tablet} {
     height: 4rem;
     width:  4rem;
-    align-self: center;
   }
 `;
 

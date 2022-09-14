@@ -3,6 +3,7 @@ import Hero from "./components/Hero/Hero";
 import Stocks from "./components/Stocks/Stocks";
 import Nosotros from "./components/Nosotros/Nosotros";
 import Servicios from "./components/Servicios/Servicios";
+import Vehiculos from "./components/Vehiculos/Vehiculos";
 import ContactoGod from "./components/Contacto/Contacto";
 import Contacto from "./components/Contacto2/Contacto";
 import Inversion from "./components/Inversion/Inversion";
@@ -36,7 +37,7 @@ function App() {
           )}
           <Stocks />
           <Nosotros />
-          <Servicios />
+          <Vehiculos />
           <Perfil2 />
           <Inversion />
           <Contacto />

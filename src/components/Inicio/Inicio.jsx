@@ -10,7 +10,6 @@ import { ChartSlider } from "../Stocks/ChartSlider";
 import { ChartBTC } from "../Stocks/ChartBTC";
 import woman from "../../images/businessWoman.jpg"
 
-
 const Inicio = () => {
   const isDesktop = useDesktop();
 
