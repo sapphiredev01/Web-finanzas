@@ -102,7 +102,7 @@ export const ContainerModal = styled.div`
 export const HeaderModal = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   h1 {
     font-size: 3rem;
     color: var(--blue);

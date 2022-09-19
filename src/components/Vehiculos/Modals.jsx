@@ -1,10 +1,5 @@
 import React from 'react'
 import * as S from "./Styles";
-import { Text } from "../UI/Typography/Typography";
-import agave from "../../images/agave.png";
-import stocks2 from "../../images/stocks2.jpg";
-import stocks3 from "../../images/Stocks3.jpg";
-import carretera from "../../images/carretera.jpg";
 import vhAgricultura from "../../images/vhAgricultura.png";
 import vhCrypto from "../../images/vhCrypto.png";
 import vhStocks from "../../images/vhStocks.png";

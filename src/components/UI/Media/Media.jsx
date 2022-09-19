@@ -1,7 +1,6 @@
 import React from 'react'
 import { Container, MediaItem } from './Styles'
 import {
-  FaFacebookF,
   AiOutlineInstagram,
   BsWhatsapp,
   HiOutlineMail,
@@ -10,11 +9,6 @@ import {
 const Media = () => {
   return (
     <Container>
-        <a href="https://www.Facebook.com" target="_blank">
-          <MediaItem>
-            <FaFacebookF />
-          </MediaItem>
-        </a>
         <a href="https://www.Instagram.com" target="_blank">
           <MediaItem>
             <AiOutlineInstagram />

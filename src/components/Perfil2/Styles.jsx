@@ -31,27 +31,35 @@ export const Card = styled.div`
   padding: 1rem;
   box-shadow: 0px 20px 30px #00000011;
   overflow: hidden;
-  height: auto;
-  width: 80%;
+  height: 35rem;
+  width: 100%;
   @media ${device.tablet} {
     padding: 0;
     margin-top: 2rem;
     width: 100%;
+    height: auto;
+
+  }
+  @media ${device.laptopL} {
+    width: 80%;
+    height: auto;
   }
 `;
 
 export const TitleDescription = styled.h1`
-  margin-top: 20rem;
+  margin-top: 30rem;
   font-weight: bold;
   font-size: 3rem;
   color: var(--blue);
   @media ${device.tablet} {
+    margin-top: 20rem;
+  }
+  @media ${device.laptopL} {
+    margin-top: 20rem;
   }
 `;
 
 export const Description = styled.ul`
-  color: white;
-  background-color: #00000099;
   font-weight: bold;
   font-size: 1rem;
   li{

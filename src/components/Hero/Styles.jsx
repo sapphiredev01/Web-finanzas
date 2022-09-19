@@ -47,6 +47,5 @@ export const RowAnimated = styled.img`
   @media ${device.tablet} {
     width: 20%;
     margin-left: 80vw;
-    margin-bottom: -15vh;
   }
 `;

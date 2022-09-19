@@ -1,22 +1,30 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Container, Wrapper, Separator } from "../UI/Containers/Containers";
 import { Title } from "../UI/Typography/Typography";
 import * as S from "./Styles";
 import Fade from 'react-reveal/Fade';
 import img from "../../images/business4.jpg"
-import { useDesktop } from "../../hooks/useDesktop";
 
 const Paquetes = () => {
-  const isDesktop = useDesktop();
+  const [isDesktop, setDesktop] = useState(window.innerWidth > 1440);
+
+  const updateMedia = () => {
+    setDesktop(window.innerWidth > 1440);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
+  });
 
   const props = {
-    "auto": !isDesktop,
+    auto: !isDesktop,
   };
 
   return (
     <Container id="perfil">
       <Fade>
-      <Wrapper auto>
+      <Wrapper {...props}>
         <Title>Perfiles</Title>
         <S.ContainerCards>
           <S.ContainerCard>

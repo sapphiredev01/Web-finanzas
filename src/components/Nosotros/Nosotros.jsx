@@ -83,17 +83,17 @@ export default function Nosotros() {
         <S.WrapperFlex>
           <S.ContainerIdeo>
             <S.Icon2 src={iconMision} />
-            <S.IdeoText title >Misión</S.IdeoText>
+            <S.IdeoText><b>Misión</b></S.IdeoText>
             <S.IdeoText>Crear más oportunidades de crecimiento en diversos mercados que brindan seguridad y estabilidad en nuestros proyectos.</S.IdeoText>
           </S.ContainerIdeo>
           <S.ContainerIdeo>
             <S.Icon2 src={iconVision} />
-            <S.IdeoText title>Visión</S.IdeoText>
+            <S.IdeoText><b>Visión</b></S.IdeoText>
             <S.IdeoText>Ser lideres en diversificación global a nivel nacional.</S.IdeoText>
           </S.ContainerIdeo>
           <S.ContainerIdeo>
             <S.Icon2 src={iconValores} />
-            <S.IdeoText title>Valores</S.IdeoText>
+            <S.IdeoText><b>Valores</b></S.IdeoText>
             <S.IdeoText>Las empresas con las que colaboramos siempre actúan con ética, confianza, honestidad y trabajo en equipo para brindar seguridad a nuestros clientes y a nosotros.</S.IdeoText>
           </S.ContainerIdeo>
         </S.WrapperFlex>
