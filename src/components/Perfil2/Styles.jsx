@@ -50,7 +50,8 @@ export const TitleDescription = styled.h1`
   margin-top: 30rem;
   font-weight: bold;
   font-size: 3rem;
-  color: var(--blue);
+  color: white;
+  text-align: center;
   @media ${device.tablet} {
     margin-top: 20rem;
   }
@@ -67,5 +68,16 @@ export const Description = styled.ul`
   }
 
   @media ${device.laptopL} {
+  }
+`;
+
+export const Icon = styled.img`
+  background-image: url(${(props) => props.src});
+  height: 4rem;
+  width: auto;
+  align-self: center;
+  @media ${device.tablet} {
+    height: 4rem;
+    width:  4rem;
   }
 `;

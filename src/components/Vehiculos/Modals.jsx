@@ -9,8 +9,8 @@ export const ModalAgricultura = ({estate, changeEstate}) => {
   return (
     <>
         {estate &&
-            <S.Overlay>
-                <S.ContainerModal>
+            <S.Overlay onClick={() => changeEstate(false)}>
+                <S.ContainerModal onClick={e => e.stopPropagation()}>
 
                 <S.CloseButton onClick={() => changeEstate(false)}>X</S.CloseButton>
 
@@ -29,8 +29,8 @@ export const ModalCrypto = ({estate, changeEstate}) => {
     return (
         <>
             {estate &&
-                <S.Overlay>
-                    <S.ContainerModal>
+                <S.Overlay onClick={() => changeEstate(false)}>
+                    <S.ContainerModal onClick={e => e.stopPropagation()}>
                         <S.HeaderModal>
                             <h1><b>Vehiculo #2</b> Crypto</h1>
                         </S.HeaderModal>
@@ -53,8 +53,8 @@ export const ModalStocks = ({estate, changeEstate}) => {
     return (
         <>
             {estate &&
-                <S.Overlay>
-                    <S.ContainerModal>
+                <S.Overlay onClick={() => changeEstate(false)}>
+                    <S.ContainerModal onClick={e => e.stopPropagation()}>
 
                     <S.CloseButton onClick={() => changeEstate(false)}>X</S.CloseButton>
 
@@ -73,8 +73,8 @@ export const ModalBoosting = ({estate, changeEstate}) => {
     return (
         <>
             {estate &&
-                <S.Overlay>
-                    <S.ContainerModal>
+                <S.Overlay onClick={() => changeEstate(false)}>
+                    <S.ContainerModal onClick={e => e.stopPropagation()}>
 
                     <S.CloseButton onClick={() => changeEstate(false)}>X</S.CloseButton>
 

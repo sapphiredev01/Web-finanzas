@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import * as S from "./Styles";
 import { Container, Separator, Wrapper } from "../UI/Containers/Containers";
 import { Title } from "../UI/Typography/Typography";
@@ -22,6 +22,20 @@ const Servicios = () => {
     auto: !isDesktop,
   };
 
+  useEffect(() => {
+    const close = (e) => {
+      if(e.keyCode === 27){
+        setModalAgricultura(false);
+        setModalCrypto(false);
+        setModalStocks(false);
+        setModalBoosting(false);
+      }
+    }
+    window.addEventListener('keydown', close)
+   return () => window.removeEventListener('keydown', close)
+  },[])
+
+  
   return (
     <Container id="servicios">
       <Fade>

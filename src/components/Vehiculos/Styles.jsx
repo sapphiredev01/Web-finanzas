@@ -1,8 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
-import info from "../../images/info.png";
-import infoActive from "../../images/infoActive.png";;
 import { device } from "../../utils/Variables";
 import { fadeInUp, fadeInRight, zoomIn, fadeOut, fadeIn, lightSpeedIn, fadeInDown } from "react-animations";
 import { useDesktop } from "../../hooks/useDesktop";

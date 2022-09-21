@@ -3,7 +3,10 @@ import { Container, Wrapper, Separator } from "../UI/Containers/Containers";
 import { Title } from "../UI/Typography/Typography";
 import * as S from "./Styles";
 import Fade from 'react-reveal/Fade';
-import img from "../../images/business4.jpg"
+import advanced from "../../images/ADVANCED.jpg"
+import starter from "../../images/STARTED.jpg"
+import iconAdvanced from "../../images/icono 6.png"
+import iconStarter from "../../images/icono 7.png"
 
 const Paquetes = () => {
   const [isDesktop, setDesktop] = useState(window.innerWidth > 1440);
@@ -28,7 +31,7 @@ const Paquetes = () => {
         <Title>Perfiles</Title>
         <S.ContainerCards>
           <S.ContainerCard>
-            <S.Card src={img}>
+            <S.Card src={starter}>
               <S.TitleDescription>Starter</S.TitleDescription>
             </S.Card>
             <S.Description>
@@ -37,7 +40,7 @@ const Paquetes = () => {
               </S.Description>
           </S.ContainerCard> 
           <S.ContainerCard> 
-            <S.Card src={img}>
+            <S.Card src={advanced}>
               <S.TitleDescription>Advanced</S.TitleDescription>
             </S.Card>
             <S.Description>
