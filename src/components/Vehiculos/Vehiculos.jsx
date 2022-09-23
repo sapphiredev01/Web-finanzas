@@ -18,6 +18,14 @@ const Servicios = () => {
   const [modalStocks, setModalStocks] = useState(false);
   const [modalBoosting, setModalBoosting] = useState(false);
 
+  useEffect(() => {
+    if(modalAgricultura || modalCrypto || modalStocks || modalBoosting){
+      document.body.style.overflow = "hidden";
+    }else{
+      document.body.style.overflow = "unset";
+    }
+  }, [modalAgricultura, modalCrypto, modalStocks, modalBoosting]);
+
   const props = {
     auto: !isDesktop,
   };
