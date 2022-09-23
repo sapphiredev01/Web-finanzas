@@ -16,7 +16,7 @@ export const Text = styled.p`
 
 export const PreTitle = styled.h3`
   color: var(--blue);
-  font-size: 1.5rem;
+  font-size: 2rem;
   @media ${device.tablet} {
     text-align: center;
   }
@@ -27,5 +27,8 @@ export const NiceTitle = styled.h1`
   font-weight: bold;
   @media ${device.tablet} {
     text-align: center;
+  }
+  @media ${device.LaptopL} {
+    font-size: 1.2rem;
   }
 `;

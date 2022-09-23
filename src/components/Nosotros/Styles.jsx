@@ -5,9 +5,11 @@ import { Link } from "react-scroll";
 export const WrapperFlex = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
   @media ${device.tablet} {
     flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -29,11 +31,11 @@ export const ContentImages = styled.div`
 
 export const ImageHor = styled.img`
   background-image: url(${(props) => props.src});
-  height: 20rem;
-  margin-top: -8rem;
-  margin-left: 5rem;
+  height: 15rem;
+  margin-top: -4rem;
+  margin-left: 10rem;
   @media ${device.laptopL} {
-    height: 12rem;
+    height: 10rem;
     margin-top: -4rem;
     margin-left: 6rem;
   }
@@ -41,12 +43,21 @@ export const ImageHor = styled.img`
 
 export const ImageVer = styled.img`
   background-image: url(${(props) => props.src});
-  height: 30rem;
+  height: 25rem;
   margin-bottom: -10%;
   margin-right: 40%;
   @media ${device.laptopL} {
-    height: 20rem;
+    height: 18rem;
     margin-right: 1rem;
+  }
+`;
+
+export const Description = styled.p`
+  font-size: 1.5rem;
+  text-align: justify;
+
+  @media ${device.laptopL} {
+    font-size: 0.9rem;
   }
 `;
 
@@ -96,6 +107,10 @@ export const Icon2 = styled.img`
     height: 4rem;
     width:  4rem;
   }
+  @media ${device.laptopL} {
+    height: 2.8rem;
+    width:  2.8rem;
+  }
 `;
 
 export const boton = styled.button`
@@ -144,23 +159,24 @@ export const ContainerIdeo = styled.div`
   border-radius: 1rem;
   box-shadow: 0px 20px 50px #00000011;
   text-align: justify;
-  padding: 2rem;
+  padding: 2.5rem;
   width: 30%;
-  height: 15rem;
+  height: 12rem;
   margin: 1rem;
   @media ${device.laptopL} {
-    height: 15rem;
+    height: 8rem;
   }
   @media ${device.tablet} {
     width: 80%;
+    height: auto;
   }
 `;
 
 export const IdeoText = styled.p`
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
   @media ${device.laptopL} {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   @media ${device.tablet} {
     font-size: 1.1rem;

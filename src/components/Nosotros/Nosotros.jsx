@@ -21,10 +21,9 @@ export default function Nosotros() {
   };
 
   return (
-    <Container id="nosotros">
+    <Container id="nosotros" style={{marginTop:"3rem"}}>
       <Fade>
-      <Wrapper auto>
-      <Title>Acerca de nosotros</Title>
+      <Wrapper {...props}>
         <S.WrapperFlex>
         { isDesktop ? (
           <>
@@ -33,12 +32,13 @@ export default function Nosotros() {
             <S.ImageHor src={ImgHor} />
           </S.ContentImages>
           <S.ContentInfo>
+            <PreTitle>Acerca de nosotros</PreTitle>
             <NiceTitle>Somos tu mejor opción para invertir</NiceTitle>
-            <Text style={{textAlign:"justify"}}>
+            <S.Description >
               En <b>FINPEI</b> facilitamos el acercamiento a proyectos
               comerciales, mercados financieros y criptográficos. Participando
               en el desarrollo de proyectos de éxito
-            </Text>
+            </S.Description>
             <S.WrapperFlex>
             <S.ContainerInfo>
              <S.Icon src={iconGraph} />
@@ -54,6 +54,7 @@ export default function Nosotros() {
         ) : (
           <>
           <S.ContentInfo>
+           <Title style={{textAlign:"center"}}>Acerca de nosotros</Title>
             <NiceTitle>Somos tu mejor opción para invertir</NiceTitle>
             <Text style={{textAlign:"justify"}}>
               En <b>FINPEI</b> facilitamos el acercamiento a proyectos
@@ -102,3 +103,4 @@ export default function Nosotros() {
     </Container>
   );
 }
+

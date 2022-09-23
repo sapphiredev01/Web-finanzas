@@ -10,6 +10,9 @@ export const Container = styled.div`
     width: 100vw;
     margin: 0;
   }
+  @media ${device.laptopL} {
+    margin-top: 3rem;
+  }
 `;
 
 export const Wrapper = styled.div`
