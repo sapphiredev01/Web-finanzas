@@ -7,7 +7,7 @@ import cel from "../../images/telefono.png";
 import mail from "../../images/correo.png";
 import { useDesktop } from "../../hooks/useDesktop";
 import Fade from 'react-reveal/Fade';
-import { PreTitle, NiceTitle } from "../UI/Typography/Typography";
+import { PreTitle, NiceTitle, Title } from "../UI/Typography/Typography";
 const Contacto = () => {
   const isDesktop = useDesktop();
 
@@ -71,7 +71,7 @@ const Contacto = () => {
     <Container id="contacto">
       <Fade>
       <Wrapper {...props}>
-        <PreTitle style={{textAlign:"center"}}>Información de contacto</PreTitle>
+        <Title style={{textAlign:"center"}}>Información de contacto</Title>
         <NiceTitle style={{textAlign:"center", fontSize:"3rem"}}>Contáctanos para conocer <br/> mas información</NiceTitle>
         <S.WrapperFlex>
           <S.infoContent>

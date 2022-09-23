@@ -58,7 +58,7 @@ export const Item = ({ src, alt, title, changerModal, estateModal }) => {
 
 export const Row = styled.div`
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   z-index: 1;
   @media (max-width: 1050px) {
     grid-template-columns: repeat(2, 1fr);

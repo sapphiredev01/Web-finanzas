@@ -17,15 +17,15 @@ export default function Nosotros() {
   const isDesktop = useDesktop();
 
   const props = {
-    "auto": !isDesktop,
+    auto: !isDesktop,
   };
 
   return (
     <Container id="nosotros">
       <Fade>
       <Wrapper auto>
+      <Title>Acerca de nosotros</Title>
         <S.WrapperFlex>
-
         { isDesktop ? (
           <>
           <S.ContentImages>
@@ -33,7 +33,6 @@ export default function Nosotros() {
             <S.ImageHor src={ImgHor} />
           </S.ContentImages>
           <S.ContentInfo>
-          <PreTitle>Acerca de nosotros</PreTitle>
             <NiceTitle>Somos tu mejor opción para invertir</NiceTitle>
             <Text style={{textAlign:"justify"}}>
               En <b>FINPEI</b> facilitamos el acercamiento a proyectos
@@ -55,7 +54,6 @@ export default function Nosotros() {
         ) : (
           <>
           <S.ContentInfo>
-          <PreTitle>Acerca de nosotros</PreTitle>
             <NiceTitle>Somos tu mejor opción para invertir</NiceTitle>
             <Text style={{textAlign:"justify"}}>
               En <b>FINPEI</b> facilitamos el acercamiento a proyectos

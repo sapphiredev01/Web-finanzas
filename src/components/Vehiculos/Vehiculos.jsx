@@ -34,7 +34,6 @@ const Servicios = () => {
     window.addEventListener('keydown', close)
    return () => window.removeEventListener('keydown', close)
   },[])
-
   
   return (
     <Container id="servicios">
