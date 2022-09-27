@@ -34,13 +34,10 @@ const InfoButton = styled.button`
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   color: white;
-  font-size: 2rem;
+  font-size: 18px;
   &:hover {
     background-color: var(--white);
     color: var(--blue);
-  }
-  @media ${device.laptopL} {
-    font-size: 1rem;
   }
 
 `;

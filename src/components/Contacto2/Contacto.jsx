@@ -78,13 +78,11 @@ const Contacto = () => {
             <S.contactoIcon src={cel} alt="telefono" />
             <S.contactoTitle>WhatsApp</S.contactoTitle>
             <S.Info>+8 (123) 985 789</S.Info>
-            <S.Info>+787 878897 87</S.Info>
           </S.infoContent>
           <S.infoContent>
             <S.contactoIcon src={mail} alt="email" />
             <S.contactoTitle>Mail</S.contactoTitle>
-            <S.Info>Contacto@Finpei.com</S.Info>
-            <S.Info>info@Finpei.com</S.Info>
+            <S.Info>Contacto@Finpei.com.mx</S.Info>
           </S.infoContent>
         </S.WrapperFlex>
       </Wrapper>
