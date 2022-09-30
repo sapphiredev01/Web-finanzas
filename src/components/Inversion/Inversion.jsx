@@ -25,7 +25,6 @@ const Inversion = () => {
       <Fade>
       <Wrapper style={{marginBottom: "4rem"}} {...props}>
         <Title>Inversión</Title>
-        <S.Img src={imgBearBull} alt="Bear and Bull" />
         <S.Grid>
           <S.Div1>
             <Form onSubmitFormHandler={submitFormHandler} />

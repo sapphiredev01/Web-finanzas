@@ -24,13 +24,13 @@ export const infoContent = styled.div`
     border: 3px dashed #cecece ;
     padding: 1rem;
     margin: 0 1rem;
+    @media ${device.laptopL} {
+      width: 20%;
+    }
     @media ${device.tablet} {
         width: 60%;
         flex-direction: column;
         margin: 1rem 0;
-    }
-    @media ${device.laptopL} {
-      width: 20%;
     }
     &:hover {
     border-color: #209cdc;

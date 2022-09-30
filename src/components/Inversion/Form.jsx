@@ -9,44 +9,12 @@ const Form = ({ onSubmitFormHandler }) => {
 
   const [userInput, setUserInput] = useState({
     enteredAmount: "",
-    enteredPaymentFrequency: "",
+    enteredPaymentFrequency: "5.57",
     enteredTime: "",
   });
+  const [timeSelected, setTimeSelected] = useState("");
 
-  const [time, setTime] = useState([
-    {
-      value: "6",
-      title: "Seis meses",
-    },
-    {
-      value: "12",
-      title: "Un año",
-    },
-    {
-      value: "3",
-      title: "Tres años",
-    },
-    {
-      value: "5",
-      title: "Cinco años",
-    },
-  ]);
-
-  const paymentFrequencyHandler = (e) => {
-    const itExists = time.find((option) => option.value === "6");
-    if (!itExists) {
-      setTime([
-        {
-          value: "6",
-          title: "Seis meses",
-        },
-        ...time,
-      ]);
-    }
-    if (e.target.value === "34.99") {
-      setTime(() => time.filter((option) => option.value !== "6"));
-    }
-  };
+  const [time, setTime] = useState(0);
 
   const amountInputHandler = (event) => {
     setUserInput((prevState) => {
@@ -57,22 +25,41 @@ const Form = ({ onSubmitFormHandler }) => {
     });
   };
 
-  const paymentFrequencyInputHandler = (event) => {
-    setUserInput((prevState) => {
-      return {
-        ...prevState,
-        enteredPaymentFrequency: event.target.value,
-      };
-    });
-  };
-
   const timeInputHandler = (event) => {
-    setUserInput((prevState) => {
-      return {
-        ...prevState,
-        enteredTime: event.target.value,
-      };
-    });
+    setTime(event.target.value);
+    if(event.target.value === "1"){
+      setTimeSelected("Seis meses");
+      setUserInput((prevState) => {
+        return {
+          ...prevState,
+          enteredTime: "6",
+        };
+      });
+    }else if(event.target.value === "2"){
+      setTimeSelected("Un año");
+      setUserInput((prevState) => {
+        return {
+          ...prevState,
+          enteredTime: "12",
+        };
+      });
+    }else if(event.target.value === "3"){
+      setTimeSelected("Tres años");
+      setUserInput((prevState) => {
+        return {
+          ...prevState,
+          enteredTime: "3",
+        };
+      });
+    }else if(event.target.value === "4"){
+      setTimeSelected("Cinco años");
+      setUserInput((prevState) => {
+        return {
+          ...prevState,
+          enteredTime: "5",
+        };
+      });
+    }
   };
 
   const submitHandler = (event) => {
@@ -89,58 +76,37 @@ const Form = ({ onSubmitFormHandler }) => {
       alert.show("Por favor ingrese un valor para el periodo de pago", { type: "error" });
       return;
     }
+
     const data = [
       userInput.enteredAmount,
       userInput.enteredPaymentFrequency,
       userInput.enteredTime,
     ];
     onSubmitFormHandler(data);
-    setUserInput({
-      enteredAmount: "",
-      enteredPaymentFrequency: "",
-      enteredTime: "",
-    });
   };
 
   return (
       <S.FormStyled onSubmit={submitHandler}>
         <S.LabelStyled>Capital</S.LabelStyled>
-        <S.InputStyled
+        <S.InputRange
           value={userInput.enteredAmount}
-          type="text"
+          type="range"
+          min={10000}
+          max={1000000}
+          step={1000}
           onChange={amountInputHandler}
         />
-        <S.LabelStyled>Aportación</S.LabelStyled>
-        <S.Select
-          onChange={(e) => {
-            paymentFrequencyHandler(e);
-            paymentFrequencyInputHandler(e);
-          }}
-          value={userInput.enteredPaymentFrequency}
-        >
-          <option value="" hidden>
-            Seleccione una opción
-          </option>
-          <option value="1.46">Mensual</option>
-          <option value="5.57">Trimestral</option>
-          <option value="13.95">Semestral</option>
-          <option value="34.99">Anual</option>
-        </S.Select>
+        <S.LabelStyled>${userInput.enteredAmount}</S.LabelStyled>
         <S.LabelStyled>Plazo</S.LabelStyled>
-        <S.Select
+        <S.InputRange
+          value={time}
+          type="range"
+          min={1}
+          max={4}
+          step={1}
           onChange={timeInputHandler}
-          value={userInput.enteredTime}
-          id="time"
-        >
-          <option value="" hidden>
-            Seleccione una opción
-          </option>
-          {time.map((obj, index) => (
-            <option key={index} value={obj.value}>
-              {obj.title}
-            </option>
-          ))}
-        </S.Select>
+        />
+        <S.LabelStyled>{timeSelected}</S.LabelStyled>
         <S.ButtonStyled type="submit">
           Calcular rendimiento
         </S.ButtonStyled>

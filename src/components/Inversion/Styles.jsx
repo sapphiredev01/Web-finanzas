@@ -19,9 +19,8 @@ export const Img = styled.img`
 `;
 
 export const Div1 = styled.div`
-  background-color: var(--blue);
+  background-color: none;
   border-radius: 0.5rem;
-  box-shadow: 0px 20px 30px #00000011;
   height: 25rem;
   padding: 1rem;
   @media ${device.laptopL} {
@@ -57,6 +56,28 @@ export const InputStyled = styled.input`
   background-color: var(--blue);
 `;
 
+export const InputRange = styled.input`
+  -webkit-appearance: none;
+  width: 100%;
+  height: 1.1rem;
+  border-radius: 0.5rem;
+  background: var(--blue);
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  overflow: hidden;
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: #547b99 ;
+    cursor: pointer;
+    border: 2px solid var(--white);
+    box-shadow: -407px 0 0 400px #547b99;
+  }
+
+`;
+
 export const Select = styled.select`
   background: var(--blue);
   color: var(--white);
@@ -78,13 +99,14 @@ export const Select = styled.select`
 export const ButtonStyled = styled.button`
   text-align: center;
   text-transform: uppercase;
-  border: 1px solid var(--white);
+  border: 1px solid #000;
   border-radius: 0.5rem;
-  color: var(--white);
-  background-color: var(--blue);
+  color: #000;
+  background-color: #fff;
   transition: all 0.3s ease-in-out;
   padding: 0.5rem 1rem;
-
+  cursor: pointer;
+  box-shadow: 0px 20px 30px #00000011;
   &:hover {
     transform: scale(1.1);
   }
@@ -96,5 +118,5 @@ export const ButtonStyled = styled.button`
 export const LabelStyled = styled.label`
   font-weight: bold;
   font-size: clamp(1rem, 1vw, 1.2rem);
-  color: var(--white);
+  color: #000;
 `;
