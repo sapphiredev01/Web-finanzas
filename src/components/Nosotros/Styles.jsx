@@ -66,10 +66,15 @@ export const ContainerInfo = styled.div`
   flex-direction: row;
   border-bottom: 2px solid #428ae9;
   width: 50%;
-  margin: 2rem ;
+  height: 5.1rem;
+  margin: 2rem;
+  @media (max-width: "1210px") {
+    
+  }
   @media ${device.tablet} {
     flex-direction: column;
     align-items: center;
+    height: auto;
   }
 `;
 
@@ -77,11 +82,11 @@ export const Info = styled.p`
   text-align: justify;
   font-weight: bold;
   font-size: 1rem;
-  @media ${device.laptopL} { 
+  @media ${device.laptopL} {
     font-size: 0.8rem;
   }
-  @media ${device.tablet} {
-    font-size: 1rem;
+  @media ${device.mistery} {
+    font-size: 0.6rem;
   }
 `;
 
@@ -154,7 +159,7 @@ export const StyledLink = styled(Link).attrs(() => ({
 export const ContainerIdeo = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: first baseline;
   align-items: center;
   border-radius: 1rem;
   box-shadow: 0px 20px 50px #00000011;
@@ -166,6 +171,9 @@ export const ContainerIdeo = styled.div`
   @media ${device.laptopL} {
     height: 8rem;
   }
+  @media ${device.mistery} {
+    height: 13rem;
+  }
   @media ${device.tablet} {
     width: 80%;
     height: auto;
@@ -174,11 +182,16 @@ export const ContainerIdeo = styled.div`
 
 export const IdeoText = styled.p`
   font-size: 1rem;
-  text-align: center;
+  text-align: justify;
+  margin-top: ${(props) => (props.info ? "-0.3rem" : "")};
   @media ${device.laptopL} {
     font-size: 0.8rem;
   }
+  @media ${device.mistery} {
+    line-height: 0.8rem;
+  }
   @media ${device.tablet} {
     font-size: 1.1rem;
+    line-height: 1rem;
   }
 `;

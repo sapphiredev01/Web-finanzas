@@ -72,7 +72,8 @@ const Contacto = () => {
       <Fade>
       <Wrapper {...props}>
         <Title style={{textAlign:"center"}}>Información de contacto</Title>
-        <NiceTitle style={{textAlign:"center", fontSize:"3rem"}}>Contáctanos para conocer <br/> mas información</NiceTitle>
+        <NiceTitle style={{textAlign:"center"}}>Contáctanos para conocer mas información</NiceTitle>
+        <br/>
         <S.WrapperFlex>
           <S.infoContent>
             <S.contactoIcon src={cel} alt="telefono" />
