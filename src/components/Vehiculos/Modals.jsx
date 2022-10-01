@@ -30,7 +30,7 @@ export const ModalCrypto = ({estate, changeEstate}) => {
         <>
             {estate &&
                 <S.Overlay onClick={() => changeEstate(false)}>
-                    <S.ContainerModal onClick={e => e.stopPropagation()}>
+                    <S.ContainerModal crypto onClick={e => e.stopPropagation()}>
                         <S.HeaderModal>
                             <h1><b>Vehiculo #2</b> Crypto</h1>
                         </S.HeaderModal>
