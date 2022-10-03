@@ -99,7 +99,7 @@ export const ContainerModal = styled.div`
 
   @media ${device.tablet}{
     width: 80vw;
-    min-height: ${props => props.crypto ? "60vh" : "40vh"};
+    min-height: ${props => props.crypto ? "46vh" : "36vh"};
   }
 `;
 

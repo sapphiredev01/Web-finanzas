@@ -9,7 +9,7 @@ import {
 const Media = () => {
   return (
     <Container>
-        <a href="https://www.Instagram.com" target="_blank">
+        <a href="https://www.instagram.com/finpei.mx/" target="_blank">
           <MediaItem>
             <AiOutlineInstagram />
           </MediaItem>

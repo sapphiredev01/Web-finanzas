@@ -8,11 +8,11 @@ const Form = ({ onSubmitFormHandler }) => {
   const alert = useAlert();
 
   const [userInput, setUserInput] = useState({
-    enteredAmount: "",
+    enteredAmount: "10000",
     enteredPaymentFrequency: "5.57",
-    enteredTime: "",
+    enteredTime: "6",
   });
-  const [timeSelected, setTimeSelected] = useState("");
+  const [timeSelected, setTimeSelected] = useState("Seis meses");
 
   const [time, setTime] = useState(0);
 
@@ -96,7 +96,8 @@ const Form = ({ onSubmitFormHandler }) => {
           step={1000}
           onChange={amountInputHandler}
         />
-        <S.LabelStyled>${userInput.enteredAmount}</S.LabelStyled>
+        <S.LabelInput>${userInput.enteredAmount}</S.LabelInput>
+        <br/>
         <S.LabelStyled>Plazo</S.LabelStyled>
         <S.InputRange
           value={time}
@@ -106,7 +107,7 @@ const Form = ({ onSubmitFormHandler }) => {
           step={1}
           onChange={timeInputHandler}
         />
-        <S.LabelStyled>{timeSelected}</S.LabelStyled>
+        <S.LabelInput>{timeSelected}</S.LabelInput>
         <S.ButtonStyled type="submit">
           Calcular rendimiento
         </S.ButtonStyled>

@@ -99,10 +99,10 @@ export const Select = styled.select`
 export const ButtonStyled = styled.button`
   text-align: center;
   text-transform: uppercase;
-  border: 1px solid #000;
+  border: none;
   border-radius: 0.5rem;
-  color: #000;
-  background-color: #fff;
+  color: #fff;
+  background-color: var(--blue);
   transition: all 0.3s ease-in-out;
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -117,6 +117,14 @@ export const ButtonStyled = styled.button`
 
 export const LabelStyled = styled.label`
   font-weight: bold;
-  font-size: clamp(1rem, 1vw, 1.2rem);
+  font-size: 1.5rem;
   color: #000;
+  margin-bottom: -1rem;
+`;
+
+export const LabelInput = styled.label`
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--blue);
+  margin-top: -2rem;
 `;

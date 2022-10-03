@@ -4,19 +4,23 @@ import {
   Chart as ChartJS,
   CategoryScale,
   LinearScale,
-  BarElement,
+  PointElement,
+  LineElement,
   Title,
   Tooltip,
+  Filler,
   Legend,
 } from "chart.js";
-import { Bar } from "react-chartjs-2";
+import { Line } from 'react-chartjs-2';
 
 ChartJS.register(
   CategoryScale,
   LinearScale,
-  BarElement,
+  PointElement,
+  LineElement,
   Title,
   Tooltip,
+  Filler,
   Legend,
   ChartDataLabels
 );
@@ -99,8 +103,11 @@ const Chart = ({ data }) => {
       labels: renderSwitch(time),
       datasets: [
         {
+          fill:true,
           label: "Rendimiento de inversión",
-          backgroundColor: "#00345b",
+          borderColor: "#00345b",
+          backgroundColor: "rgba(84, 123, 153, 0.7)",
+
           data: compoundInterest(time, paymentFrequency, amount),
         },
       ],
@@ -108,7 +115,7 @@ const Chart = ({ data }) => {
   }, [time, paymentFrequency, amount]);
 
   return (
-    <Bar
+    <Line
       data={chartData}
       options={{
         responsive: true,
@@ -126,10 +133,21 @@ const Chart = ({ data }) => {
             intersect: true,
           },
           datalabels: {
-            display: isDesktop ? true : false,
-            color: "#fff",
+            display: false,
           },
         },
+        scales: {
+          xAxes: [{
+            gridLines: {
+                display:false
+            }
+          }],
+          yAxes: [{
+              gridLines: {
+                  display:false
+              }   
+          }]
+      }
       }}
     />
   );

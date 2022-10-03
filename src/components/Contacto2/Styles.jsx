@@ -46,30 +46,24 @@ export const infoContent = styled.div`
 
 export const contactoIcon = styled.img`
     width: auto;
-    height: 3rem;
+    height: 2rem;
     object-fit: cover;
     border: 2px dashed #cecece ;
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 4rem;
-    @media ${device.tablet} {
-        height: 3rem;          
-    } 
 `;
 
 export const contactoTitle = styled.h2`
     text-align: center;
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: bold;
 `;
 
 export const Info = styled.p`
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #5e5e5e;
     font-weight: 600;
-    @media ${device.tablet} {
-
-    }
 `;
 
 export const Input = styled.input`
