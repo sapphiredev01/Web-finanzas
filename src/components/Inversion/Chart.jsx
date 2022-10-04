@@ -26,16 +26,6 @@ ChartJS.register(
 );
 
 const Chart = ({ data }) => {
-  const [isDesktop, setDesktop] = useState(window.innerWidth > 820);
-  
-  const updateMedia = () => {
-    setDesktop(window.innerWidth > 820);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", updateMedia);
-    return () => window.removeEventListener("resize", updateMedia);
-  });
   const [chartData, setChartData] = useState({
     labels: [],
     datasets: [
@@ -65,19 +55,34 @@ const Chart = ({ data }) => {
   const years = ["1er año", "2do año", "3er año", "4to año", "5to año"];
 
   const amount = data[0];
-  const paymentFrequency = data[1];
-  const time = data[2];
+  const time = data[1];
 
-  //Falta mejorar lógica de esta función
-  const compoundInterest = (time, paymentFrequency, amount) => {
+  const compoundInterest = (time, amount) => {
     const indexes = Array.from({ length: time }, (_, i) => i + 1);
     indexes.map((index) => {
       return index;
     });
     const interest = indexes.map((index) => {
-      const values = (amount * (1 + paymentFrequency / 100) ** index).toFixed(
-        2
-      );
+
+      let values;
+      switch(time){
+        case "6":
+          //capital x (3.33 /100) para sacar el interes mensual
+          values = (amount * (3.33 / 100) * index).toFixed(2);
+          break;
+        case "12":
+          //capital x (3.33 /100) para sacar el interes mensual
+          values = (amount * (3.33 / 100) * index).toFixed(2);
+          break;
+        case "3" :
+          //capital x (39.96/100) para sacar el interes anual
+          values = (amount * (39.96 / 100) * index).toFixed(2);
+          break;
+        case "5":
+          //capital x (39.96/100) para sacar el interes anual
+          values = (amount * (39.96 / 100) * index).toFixed(2);
+          break;  
+      }
       return values;
     });
     return interest;
@@ -108,11 +113,11 @@ const Chart = ({ data }) => {
           borderColor: "#00345b",
           backgroundColor: "rgba(84, 123, 153, 0.7)",
 
-          data: compoundInterest(time, paymentFrequency, amount),
+          data: compoundInterest(time, amount),
         },
       ],
     });
-  }, [time, paymentFrequency, amount]);
+  }, [time, amount]);
 
   return (
     <Line

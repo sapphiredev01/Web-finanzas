@@ -9,7 +9,6 @@ const Form = ({ onSubmitFormHandler }) => {
 
   const [userInput, setUserInput] = useState({
     enteredAmount: "10000",
-    enteredPaymentFrequency: "5.57",
     enteredTime: "6",
   });
   const [timeSelected, setTimeSelected] = useState("Seis meses");
@@ -72,14 +71,9 @@ const Form = ({ onSubmitFormHandler }) => {
       alert.show("Por favor ingrese un valor mayor a cero para el monto", { type: "error" });
       return;
     }
-    if (userInput.enteredPaymentFrequency === "") {
-      alert.show("Por favor ingrese un valor para el periodo de pago", { type: "error" });
-      return;
-    }
 
     const data = [
       userInput.enteredAmount,
-      userInput.enteredPaymentFrequency,
       userInput.enteredTime,
     ];
     onSubmitFormHandler(data);
