@@ -92,11 +92,11 @@ const Form = ({ onSubmitFormHandler }) => {
           value={userInput.enteredAmount}
           type="range"
           min={10000}
-          max={1000000}
-          step={1000}
+          max={10000000}
+          step={10000}
           onChange={amountInputHandler}
         />
-        <S.LabelInput>${userInput.enteredAmount}</S.LabelInput>
+        <S.LabelInput>${Number(userInput.enteredAmount).toLocaleString("es-mx")}</S.LabelInput>
         <br/>
         <S.LabelStyled>Plazo</S.LabelStyled>
         <S.InputRange
