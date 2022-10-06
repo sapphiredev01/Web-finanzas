@@ -65,22 +65,23 @@ const Chart = ({ data }) => {
     const interest = indexes.map((index) => {
 
       let values;
+      let interMes = ((amount*1) * (3.33/100)).toFixed(2);
+      let pagoMes = ((interMes*1) * ((index-1)));
+
+      let interAnual = ((amount*1) * (39.96/100)).toFixed(2);
+      let pagoAnual = ((interAnual*1) * (index));
       switch(time){
         case "6":
-          //capital x (3.33 /100) para sacar el interes mensual
-          values = (amount * (3.33 / 100) * index).toFixed(2);
-          break;
+          values = ((amount*1) + (pagoMes*1));
         case "12":
-          //capital x (3.33 /100) para sacar el interes mensual
-          values = (amount * (3.33 / 100) * index).toFixed(2);
+          values = ((amount*1) + (pagoMes*1));
           break;
         case "3" :
           //capital x (39.96/100) para sacar el interes anual
-          values = (amount * (39.96 / 100) * index).toFixed(2);
+          values = ((amount*1) + (pagoAnual*1));
           break;
         case "5":
-          //capital x (39.96/100) para sacar el interes anual
-          values = (amount * (39.96 / 100) * index).toFixed(2);
+          values = ((amount*1) + (pagoAnual*1));
           break;  
       }
       return values;
@@ -91,7 +92,7 @@ const Chart = ({ data }) => {
   const renderSwitch = (time) => {
     switch (time) {
       case "6":
-        return months.slice(0, 6);
+        return months;
       case "12":
         return months;
       case "3":
@@ -120,6 +121,7 @@ const Chart = ({ data }) => {
   }, [time, amount]);
 
   return (
+    
     <Line
       data={chartData}
       options={{

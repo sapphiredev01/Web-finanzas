@@ -24,6 +24,7 @@ export const infoContent = styled.div`
     border: 3px dashed #cecece ;
     padding: 1rem;
     margin: 0 1rem;
+    cursor: pointer;
     @media ${device.laptopL} {
       width: 20%;
     }

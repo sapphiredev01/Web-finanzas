@@ -14,12 +14,12 @@ const Media = () => {
             <AiOutlineInstagram />
           </MediaItem>
         </a>
-        <a href="https://www.Whatsapp.com" target="_blank">
+        <a href="https://wa.me/message/WXW4WNFS6LNPB1" target="_blank">
           <MediaItem>
             <BsWhatsapp />
           </MediaItem>
         </a>
-        <a href="https://www.Outlook.com" target="_blank">
+        <a href="mailto:contacto@finpei.com.mx?Subject=Interesado%20en%20asesoria%20Finpei">
           <MediaItem>
             <HiOutlineMail />
           </MediaItem>
