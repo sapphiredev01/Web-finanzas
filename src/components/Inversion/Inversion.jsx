@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Container, Wrapper, Separator } from "../UI/Containers/Containers";
 import { Title } from "../UI/Typography/Typography";
 import * as S from "./Styles";
-import imgBearBull from "../../images/bear_bull.png";
 import Chart from "./Chart";
 import Form from "./Form";
 import { useDesktop } from "../../hooks/useDesktop";
@@ -20,6 +19,9 @@ const Inversion = () => {
     setData(data);
   };
 
+  const [intereses, setIntereses] = useState(0);
+  const [total, setTotal] = useState(0);
+
   return (
     <Container id="inversion">
       <Fade>
@@ -30,8 +32,20 @@ const Inversion = () => {
             <Form onSubmitFormHandler={submitFormHandler} />
           </S.Div1>
           <S.Div2>
-            <Chart data={data} />
+            <Chart data={data} setIntereses={setIntereses} setTotal={setTotal}/>
           </S.Div2>
+          <div/>
+          {
+            total > 0 && 
+            (
+              <S.Div3>
+                <S.LabelStyled>Rendimiento de intereses: ${intereses.toLocaleString("es-mx")}</S.LabelStyled>
+                <br/>
+                <br/>
+                <S.LabelStyled>Intereses + Capital: ${total.toLocaleString("es-mx")}</S.LabelStyled>
+              </S.Div3>
+            )
+          }
         </S.Grid>
       </Wrapper>
       </Fade>

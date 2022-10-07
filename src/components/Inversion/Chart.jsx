@@ -25,7 +25,7 @@ ChartJS.register(
   ChartDataLabels
 );
 
-const Chart = ({ data }) => {
+const Chart = ({ data, setIntereses, setTotal }) => {
   const [chartData, setChartData] = useState({
     labels: [],
     datasets: [
@@ -36,27 +36,47 @@ const Chart = ({ data }) => {
       },
     ],
   });
-
-  const months = [
-    "Enero",
-    "Febrero",
-    "Marzo",
-    "Abril",
-    "Mayo",
-    "Junio",
-    "Julio",
-    "Agosto",
-    "Septiembre",
-    "Octubre",
-    "Noviembre",
-    "Diciembre",
-  ];
-
-  const years = ["1er año", "2do año", "3er año", "4to año", "5to año"];
-
   const amount = data[0];
   const time = data[1];
 
+  let months = [];
+  if(time == "6"){
+    months = [
+      "Enero",
+      "Febrero",
+      "Marzo (Pago)",
+      "Abril",
+      "Mayo",
+      "Junio (Pago)",
+      "Julio",
+      "Agosto",
+      "Septiembre",
+      "Octubre",
+      "Noviembre",
+      "Diciembre",
+    ];
+  }else{
+    months = [
+      "Enero",
+      "Febrero",
+      "Marzo (Pago)",
+      "Abril",
+      "Mayo",
+      "Junio (Pago)",
+      "Julio",
+      "Agosto",
+      "Septiembre (Pago)",
+      "Octubre",
+      "Noviembre",
+      "Diciembre (Pago)",
+    ];
+  }
+
+
+  const years = ["1er año", "2do año", "3er año", "4to año", "5to año"];
+
+  let interTotal = 0;
+  let pagoTotal = 0;
   const compoundInterest = (time, amount) => {
     const indexes = Array.from({ length: time }, (_, i) => i + 1);
     indexes.map((index) => {
@@ -70,22 +90,33 @@ const Chart = ({ data }) => {
 
       let interAnual = ((amount*1) * (39.96/100)).toFixed(2);
       let pagoAnual = ((interAnual*1) * (index));
+
       switch(time){
         case "6":
           values = ((amount*1) + (pagoMes*1));
+          interTotal = ((interMes*1) * ((index-1)));
+          pagoTotal = ((interTotal*1) + (amount*1));
         case "12":
           values = ((amount*1) + (pagoMes*1));
+          interTotal = ((interMes*1) * ((index-1)));
+          pagoTotal = ((interTotal*1) + (amount*1));
           break;
         case "3" :
           //capital x (39.96/100) para sacar el interes anual
           values = ((amount*1) + (pagoAnual*1));
+          interTotal = ((interAnual*1) * ((index*1)));
+          pagoTotal = ((interTotal*1) + (amount*1));
           break;
         case "5":
           values = ((amount*1) + (pagoAnual*1));
+          interTotal = ((interAnual*1) * ((index*1)));
+          pagoTotal = ((interTotal*1) + (amount*1));
           break;  
       }
       return values;
     });
+    setIntereses(interTotal);
+    setTotal(pagoTotal);
     return interest;
   };
 
@@ -100,7 +131,7 @@ const Chart = ({ data }) => {
       case "5":
         return years;
       default:
-        return months.slice(0, 6);
+        return null;
     }
   };
 

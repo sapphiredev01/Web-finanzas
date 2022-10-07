@@ -2,10 +2,12 @@
 import React, { useState } from "react";
 import * as S from "./Styles";
 import { useAlert } from "react-alert";
+import { useDesktop } from "../../hooks/useDesktop";
 
 
 const Form = ({ onSubmitFormHandler }) => {
   const alert = useAlert();
+  const isDesktop = useDesktop();
 
   const [userInput, setUserInput] = useState({
     enteredAmount: "10000",
@@ -79,17 +81,58 @@ const Form = ({ onSubmitFormHandler }) => {
     onSubmitFormHandler(data);
   };
 
+  const incraseRange = () => {
+    if (userInput.enteredAmount < 10000000) {
+      setUserInput((prevState) => {
+        return {
+          ...prevState,
+          enteredAmount: ((userInput.enteredAmount*1) + 10000).toString(),
+        };
+      });
+    }
+  }
+
+  const decreaseRange = () => {
+    if (userInput.enteredAmount > 10000) {
+      setUserInput((prevState) => {
+        return {
+          ...prevState,
+          enteredAmount: ((userInput.enteredAmount*1) - 10000).toString(),
+        };
+      });
+    }
+  }
+
   return (
       <S.FormStyled onSubmit={submitHandler}>
         <S.LabelStyled>Capital</S.LabelStyled>
-        <S.InputRange
-          value={userInput.enteredAmount}
-          type="range"
-          min={10000}
-          max={10000000}
-          step={10000}
-          onChange={amountInputHandler}
-        />
+
+        {
+          !isDesktop ? (
+            <S.RangesDiv>
+              <S.RangeButton type="button" onClick={decreaseRange}>-</S.RangeButton>
+              <S.InputRange
+                value={userInput.enteredAmount}
+                type="range"
+                min={10000}
+                max={10000000}
+                step={10000}
+                onChange={amountInputHandler}
+              />
+              <S.RangeButton type="button" onClick={incraseRange}>+</S.RangeButton>
+            </S.RangesDiv>
+          ) : (
+            <S.InputRange
+              value={userInput.enteredAmount}
+              type="range"
+              min={10000}
+              max={10000000}
+              step={10000}
+              onChange={amountInputHandler}
+            />
+          )
+        }
+       
         <S.LabelInput>${Number(userInput.enteredAmount).toLocaleString("es-mx")}</S.LabelInput>
         <br/>
         <S.LabelStyled>Plazo</S.LabelStyled>
@@ -102,7 +145,7 @@ const Form = ({ onSubmitFormHandler }) => {
           onChange={timeInputHandler}
         />
         <S.LabelInput>{timeSelected}</S.LabelInput>
-        <S.ButtonStyled type="submit">
+        <S.ButtonStyled type="submit" onSubmit={submitHandler}>
           Calcular rendimiento
         </S.ButtonStyled>
       </S.FormStyled>

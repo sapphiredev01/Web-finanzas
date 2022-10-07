@@ -38,6 +38,12 @@ export const Div2 = styled.div`
   }
 `;
 
+export const Div3 = styled.div`
+  background-color: none;
+  padding: 1rem;
+`;
+
+
 export const FormStyled = styled.form`
   display: grid;
   place-items: center;
@@ -127,4 +133,20 @@ export const LabelInput = styled.label`
   font-size: 1.2rem;
   color: var(--blue);
   margin-top: -2rem;
+`;
+
+export const RangesDiv = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+`;
+
+export const RangeButton = styled.button`
+  background: none;
+  border: none;
+  color: var(--blue);
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
 `;
