@@ -123,7 +123,7 @@ const Chart = ({ data, setIntereses, setTotal }) => {
   const renderSwitch = (time) => {
     switch (time) {
       case "6":
-        return months;
+        return months.slice(0, 6);
       case "12":
         return months;
       case "3":
