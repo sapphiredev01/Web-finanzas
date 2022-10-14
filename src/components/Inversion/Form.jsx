@@ -10,20 +10,28 @@ const Form = ({ onSubmitFormHandler }) => {
   const isDesktop = useDesktop();
 
   const [userInput, setUserInput] = useState({
-    enteredAmount: "10000",
-    enteredTime: "6",
+    enteredAmount: "100000",
+    enteredTime: "7",
   });
   const [timeSelected, setTimeSelected] = useState("Seis meses");
-
   const [time, setTime] = useState(0);
 
   const amountInputHandler = (event) => {
-    setUserInput((prevState) => {
-      return {
-        ...prevState,
-        enteredAmount: event.target.value,
-      };
-    });
+    if (event.target.value > 1000000) {
+      setUserInput((prevState) => {
+        return {
+          ...prevState,
+          enteredAmount: event.target.value - 100000,
+        };
+      });
+    }else{
+      setUserInput((prevState) => {
+        return {
+          ...prevState,
+          enteredAmount: event.target.value,
+        };
+      });
+    }
   };
 
   const timeInputHandler = (event) => {
@@ -33,7 +41,7 @@ const Form = ({ onSubmitFormHandler }) => {
       setUserInput((prevState) => {
         return {
           ...prevState,
-          enteredTime: "6",
+          enteredTime: "7",
         };
       });
     }else if(event.target.value === "2"){
@@ -41,7 +49,7 @@ const Form = ({ onSubmitFormHandler }) => {
       setUserInput((prevState) => {
         return {
           ...prevState,
-          enteredTime: "12",
+          enteredTime: "13",
         };
       });
     }else if(event.target.value === "3"){
@@ -82,22 +90,36 @@ const Form = ({ onSubmitFormHandler }) => {
   };
 
   const incraseRange = () => {
-    if (userInput.enteredAmount < 10000000) {
+    if (userInput.enteredAmount < 10000000 && userInput.enteredAmount >= 1000000) {
       setUserInput((prevState) => {
         return {
           ...prevState,
-          enteredAmount: ((userInput.enteredAmount*1) + 10000).toString(),
+          enteredAmount: ((userInput.enteredAmount*1) + 500000).toString(),
+        };
+      });
+    } else if (userInput.enteredAmount < 1000000 && userInput.enteredAmount < 1000000) {
+      setUserInput((prevState) => {
+        return {
+          ...prevState,
+          enteredAmount: ((userInput.enteredAmount*1) + 100000).toString(),
         };
       });
     }
   }
 
   const decreaseRange = () => {
-    if (userInput.enteredAmount > 10000) {
+    if (userInput.enteredAmount > 100000 && userInput.enteredAmount < 1000000) {
       setUserInput((prevState) => {
         return {
           ...prevState,
-          enteredAmount: ((userInput.enteredAmount*1) - 10000).toString(),
+          enteredAmount: ((userInput.enteredAmount*1) - 100000).toString(),
+        };
+      });
+    } else if (userInput.enteredAmount > 100000 && userInput.enteredAmount >= 1000000) {
+      setUserInput((prevState) => {
+        return {
+          ...prevState,
+          enteredAmount: ((userInput.enteredAmount*1) - 500000).toString(),
         };
       });
     }
@@ -114,9 +136,9 @@ const Form = ({ onSubmitFormHandler }) => {
               <S.InputRange
                 value={userInput.enteredAmount}
                 type="range"
-                min={10000}
-                max={10000000}
-                step={10000}
+                min={100000}
+                max={10100000}
+                step={userInput.enteredAmount >= 1000000 ? 500000 : 100000}
                 onChange={amountInputHandler}
               />
               <S.RangeButton type="button" onClick={incraseRange}>+</S.RangeButton>
@@ -125,25 +147,43 @@ const Form = ({ onSubmitFormHandler }) => {
             <S.InputRange
               value={userInput.enteredAmount}
               type="range"
-              min={10000}
-              max={10000000}
-              step={10000}
+              min={100000}
+              max={10100000}
+              step={userInput.enteredAmount >= 1000000 ? 500000 : 100000}
               onChange={amountInputHandler}
             />
           )
         }
-       
+        
         <S.LabelInput>${Number(userInput.enteredAmount).toLocaleString("es-mx")}</S.LabelInput>
         <br/>
         <S.LabelStyled>Plazo</S.LabelStyled>
-        <S.InputRange
-          value={time}
-          type="range"
-          min={1}
-          max={4}
-          step={1}
-          onChange={timeInputHandler}
-        />
+        {
+          !isDesktop ? (
+            <S.RangesDiv>
+              <S.RangeButton type="button" style={{visibility:"hidden"}}>-</S.RangeButton>
+              <S.InputRange
+              value={time}
+              type="range"
+              min={1}
+              max={4}
+              step={1}
+              onChange={timeInputHandler}
+              />
+              <S.RangeButton type="button" style={{visibility:"hidden"}}>+</S.RangeButton>
+            </S.RangesDiv>
+          ) : (
+            <S.InputRange
+            value={time}
+            type="range"
+            min={1}
+            max={4}
+            step={1}
+            onChange={timeInputHandler}
+            />
+          )
+        }
+       
         <S.LabelInput>{timeSelected}</S.LabelInput>
         <S.ButtonStyled type="submit" onSubmit={submitHandler}>
           Calcular rendimiento

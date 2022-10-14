@@ -1,5 +1,6 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { device } from "../../utils/Variables";
+import { fadeInUp} from "react-animations";
 
 export const Grid = styled.div`
   display: grid;
@@ -38,11 +39,28 @@ export const Div2 = styled.div`
   }
 `;
 
+const upAnimation = keyframes`${fadeInUp}`;
 export const Div3 = styled.div`
   background-color: none;
   padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  @media ${device.tablet} {
+    flex-direction: column;
+  }
 `;
 
+export const ItemResult = styled.div`
+  animation: 1s ${upAnimation};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+`;
 
 export const FormStyled = styled.form`
   display: grid;
@@ -126,6 +144,11 @@ export const LabelStyled = styled.label`
   font-size: 1.5rem;
   color: #000;
   margin-bottom: -1rem;
+`;
+
+export const TextResult = styled.h1`
+  font-size: 1.5rem;
+  color: var(--blue);
 `;
 
 export const LabelInput = styled.label`

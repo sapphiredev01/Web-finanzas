@@ -39,38 +39,21 @@ const Chart = ({ data, setIntereses, setTotal }) => {
   const amount = data[0];
   const time = data[1];
 
-  let months = [];
-  if(time == "6"){
-    months = [
+    const months = [
       "Enero",
       "Febrero",
-      "Marzo (Pago)",
-      "Abril",
+      "Marzo",
+      "Abril (Pago)",
       "Mayo",
-      "Junio (Pago)",
-      "Julio",
+      "Junio",
+      "Julio (Pago)",
       "Agosto",
       "Septiembre",
-      "Octubre",
+      "Octubre (Pago)",
       "Noviembre",
       "Diciembre",
+      "Enero (Pago)",
     ];
-  }else{
-    months = [
-      "Enero",
-      "Febrero",
-      "Marzo (Pago)",
-      "Abril",
-      "Mayo",
-      "Junio (Pago)",
-      "Julio",
-      "Agosto",
-      "Septiembre (Pago)",
-      "Octubre",
-      "Noviembre",
-      "Diciembre (Pago)",
-    ];
-  }
 
 
   const years = ["1er año", "2do año", "3er año", "4to año", "5to año"];
@@ -92,11 +75,11 @@ const Chart = ({ data, setIntereses, setTotal }) => {
       let pagoAnual = ((interAnual*1) * (index));
 
       switch(time){
-        case "6":
+        case "7":
           values = ((amount*1) + (pagoMes*1));
           interTotal = ((interMes*1) * ((index-1)));
           pagoTotal = ((interTotal*1) + (amount*1));
-        case "12":
+        case "13":
           values = ((amount*1) + (pagoMes*1));
           interTotal = ((interMes*1) * ((index-1)));
           pagoTotal = ((interTotal*1) + (amount*1));
@@ -122,9 +105,9 @@ const Chart = ({ data, setIntereses, setTotal }) => {
 
   const renderSwitch = (time) => {
     switch (time) {
-      case "6":
-        return months.slice(0, 6);
-      case "12":
+      case "7":
+        return months.slice(0, 7);
+      case "13":
         return months;
       case "3":
         return years.slice(0, 3);

@@ -35,18 +35,23 @@ const Inversion = () => {
             <Chart data={data} setIntereses={setIntereses} setTotal={setTotal}/>
           </S.Div2>
           <div/>
-          <S.Div3>
-            <S.LabelStyled>Rendimiento mensual: 3.33%</S.LabelStyled>
+          <S.Div3>           
           {
             total > 0 && 
             (
               <>
-                <br/>
-                <br/>
-                <S.LabelStyled>Rendimiento de intereses: ${intereses.toLocaleString("es-mx")}</S.LabelStyled>
-                <br/>
-                <br/>
-                <S.LabelStyled>Intereses + Capital: ${total.toLocaleString("es-mx")}</S.LabelStyled>       
+               <S.ItemResult>
+                <S.LabelStyled>Rendimiento mensual:</S.LabelStyled>
+                <S.TextResult> 3.33%</S.TextResult>
+              </S.ItemResult>
+              <S.ItemResult>
+                <S.LabelStyled>Rendimiento de intereses:</S.LabelStyled>
+                <S.TextResult> ${intereses.toLocaleString("es-mx")}</S.TextResult>
+              </S.ItemResult>
+              <S.ItemResult>
+                <S.LabelStyled>Intereses + Capital:</S.LabelStyled>
+                <S.TextResult> ${total.toLocaleString("es-mx")}</S.TextResult>
+              </S.ItemResult>
               </>       
             )
           }
