@@ -39,24 +39,10 @@ const Chart = ({ data, setIntereses, setTotal }) => {
   const amount = data[0];
   const time = data[1];
 
-    const months = [
-      "Enero",
-      "Febrero",
-      "Marzo",
-      "Abril (Pago)",
-      "Mayo",
-      "Junio",
-      "Julio (Pago)",
-      "Agosto",
-      "Septiembre",
-      "Octubre (Pago)",
-      "Noviembre",
-      "Diciembre",
-      "Enero (Pago)",
-    ];
-
-
-  const years = ["1er año", "2do año", "3er año", "4to año", "5to año"];
+  const [pago1, setPago1] = useState(0);
+  const [pago2, setPago2] = useState(0);
+  const [pago3, setPago3] = useState(0);
+  const [pago4, setPago4] = useState(0);
 
   let interTotal = 0;
   let pagoTotal = 0;
@@ -73,12 +59,28 @@ const Chart = ({ data, setIntereses, setTotal }) => {
 
       let interAnual = ((amount*1) * (39.96/100)).toFixed(2);
       let pagoAnual = ((interAnual*1) * (index));
+      
+      switch (index) {
+      case 4:
+        setPago1(pagoMes);
+        break;
+      case 7:
+        setPago2(pagoMes);
+        break;
+      case 10:
+        setPago3(pagoMes);  
+        break;
+      case 13:
+        setPago4(pagoMes);
+        break;
+    }
 
       switch(time){
         case "7":
           values = ((amount*1) + (pagoMes*1));
           interTotal = ((interMes*1) * ((index-1)));
           pagoTotal = ((interTotal*1) + (amount*1));
+          break;
         case "13":
           values = ((amount*1) + (pagoMes*1));
           interTotal = ((interMes*1) * ((index-1)));
@@ -102,6 +104,24 @@ const Chart = ({ data, setIntereses, setTotal }) => {
     setTotal(pagoTotal);
     return interest;
   };
+
+  const months = [
+    "Enero",
+    "Febrero",
+    "Marzo",
+    "Abril (Pago) - $"+pago1.toLocaleString("es-mx"),
+    "Mayo",
+    "Junio",
+    "Julio (Pago) - $"+pago2.toLocaleString("es-mx"),
+    "Agosto",
+    "Septiembre",
+    "Octubre (Pago) - $"+pago3.toLocaleString("es-mx"),
+    "Noviembre",
+    "Diciembre",
+    "Enero (Pago) - $"+pago4.toLocaleString("es-mx"),
+  ];
+
+  const years = ["1er año", "2do año", "3er año", "4to año", "5to año"];
 
   const renderSwitch = (time) => {
     switch (time) {
@@ -127,7 +147,6 @@ const Chart = ({ data, setIntereses, setTotal }) => {
           label: "Rendimiento de inversión",
           borderColor: "#00345b",
           backgroundColor: "rgba(84, 123, 153, 0.7)",
-
           data: compoundInterest(time, amount),
         },
       ],
