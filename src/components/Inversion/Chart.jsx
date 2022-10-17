@@ -60,21 +60,6 @@ const Chart = ({ data, setIntereses, setTotal }) => {
       let interAnual = ((amount*1) * (39.96/100)).toFixed(2);
       let pagoAnual = ((interAnual*1) * (index));
       
-      switch (index) {
-      case 4:
-        setPago1(pagoMes);
-        break;
-      case 7:
-        setPago2(pagoMes);
-        break;
-      case 10:
-        setPago3(pagoMes);  
-        break;
-      case 13:
-        setPago4(pagoMes);
-        break;
-    }
-
       switch(time){
         case "7":
           values = ((amount*1) + (pagoMes*1));
@@ -98,8 +83,25 @@ const Chart = ({ data, setIntereses, setTotal }) => {
           pagoTotal = ((interTotal*1) + (amount*1));
           break;  
       }
+
+      switch (index) {
+        case 4:
+          setPago1(pagoMes);
+          break;
+        case 7:
+          setPago2(pagoMes);
+          break;
+        case 10:
+          setPago3(pagoMes);  
+          break;
+        case 13:
+          setPago4(pagoMes);
+          break;
+      }
+
       return values;
     });
+    
     setIntereses(interTotal);
     setTotal(pagoTotal);
     return interest;
@@ -151,7 +153,7 @@ const Chart = ({ data, setIntereses, setTotal }) => {
         },
       ],
     });
-  }, [time, amount]);
+  }, [time, amount, pago1, pago2, pago3, pago4]);
 
   return (
     
