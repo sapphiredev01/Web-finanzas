@@ -12,6 +12,7 @@ import {
   Legend,
 } from "chart.js";
 import { Line } from 'react-chartjs-2';
+import { useDesktop } from "../../hooks/useDesktop";
 
 ChartJS.register(
   CategoryScale,
@@ -83,22 +84,12 @@ const Chart = ({ data, setIntereses, setTotal }) => {
           pagoTotal = ((interTotal*1) + (amount*1));
           break;  
       }
-
-      switch (index) {
-        case 4:
-          setPago1(pagoMes);
-          break;
-        case 7:
-          setPago2(pagoMes);
-          break;
-        case 10:
-          setPago3(pagoMes);  
-          break;
-        case 13:
-          setPago4(pagoMes);
-          break;
+      if(index === 4){
+        setPago1(pagoMes);
+        setPago2(pagoMes);
+        setPago3(pagoMes);
+        setPago4(pagoMes);
       }
-
       return values;
     });
     
@@ -107,21 +98,44 @@ const Chart = ({ data, setIntereses, setTotal }) => {
     return interest;
   };
 
-  const months = [
-    "Enero",
-    "Febrero",
-    "Marzo",
-    "Abril (Pago) - $"+pago1.toLocaleString("es-mx"),
-    "Mayo",
-    "Junio",
-    "Julio (Pago) - $"+pago2.toLocaleString("es-mx"),
-    "Agosto",
-    "Septiembre",
-    "Octubre (Pago) - $"+pago3.toLocaleString("es-mx"),
-    "Noviembre",
-    "Diciembre",
-    "Enero (Pago) - $"+pago4.toLocaleString("es-mx"),
-  ];
+  const isDesktop = useDesktop();
+   let months = [];
+  {
+    isDesktop ? (
+      months = [
+        "Enero",
+        "Febrero",
+        "Marzo",
+        "Abril (Pago) - $"+pago1.toLocaleString("es-mx"),
+        "Mayo",
+        "Junio",
+        "Julio (Pago) - $"+pago2.toLocaleString("es-mx"),
+        "Agosto",
+        "Septiembre",
+        "Octubre (Pago) - $"+pago3.toLocaleString("es-mx"),
+        "Noviembre",
+        "Diciembre",
+        "Enero (Pago) - $"+pago4.toLocaleString("es-mx"),
+      ]
+    ) : (
+      months = [
+        "Enero",
+        "Febrero",
+        "Marzo",
+        "Abril (Pago)",
+        "Mayo",
+        "Junio",
+        "Julio (Pago)",
+        "Agosto",
+        "Septiembre",
+        "Octubre (Pago)",
+        "Noviembre",
+        "Diciembre",
+        "Enero (Pago)",
+      ]
+    )
+  }
+   
 
   const years = ["1er año", "2do año", "3er año", "4to año", "5to año"];
 
@@ -173,6 +187,7 @@ const Chart = ({ data, setIntereses, setTotal }) => {
           hover: {
             mode: "nearest",
             intersect: true,
+            
           },
           datalabels: {
             display: false,
